@@ -1,0 +1,381 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="3300" height="2200" viewBox="0 0 3300 2200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-2, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-7 {
+        fill: none;
+      }
+
+      .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-2, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29 {
+        stroke: #000;
+      }
+
+      .cls-11, .cls-2, .cls-7 {
+        stroke-width: 0.5px;
+      }
+
+      .cls-3, .cls-6 {
+        isolation: isolate;
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: -0.06em;
+      }
+
+      .cls-6 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-7 {
+        stroke: #00aeef;
+      }
+
+      .cls-8 {
+        letter-spacing: -0.11em;
+      }
+
+      .cls-9 {
+        letter-spacing: -0.07em;
+      }
+
+      .cls-10 {
+        fill: #27aae1;
+      }
+
+      .cls-11 {
+        stroke: #27aae1;
+      }
+
+      .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-12 {
+        stroke-width: 16.2px;
+      }
+
+      .cls-13 {
+        stroke-width: 17.7px;
+      }
+
+      .cls-14 {
+        stroke-width: 14.2px;
+      }
+
+      .cls-15 {
+        stroke-width: 15.7px;
+      }
+
+      .cls-16 {
+        stroke-width: 12.2px;
+      }
+
+      .cls-17 {
+        stroke-width: 13.7px;
+      }
+
+      .cls-18 {
+        stroke-width: 10.2px;
+      }
+
+      .cls-19 {
+        stroke-width: 11.7px;
+      }
+
+      .cls-20 {
+        stroke-width: 9.7px;
+      }
+
+      .cls-21 {
+        stroke-width: 7.7px;
+      }
+
+      .cls-22 {
+        stroke-width: 3.7px;
+      }
+
+      .cls-23 {
+        stroke-width: 12.7px;
+      }
+
+      .cls-24 {
+        stroke-width: 11.2px;
+      }
+
+      .cls-25 {
+        stroke-width: 8.2px;
+      }
+
+      .cls-26 {
+        stroke-width: 6.7px;
+      }
+
+      .cls-27 {
+        stroke-width: 10.7px;
+      }
+
+      .cls-28 {
+        stroke-width: 8.7px;
+      }
+
+      .cls-29 {
+        stroke-width: 5.7px;
+      }
+    </style>
+  </defs>
+  <g id="Notes">
+    <rect id="artboard" class="cls-1" width="3300" height="2200"/>
+    <line class="cls-2" x1="263" y1="292" x2="3036" y2="292"/>
+    <text class="cls-3" transform="translate(263 322)"><tspan class="cls-4">W</tspan><tspan x="11.11" y="0">eight/Scale </tspan><tspan class="cls-5" x="77.8" y="0">V</tspan><tspan x="85.14" y="0">ariations</tspan></text>
+    <text class="cls-6" transform="translate(536.04 322)">Ultralight</text>
+    <text class="cls-6" transform="translate(844.75 322)">Thin</text>
+    <text class="cls-6" transform="translate(1140.12 322)">Light</text>
+    <text class="cls-6" transform="translate(1428.83 322)">Regular</text>
+    <text class="cls-6" transform="translate(1725.22 322)">Medium</text>
+    <text class="cls-6" transform="translate(2018.26 322)">Semibold</text>
+    <text class="cls-6" transform="translate(2327.97 322)">Bold</text>
+    <text class="cls-6" transform="translate(2619.68 322)">Heavy</text>
+    <text class="cls-6" transform="translate(2918.73 322)">Black</text>
+    <line class="cls-2" x1="263" y1="1903" x2="3036" y2="1903"/>
+    <path d="M272.25,1933.83a7.88,7.88,0,1,0-7.88-7.88A7.95,7.95,0,0,0,272.25,1933.83Zm0-1.48a6.4,6.4,0,1,1,6.39-6.4A6.36,6.36,0,0,1,272.25,1932.35Zm-2.85-5.67h2.11v2.12a.73.73,0,1,0,1.46,0v-2.12h2.13a.69.69,0,0,0,.74-.72.7.7,0,0,0-.74-.74H273v-2.11a.73.73,0,1,0-1.46,0v2.11H269.4a.71.71,0,0,0-.76.74A.7.7,0,0,0,269.4,1926.68Z"/>
+    <path d="M293.22,1935.91a10,10,0,1,0-10-10A10,10,0,0,0,293.22,1935.91Zm0-1.66a8.3,8.3,0,1,1,8.3-8.3A8.27,8.27,0,0,1,293.22,1934.25Zm-3.73-7.48h2.89v2.91a.78.78,0,0,0,.82.82.79.79,0,0,0,.83-.82v-2.91h2.91a.78.78,0,0,0,.82-.81.79.79,0,0,0-.82-.83H294v-2.89a.83.83,0,1,0-1.65,0v2.89h-2.89a.82.82,0,1,0,0,1.64Z"/>
+    <path d="M319.89,1938.66A12.72,12.72,0,1,0,307.18,1926,12.8,12.8,0,0,0,319.89,1938.66Zm0-1.81a10.9,10.9,0,1,1,10.9-10.9A10.87,10.87,0,0,1,319.89,1936.85Zm-4.91-10h4v4a.9.9,0,1,0,1.79,0v-4h4a.91.91,0,1,0,0-1.81h-4v-4a.9.9,0,1,0-1.79,0v4h-4a.91.91,0,1,0,0,1.81Z"/>
+    <text class="cls-3" transform="translate(263 1953)">Design <tspan class="cls-5" x="43.34" y="0">V</tspan><tspan x="50.68" y="0">ariations</tspan></text>
+    <text class="cls-6" transform="translate(263 1971)">Symbols are supported in up to nine weights and three scales.</text>
+    <text class="cls-6" transform="translate(263 1989)">For optimal layout with text and other symbols, vertically align</text>
+    <text class="cls-6" transform="translate(263 2007)">symbols with the adjacent text.</text>
+    <line class="cls-7" x1="776" y1="1919" x2="776" y2="1933"/>
+    <path d="M779.31,1933.13c.52,0,.77-.2,1-.74l1.26-3.45h5.76l1.26,3.45a.89.89,0,0,0,1,.74.78.78,0,0,0,.85-.8,1.4,1.4,0,0,0-.11-.53l-4.58-12.19a1.24,1.24,0,0,0-1.25-.9,1.21,1.21,0,0,0-1.23.89l-4.58,12.21a1.4,1.4,0,0,0-.11.53A.75.75,0,0,0,779.31,1933.13Zm2.7-5.67,2.37-6.57h0l2.37,6.57Z"/>
+    <line class="cls-7" x1="792.84" y1="1919" x2="792.84" y2="1933"/>
+    <text class="cls-3" transform="translate(776 1953)">Margins</text>
+    <text class="cls-6" transform="translate(776 1971)">Leading and trailing margins on the left and right side of each symbol</text>
+    <text class="cls-6" transform="translate(776 1989)">can be adjusted by modifying the x-location of the margin guidelines.</text>
+    <text class="cls-6" transform="translate(776 2007)">Modifications are automatically applied proportionally to all</text>
+    <text class="cls-6" transform="translate(776 2025)">scales and weights.</text>
+    <path d="M1291.84,1934.87l1.7,1.7c.86.87,1.85.81,2.77-.21l10.18-11.21a1.63,1.63,0,0,0,.85,0l1.06-.2.67.68,0,.55a1.55,1.55,0,0,0,.58,1.36l.76.74a1,1,0,0,0,1.56,0l2.91-2.92a1,1,0,0,0,0-1.54l-.77-.76a1.57,1.57,0,0,0-1.33-.6l-.58,0-.64-.63.24-1.13a1.57,1.57,0,0,0-.61-1.59l-2.2-2.19c-3.34-3.32-7.77-3.24-10.66-.35a1.14,1.14,0,0,0-.22,1.38,1.17,1.17,0,0,0,1.34.43,5.39,5.39,0,0,1,4.41.54l-.58,1.45a1.66,1.66,0,0,0-.1,1.24l-11.06,10.39C1291.06,1933,1291,1934,1291.84,1934.87Zm7.91-17.83a6.07,6.07,0,0,1,8,.75l2.43,2.42a.69.69,0,0,1,.21.76l-.32,1.48,1.5,1.49,1-.06a.54.54,0,0,1,.52.2l.58.58-2.44,2.44-.58-.57a.58.58,0,0,1-.21-.54l.07-1-1.5-1.48-1.52.25a.66.66,0,0,1-.72-.19l-2-2c-.25-.23-.28-.4-.12-.77l.87-2.09a5.75,5.75,0,0,0-5.62-1.48C1299.68,1917.28,1299.62,1917.15,1299.75,1917Zm-5.48,18.26-1.17-1.16c-.47-.46-.36-.8,0-1.16L1304,1922.8l1.47,1.49-10,11C1295.07,1935.68,1294.74,1935.77,1294.27,1935.3Z"/>
+    <text class="cls-3" transform="translate(1289 1953)">Exporting</text>
+    <text class="cls-6" transform="translate(1289 1971)">Symbols should be outlined when exporting to ensure the</text>
+    <text class="cls-6" transform="translate(1289 1989)">design is preserved when submitting to Xcode.</text>
+    <text id="template-version" class="cls-6" transform="translate(2958.85 1933)"><tspan class="cls-8">T</tspan><tspan x="6" y="0">emplate </tspan><tspan class="cls-9" x="52.03" y="0">v</tspan><tspan x="57.13" y="0">.2.0</tspan></text>
+    <text class="cls-6" transform="translate(2878.58 1951)">Requires Xcode 12 or greater</text>
+    <text class="cls-6" transform="translate(2843.23 1969)">Generated from arro<tspan class="cls-5" x="108.71" y="0">w</tspan><tspan x="116.72" y="0">.rectanglepath</tspan></text>
+    <text class="cls-6" transform="translate(2921.92 1987)"><tspan class="cls-5">T</tspan><tspan x="6.67" y="0">ypeset at 100 points</tspan></text>
+    <text class="cls-6" transform="translate(263 726)">Small</text>
+    <text class="cls-6" transform="translate(263 1156)">Medium</text>
+    <text class="cls-6" transform="translate(263 1586)">Large</text>
+  </g>
+  <g id="Guides">
+    <g id="H-reference">
+      <path class="cls-10" d="M340,696h2.68L352,671.54h32.76L394.13,696h2.63l-27.14-70.46h-2.5Zm28.37-67.14h.09l15.43,40.43h-31Z"/>
+    </g>
+    <line id="Baseline-S" class="cls-11" x1="263" y1="696" x2="3036" y2="696"/>
+    <line id="Capline-S" class="cls-11" x1="263" y1="625.54" x2="3036" y2="625.54"/>
+    <g id="H-reference-2" data-name="H-reference">
+      <path class="cls-10" d="M340,1126h2.68l9.33-24.46h32.76l9.38,24.46h2.63l-27.14-70.46h-2.5Zm28.37-67.14h.09l15.43,40.43h-31Z"/>
+    </g>
+    <line id="Baseline-M" class="cls-11" x1="263" y1="1126" x2="3036" y2="1126"/>
+    <line id="Capline-M" class="cls-11" x1="263" y1="1055.54" x2="3036" y2="1055.54"/>
+    <g id="H-reference-3" data-name="H-reference">
+      <path class="cls-10" d="M340,1556h2.68l9.33-24.46h32.76l9.38,24.46h2.63l-27.14-70.46h-2.5Zm28.37-67.14h.09l15.43,40.43h-31Z"/>
+    </g>
+    <line id="Baseline-L" class="cls-11" x1="263" y1="1556" x2="3036" y2="1556"/>
+    <line id="Capline-L" class="cls-11" x1="263" y1="1485.54" x2="3036" y2="1485.54"/>
+    <line id="left-margin" class="cls-7" x1="1379.82" y1="1030.79" x2="1379.82" y2="1150.12"/>
+    <line id="right-margin" class="cls-7" x1="1519.86" y1="1030.79" x2="1519.86" y2="1150.12"/>
+  </g>
+  <g id="Symbols">
+    <g id="Black-L">
+      <g>
+        <polyline class="cls-12" points="2974.34 1478.12 2886.69 1478.12 2877.92 1552.98 2886.69 1478.12 2917.01 1462.49 2945.34 1462.49 2974.34 1478.12 2983.12 1553.1"/>
+        <line class="cls-13" x1="3000.52" y1="1574.46" x2="2860.52" y2="1574.46"/>
+      </g>
+    </g>
+    <g id="Heavy-L">
+      <g>
+        <polyline class="cls-12" points="2682.47 1480.53 2585.12 1480.53 2575.38 1555.39 2585.12 1480.53 2618.79 1464.9 2650.26 1464.9 2682.47 1480.53 2692.23 1555.51"/>
+        <line class="cls-13" x1="2703.8" y1="1576.88" x2="2563.8" y2="1576.88"/>
+      </g>
+    </g>
+    <g id="Bold-L">
+      <g>
+        <polyline class="cls-14" points="2385.76 1480.53 2288.41 1480.53 2278.67 1555.39 2288.41 1480.53 2322.08 1464.9 2353.56 1464.9 2385.76 1480.53 2395.52 1555.51"/>
+        <line class="cls-15" x1="2407.09" y1="1576.88" x2="2267.09" y2="1576.88"/>
+      </g>
+    </g>
+    <g id="Semibold-L">
+      <g>
+        <polyline class="cls-16" points="2088.29 1480.53 1990.94 1480.53 1981.19 1555.39 1990.94 1480.53 2024.61 1464.9 2056.08 1464.9 2088.29 1480.53 2098.05 1555.51"/>
+        <line class="cls-17" x1="2109.62" y1="1576.88" x2="1969.62" y2="1576.88"/>
+      </g>
+    </g>
+    <g id="Medium-L">
+      <g>
+        <polyline class="cls-18" points="1788.39 1480.53 1691.03 1480.53 1681.29 1555.39 1691.03 1480.53 1724.7 1464.9 1756.18 1464.9 1788.39 1480.53 1798.14 1555.51"/>
+        <line class="cls-19" x1="1809.72" y1="1576.88" x2="1669.72" y2="1576.88"/>
+      </g>
+    </g>
+    <g id="Regular-L">
+      <g>
+        <line class="cls-20" x1="1513.04" y1="1576.97" x2="1383.04" y2="1576.97"/>
+        <polygon points="1402.33 1484.1 1393.26 1566.09 1503.58 1566.14 1494.48 1484.1 1402.33 1484.1"/>
+        <polygon points="1433.32 1464.01 1404.73 1477.48 1492.11 1477.48 1464.78 1464.01 1433.32 1464.01"/>
+      </g>
+    </g>
+    <g id="Light-L">
+      <g>
+        <line class="cls-21" x1="1216.32" y1="1576.97" x2="1086.32" y2="1576.97"/>
+        <polygon points="1105.43 1482.38 1096.36 1568.39 1206.68 1568.45 1197.58 1482.38 1105.43 1482.38"/>
+        <polygon points="1136.41 1464.01 1107.83 1477.48 1195.2 1477.48 1167.87 1464.01 1136.41 1464.01"/>
+      </g>
+    </g>
+    <g id="Thin-L">
+      <g>
+        <line class="cls-22" x1="917.46" y1="1576.24" x2="787.46" y2="1576.24"/>
+        <polygon points="806.47 1481.01 797.4 1571.82 907.72 1571.88 898.62 1481.01 806.47 1481.01"/>
+        <polygon points="837.45 1465.3 808.87 1478.77 896.25 1478.77 868.91 1465.3 837.45 1465.3"/>
+      </g>
+    </g>
+    <g id="Ultralight-L">
+      <g>
+        <line class="cls-22" x1="619.68" y1="1576.45" x2="489.68" y2="1576.45"/>
+        <polygon points="508.68 1481.21 499.61 1572.03 609.93 1572.09 600.84 1481.21 508.68 1481.21"/>
+        <polygon points="539.67 1465.5 511.09 1478.97 598.46 1478.97 571.13 1465.5 539.67 1465.5"/>
+      </g>
+    </g>
+    <g id="Black-M">
+      <g>
+        <polyline class="cls-23" points="2966.79 1058 2891.9 1058 2884.41 1115.81 2891.9 1058 2917.8 1045.94 2942.02 1045.94 2966.79 1058 2974.3 1115.9"/>
+        <line class="cls-14" x1="2984.35" y1="1134.85" x2="2874.35" y2="1134.85"/>
+      </g>
+    </g>
+    <g id="Heavy-M">
+      <g>
+        <polyline class="cls-23" points="2671.25 1059.5 2596.36 1059.5 2588.87 1117.3 2596.36 1059.5 2622.26 1047.43 2646.47 1047.43 2671.25 1059.5 2678.75 1117.4"/>
+        <line class="cls-14" x1="2688.81" y1="1136.34" x2="2578.81" y2="1136.34"/>
+      </g>
+    </g>
+    <g id="Bold-M">
+      <g>
+        <polyline class="cls-24" points="2374.53 1059.5 2299.64 1059.5 2292.15 1117.3 2299.64 1059.5 2325.55 1047.43 2349.76 1047.43 2374.53 1059.5 2382.04 1117.4"/>
+        <line class="cls-23" x1="2392.09" y1="1136.34" x2="2282.09" y2="1136.34"/>
+      </g>
+    </g>
+    <g id="Semibold-M">
+      <g>
+        <polyline class="cls-20" points="2077.8 1060.04 2002.92 1060.04 1995.42 1117.85 2002.92 1060.04 2028.82 1047.97 2053.03 1047.97 2077.8 1060.04 2085.31 1117.94"/>
+        <line class="cls-24" x1="2095.37" y1="1136.89" x2="1985.37" y2="1136.89"/>
+      </g>
+    </g>
+    <g id="Medium-M">
+      <g>
+        <polyline class="cls-25" points="1781.11 1059.65 1706.22 1059.65 1698.73 1117.46 1706.22 1059.65 1732.12 1047.59 1756.33 1047.59 1781.11 1059.65 1788.61 1117.55"/>
+        <line class="cls-20" x1="1798.67" y1="1136.5" x2="1688.67" y2="1136.5"/>
+      </g>
+    </g>
+    <g id="Regular-M">
+      <g>
+        <line class="cls-25" x1="1496.96" y1="1136.48" x2="1396.96" y2="1136.48"/>
+        <polygon points="1414.16 1061.29 1407.48 1126.92 1488.76 1126.97 1482.06 1061.29 1414.16 1061.29"/>
+        <polygon points="1437.02 1046.17 1415.8 1056.23 1480.67 1056.23 1460.37 1046.17 1437.02 1046.17"/>
+      </g>
+    </g>
+    <g id="Light-M">
+      <g>
+        <line class="cls-26" x1="1200.25" y1="1136.48" x2="1100.25" y2="1136.48"/>
+        <polygon points="1116.28 1060.76 1109.6 1129.38 1190.88 1129.43 1184.18 1060.76 1116.28 1060.76"/>
+        <polygon points="1139.14 1046.98 1117.92 1057.04 1182.79 1057.04 1162.49 1046.98 1139.14 1046.98"/>
+      </g>
+    </g>
+    <g id="Thin-M">
+      <g>
+        <line class="cls-22" x1="903.54" y1="1136.8" x2="803.54" y2="1136.8"/>
+        <polygon points="819.57 1060.87 812.89 1133.04 894.17 1133.09 887.47 1060.87 819.57 1060.87"/>
+        <polygon points="842.43 1048.83 821.21 1058.89 886.08 1058.88 865.78 1048.83 842.43 1048.83"/>
+      </g>
+    </g>
+    <g id="Ultralight-M">
+      <g>
+        <line class="cls-22" x1="606.83" y1="1136.8" x2="506.83" y2="1136.8"/>
+        <polygon points="522.86 1060.87 516.17 1133.04 597.46 1133.09 590.75 1060.87 522.86 1060.87"/>
+        <polygon points="545.71 1048.83 524.49 1058.89 589.36 1058.88 569.07 1048.83 545.71 1048.83"/>
+      </g>
+    </g>
+    <g id="Black-S">
+      <g>
+        <line class="cls-27" x1="2973.02" y1="698.68" x2="2888.02" y2="698.68"/>
+        <polygon points="2902.57 641.07 2897.04 683.73 2964.23 683.76 2958.69 641.07 2902.57 641.07"/>
+        <polygon points="2921.98 621.73 2905.47 631.87 2955.94 631.87 2940.15 621.73 2921.98 621.73"/>
+      </g>
+    </g>
+    <g id="Heavy-S">
+      <g>
+        <line class="cls-27" x1="2676.31" y1="698.68" x2="2591.31" y2="698.68"/>
+        <polygon points="2605.85 641.07 2600.33 683.73 2667.51 683.76 2661.97 641.07 2605.85 641.07"/>
+        <polygon points="2625.26 621.73 2608.75 631.87 2659.23 631.87 2643.44 621.73 2625.26 621.73"/>
+      </g>
+    </g>
+    <g id="Bold-S">
+      <g>
+        <line class="cls-20" x1="2379.59" y1="699.16" x2="2294.59" y2="699.16"/>
+        <polygon points="2309 641.09 2303.48 685.67 2370.67 685.7 2365.13 641.09 2309 641.09"/>
+        <polygon points="2328.42 622.75 2311.9 632.89 2362.38 632.88 2346.59 622.75 2328.42 622.75"/>
+      </g>
+    </g>
+    <g id="Semibold-S">
+      <g>
+        <line class="cls-28" x1="2082.87" y1="699.16" x2="1997.87" y2="699.16"/>
+        <polygon points="2012.28 640.6 2006.76 687.59 2073.94 687.62 2068.4 640.6 2012.28 640.6"/>
+        <polygon points="2031.69 623.52 2015.18 633.67 2065.65 633.66 2049.86 623.52 2031.69 623.52"/>
+      </g>
+    </g>
+    <g id="Medium-S">
+      <g>
+        <line class="cls-21" x1="1786.18" y1="698.99" x2="1701.18" y2="698.99"/>
+        <polygon points="1715.59 639.92 1710.06 688.46 1777.25 688.5 1771.71 639.92 1715.59 639.92"/>
+        <polygon points="1735 623.61 1718.49 633.75 1768.96 633.75 1753.17 623.61 1735 623.61"/>
+      </g>
+    </g>
+    <g id="Regular-S">
+      <g>
+        <line class="cls-26" x1="1486.96" y1="698.99" x2="1406.96" y2="698.99"/>
+        <polygon points="1418.88 639.4 1413.36 690.6 1480.54 690.64 1475 639.4 1418.88 639.4"/>
+        <polygon points="1438.29 624.04 1421.78 634.19 1472.26 634.19 1456.47 624.04 1438.29 624.04"/>
+      </g>
+    </g>
+    <g id="Light-S">
+      <g>
+        <line class="cls-29" x1="1190.25" y1="698.99" x2="1110.25" y2="698.99"/>
+        <polygon points="1122.17 638.82 1116.65 691.67 1183.84 691.71 1178.3 638.82 1122.17 638.82"/>
+        <polygon points="1141.59 624.64 1125.08 634.78 1175.55 634.78 1159.76 624.64 1141.59 624.64"/>
+      </g>
+    </g>
+    <g id="Thin-S">
+      <g>
+        <line class="cls-22" x1="893.54" y1="698.77" x2="813.54" y2="698.77"/>
+        <polygon points="825.47 638.29 819.95 694.58 887.13 694.62 881.59 638.29 825.47 638.29"/>
+        <polygon points="844.88 625.95 828.37 636.1 878.85 636.09 863.05 625.95 844.88 625.95"/>
+      </g>
+    </g>
+    <g id="Ultralight-S">
+      <g>
+        <line class="cls-22" x1="598.9" y1="698.99" x2="518.9" y2="698.99"/>
+        <polygon points="530.83 638.51 525.3 694.8 592.49 694.84 586.95 638.51 530.83 638.51"/>
+        <polygon points="550.24 626.18 533.73 636.32 584.2 636.32 568.41 626.18 550.24 626.18"/>
+      </g>
+    </g>
+  </g>
+</svg>

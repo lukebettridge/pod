@@ -1,0 +1,396 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="3300" height="2200" viewBox="0 0 3300 2200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-2, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-7 {
+        fill: none;
+      }
+
+      .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-2, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37 {
+        stroke: #000;
+      }
+
+      .cls-11, .cls-2, .cls-7 {
+        stroke-width: 0.5px;
+      }
+
+      .cls-3, .cls-6 {
+        isolation: isolate;
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: -0.06em;
+      }
+
+      .cls-6 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-7 {
+        stroke: #00aeef;
+      }
+
+      .cls-8 {
+        letter-spacing: -0.11em;
+      }
+
+      .cls-9 {
+        letter-spacing: -0.07em;
+      }
+
+      .cls-10 {
+        fill: #27aae1;
+      }
+
+      .cls-11 {
+        stroke: #27aae1;
+      }
+
+      .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-12 {
+        stroke-width: 16.2px;
+      }
+
+      .cls-13 {
+        stroke-width: 17.7px;
+      }
+
+      .cls-14 {
+        stroke-width: 14.2px;
+      }
+
+      .cls-15 {
+        stroke-width: 15.7px;
+      }
+
+      .cls-16 {
+        stroke-width: 12.2px;
+      }
+
+      .cls-17 {
+        stroke-width: 13.7px;
+      }
+
+      .cls-18 {
+        stroke-width: 10.2px;
+      }
+
+      .cls-19 {
+        stroke-width: 11.7px;
+      }
+
+      .cls-20 {
+        stroke-width: 8.2px;
+      }
+
+      .cls-21 {
+        stroke-width: 9.7px;
+      }
+
+      .cls-22 {
+        stroke-width: 6.2px;
+      }
+
+      .cls-23 {
+        stroke-width: 7.7px;
+      }
+
+      .cls-24 {
+        stroke-width: 4.2px;
+      }
+
+      .cls-25 {
+        stroke-width: 5.7px;
+      }
+
+      .cls-26 {
+        stroke-width: 2.2px;
+      }
+
+      .cls-27 {
+        stroke-width: 3.7px;
+      }
+
+      .cls-28 {
+        stroke-width: 12.7px;
+      }
+
+      .cls-29 {
+        stroke-width: 11.2px;
+      }
+
+      .cls-30 {
+        stroke-width: 6.7px;
+      }
+
+      .cls-31 {
+        stroke-width: 5.2px;
+      }
+
+      .cls-32 {
+        stroke-width: 9.2px;
+      }
+
+      .cls-33 {
+        stroke-width: 10.7px;
+      }
+
+      .cls-34 {
+        stroke-width: 7.2px;
+      }
+
+      .cls-35 {
+        stroke-width: 8.7px;
+      }
+
+      .cls-36 {
+        stroke-width: 3.2px;
+      }
+
+      .cls-37 {
+        stroke-width: 4.7px;
+      }
+    </style>
+  </defs>
+  <g id="Notes">
+    <rect id="artboard" class="cls-1" width="3300" height="2200"/>
+    <line class="cls-2" x1="263" y1="292" x2="3036" y2="292"/>
+    <text class="cls-3" transform="translate(263 322)"><tspan class="cls-4">W</tspan><tspan x="11.11" y="0">eight/Scale </tspan><tspan class="cls-5" x="77.8" y="0">V</tspan><tspan x="85.14" y="0">ariations</tspan></text>
+    <text class="cls-6" transform="translate(536.04 322)">Ultralight</text>
+    <text class="cls-6" transform="translate(844.75 322)">Thin</text>
+    <text class="cls-6" transform="translate(1140.12 322)">Light</text>
+    <text class="cls-6" transform="translate(1428.83 322)">Regular</text>
+    <text class="cls-6" transform="translate(1725.22 322)">Medium</text>
+    <text class="cls-6" transform="translate(2018.26 322)">Semibold</text>
+    <text class="cls-6" transform="translate(2327.97 322)">Bold</text>
+    <text class="cls-6" transform="translate(2619.68 322)">Heavy</text>
+    <text class="cls-6" transform="translate(2918.73 322)">Black</text>
+    <line class="cls-2" x1="263" y1="1903" x2="3036" y2="1903"/>
+    <path d="M272.25,1933.83a7.88,7.88,0,1,0-7.88-7.88A7.95,7.95,0,0,0,272.25,1933.83Zm0-1.48a6.4,6.4,0,1,1,6.39-6.4A6.36,6.36,0,0,1,272.25,1932.35Zm-2.85-5.67h2.11v2.12a.73.73,0,1,0,1.46,0v-2.12h2.13a.69.69,0,0,0,.74-.72.7.7,0,0,0-.74-.74H273v-2.11a.73.73,0,1,0-1.46,0v2.11H269.4a.71.71,0,0,0-.76.74A.7.7,0,0,0,269.4,1926.68Z"/>
+    <path d="M293.22,1935.91a10,10,0,1,0-10-10A10,10,0,0,0,293.22,1935.91Zm0-1.66a8.3,8.3,0,1,1,8.3-8.3A8.27,8.27,0,0,1,293.22,1934.25Zm-3.73-7.48h2.89v2.91a.78.78,0,0,0,.82.82.79.79,0,0,0,.83-.82v-2.91h2.91a.78.78,0,0,0,.82-.81.79.79,0,0,0-.82-.83H294v-2.89a.83.83,0,1,0-1.65,0v2.89h-2.89a.82.82,0,1,0,0,1.64Z"/>
+    <path d="M319.89,1938.66A12.72,12.72,0,1,0,307.18,1926,12.8,12.8,0,0,0,319.89,1938.66Zm0-1.81a10.9,10.9,0,1,1,10.9-10.9A10.87,10.87,0,0,1,319.89,1936.85Zm-4.91-10h4v4a.9.9,0,1,0,1.79,0v-4h4a.91.91,0,1,0,0-1.81h-4v-4a.9.9,0,1,0-1.79,0v4h-4a.91.91,0,1,0,0,1.81Z"/>
+    <text class="cls-3" transform="translate(263 1953)">Design <tspan class="cls-5" x="43.34" y="0">V</tspan><tspan x="50.68" y="0">ariations</tspan></text>
+    <text class="cls-6" transform="translate(263 1971)">Symbols are supported in up to nine weights and three scales.</text>
+    <text class="cls-6" transform="translate(263 1989)">For optimal layout with text and other symbols, vertically align</text>
+    <text class="cls-6" transform="translate(263 2007)">symbols with the adjacent text.</text>
+    <line class="cls-7" x1="776" y1="1919" x2="776" y2="1933"/>
+    <path d="M779.31,1933.13c.52,0,.77-.2,1-.74l1.26-3.45h5.76l1.26,3.45a.89.89,0,0,0,1,.74.78.78,0,0,0,.85-.8,1.4,1.4,0,0,0-.11-.53l-4.58-12.19a1.24,1.24,0,0,0-1.25-.9,1.21,1.21,0,0,0-1.23.89l-4.58,12.21a1.4,1.4,0,0,0-.11.53A.75.75,0,0,0,779.31,1933.13Zm2.7-5.67,2.37-6.57h0l2.37,6.57Z"/>
+    <line class="cls-7" x1="792.84" y1="1919" x2="792.84" y2="1933"/>
+    <text class="cls-3" transform="translate(776 1953)">Margins</text>
+    <text class="cls-6" transform="translate(776 1971)">Leading and trailing margins on the left and right side of each symbol</text>
+    <text class="cls-6" transform="translate(776 1989)">can be adjusted by modifying the x-location of the margin guidelines.</text>
+    <text class="cls-6" transform="translate(776 2007)">Modifications are automatically applied proportionally to all</text>
+    <text class="cls-6" transform="translate(776 2025)">scales and weights.</text>
+    <path d="M1291.84,1934.87l1.7,1.7c.86.87,1.85.81,2.77-.21l10.18-11.21a1.63,1.63,0,0,0,.85,0l1.06-.2.67.68,0,.55a1.55,1.55,0,0,0,.58,1.36l.76.74a1,1,0,0,0,1.56,0l2.91-2.92a1,1,0,0,0,0-1.54l-.77-.76a1.57,1.57,0,0,0-1.33-.6l-.58,0-.64-.63.24-1.13a1.57,1.57,0,0,0-.61-1.59l-2.2-2.19c-3.34-3.32-7.77-3.24-10.66-.35a1.14,1.14,0,0,0-.22,1.38,1.17,1.17,0,0,0,1.34.43,5.39,5.39,0,0,1,4.41.54l-.58,1.45a1.66,1.66,0,0,0-.1,1.24l-11.06,10.39C1291.06,1933,1291,1934,1291.84,1934.87Zm7.91-17.83a6.07,6.07,0,0,1,8,.75l2.43,2.42a.69.69,0,0,1,.21.76l-.32,1.48,1.5,1.49,1-.06a.54.54,0,0,1,.52.2l.58.58-2.44,2.44-.58-.57a.58.58,0,0,1-.21-.54l.07-1-1.5-1.48-1.52.25a.66.66,0,0,1-.72-.19l-2-2c-.25-.23-.28-.4-.12-.77l.87-2.09a5.75,5.75,0,0,0-5.62-1.48C1299.68,1917.28,1299.62,1917.15,1299.75,1917Zm-5.48,18.26-1.17-1.16c-.47-.46-.36-.8,0-1.16L1304,1922.8l1.47,1.49-10,11C1295.07,1935.68,1294.74,1935.77,1294.27,1935.3Z"/>
+    <text class="cls-3" transform="translate(1289 1953)">Exporting</text>
+    <text class="cls-6" transform="translate(1289 1971)">Symbols should be outlined when exporting to ensure the</text>
+    <text class="cls-6" transform="translate(1289 1989)">design is preserved when submitting to Xcode.</text>
+    <text id="template-version" class="cls-6" transform="translate(2958.85 1933)"><tspan class="cls-8">T</tspan><tspan x="6" y="0">emplate </tspan><tspan class="cls-9" x="52.03" y="0">v</tspan><tspan x="57.13" y="0">.2.0</tspan></text>
+    <text class="cls-6" transform="translate(2878.58 1951)">Requires Xcode 12 or greater</text>
+    <text class="cls-6" transform="translate(2843.23 1969)">Generated from arro<tspan class="cls-5" x="108.71" y="0">w</tspan><tspan x="116.72" y="0">.rectanglepath</tspan></text>
+    <text class="cls-6" transform="translate(2921.92 1987)"><tspan class="cls-5">T</tspan><tspan x="6.67" y="0">ypeset at 100 points</tspan></text>
+    <text class="cls-6" transform="translate(263 726)">Small</text>
+    <text class="cls-6" transform="translate(263 1156)">Medium</text>
+    <text class="cls-6" transform="translate(263 1586)">Large</text>
+  </g>
+  <g id="Guides">
+    <g id="H-reference">
+      <path class="cls-10" d="M340,696h2.68L352,671.54h32.76L394.13,696h2.63l-27.14-70.46h-2.5Zm28.37-67.14h.09l15.43,40.43h-31Z"/>
+    </g>
+    <line id="Baseline-S" class="cls-11" x1="263" y1="696" x2="3036" y2="696"/>
+    <line id="Capline-S" class="cls-11" x1="263" y1="625.54" x2="3036" y2="625.54"/>
+    <g id="H-reference-2" data-name="H-reference">
+      <path class="cls-10" d="M340,1126h2.68l9.33-24.46h32.76l9.38,24.46h2.63l-27.14-70.46h-2.5Zm28.37-67.14h.09l15.43,40.43h-31Z"/>
+    </g>
+    <line id="Baseline-M" class="cls-11" x1="263" y1="1126" x2="3036" y2="1126"/>
+    <line id="Capline-M" class="cls-11" x1="263" y1="1055.54" x2="3036" y2="1055.54"/>
+    <g id="H-reference-3" data-name="H-reference">
+      <path class="cls-10" d="M340,1556h2.68l9.33-24.46h32.76l9.38,24.46h2.63l-27.14-70.46h-2.5Zm28.37-67.14h.09l15.43,40.43h-31Z"/>
+    </g>
+    <line id="Baseline-L" class="cls-11" x1="263" y1="1556" x2="3036" y2="1556"/>
+    <line id="Capline-L" class="cls-11" x1="263" y1="1485.54" x2="3036" y2="1485.54"/>
+    <line id="left-margin" class="cls-7" x1="1379.82" y1="1030.79" x2="1379.82" y2="1150.12"/>
+    <line id="right-margin" class="cls-7" x1="1519.86" y1="1030.79" x2="1519.86" y2="1150.12"/>
+  </g>
+  <g id="Symbols">
+    <g id="Black-L">
+      <g>
+        <polyline class="cls-12" points="2974.34 1478.12 2886.69 1478.12 2877.92 1552.98 2886.69 1478.12 2917.01 1462.49 2945.34 1462.49 2974.34 1478.12 2983.12 1553.1"/>
+        <line class="cls-13" x1="3000.52" y1="1574.46" x2="2860.52" y2="1574.46"/>
+      </g>
+    </g>
+    <g id="Heavy-L">
+      <g>
+        <polyline class="cls-12" points="2682.47 1480.53 2585.12 1480.53 2575.38 1555.39 2585.12 1480.53 2618.79 1464.9 2650.26 1464.9 2682.47 1480.53 2692.23 1555.51"/>
+        <line class="cls-13" x1="2703.8" y1="1576.88" x2="2563.8" y2="1576.88"/>
+      </g>
+    </g>
+    <g id="Bold-L">
+      <g>
+        <polyline class="cls-14" points="2385.76 1480.53 2288.41 1480.53 2278.67 1555.39 2288.41 1480.53 2322.08 1464.9 2353.56 1464.9 2385.76 1480.53 2395.52 1555.51"/>
+        <line class="cls-15" x1="2407.09" y1="1576.88" x2="2267.09" y2="1576.88"/>
+      </g>
+    </g>
+    <g id="Semibold-L">
+      <g>
+        <polyline class="cls-16" points="2088.29 1480.53 1990.94 1480.53 1981.19 1555.39 1990.94 1480.53 2024.61 1464.9 2056.08 1464.9 2088.29 1480.53 2098.05 1555.51"/>
+        <line class="cls-17" x1="2109.62" y1="1576.88" x2="1969.62" y2="1576.88"/>
+      </g>
+    </g>
+    <g id="Medium-L">
+      <g>
+        <polyline class="cls-18" points="1788.39 1480.53 1691.03 1480.53 1681.29 1555.39 1691.03 1480.53 1724.7 1464.9 1756.18 1464.9 1788.39 1480.53 1798.14 1555.51"/>
+        <line class="cls-19" x1="1809.72" y1="1576.88" x2="1669.72" y2="1576.88"/>
+      </g>
+    </g>
+    <g id="Regular-L">
+      <g>
+        <polyline class="cls-20" points="1496.71 1480.62 1399.35 1480.62 1389.61 1555.48 1399.35 1480.62 1433.02 1465 1464.5 1465 1496.71 1480.62 1506.46 1555.61"/>
+        <line class="cls-21" x1="1518.04" y1="1576.97" x2="1378.04" y2="1576.97"/>
+      </g>
+    </g>
+    <g id="Light-L">
+      <g>
+        <polyline class="cls-22" points="1199.99 1480.62 1102.64 1480.62 1092.9 1555.48 1102.64 1480.62 1136.31 1465 1167.79 1465 1199.99 1480.62 1209.75 1555.61"/>
+        <line class="cls-23" x1="1221.32" y1="1576.97" x2="1081.32" y2="1576.97"/>
+      </g>
+    </g>
+    <g id="Thin-L">
+      <g>
+        <polyline class="cls-24" points="901.13 1481.1 803.78 1481.1 794.03 1555.96 803.78 1481.1 837.45 1465.47 868.92 1465.47 901.13 1481.1 910.89 1556.08"/>
+        <line class="cls-25" x1="922.46" y1="1577.45" x2="782.46" y2="1577.45"/>
+      </g>
+    </g>
+    <g id="Ultralight-L">
+      <g>
+        <polyline class="cls-26" points="603.35 1480.1 505.99 1480.1 496.25 1554.96 505.99 1480.1 539.66 1464.47 571.14 1464.47 603.35 1480.1 613.11 1555.08"/>
+        <line class="cls-27" x1="624.68" y1="1576.45" x2="484.68" y2="1576.45"/>
+      </g>
+    </g>
+    <g id="Black-M">
+      <g>
+        <polyline class="cls-28" points="2966.79 1058 2891.9 1058 2884.41 1115.81 2891.9 1058 2917.8 1045.94 2942.02 1045.94 2966.79 1058 2974.3 1115.9"/>
+        <line class="cls-14" x1="2984.35" y1="1134.85" x2="2874.35" y2="1134.85"/>
+      </g>
+    </g>
+    <g id="Heavy-M">
+      <g>
+        <polyline class="cls-28" points="2671.25 1059.5 2596.36 1059.5 2588.87 1117.3 2596.36 1059.5 2622.26 1047.43 2646.47 1047.43 2671.25 1059.5 2678.75 1117.4"/>
+        <line class="cls-14" x1="2688.81" y1="1136.34" x2="2578.81" y2="1136.34"/>
+      </g>
+    </g>
+    <g id="Bold-M">
+      <g>
+        <polyline class="cls-29" points="2374.53 1059.5 2299.64 1059.5 2292.15 1117.3 2299.64 1059.5 2325.55 1047.43 2349.76 1047.43 2374.53 1059.5 2382.04 1117.4"/>
+        <line class="cls-28" x1="2392.09" y1="1136.34" x2="2282.09" y2="1136.34"/>
+      </g>
+    </g>
+    <g id="Semibold-M">
+      <g>
+        <polyline class="cls-21" points="2077.8 1060.04 2002.92 1060.04 1995.42 1117.85 2002.92 1060.04 2028.82 1047.97 2053.03 1047.97 2077.8 1060.04 2085.31 1117.94"/>
+        <line class="cls-29" x1="2095.37" y1="1136.89" x2="1985.37" y2="1136.89"/>
+      </g>
+    </g>
+    <g id="Medium-M">
+      <g>
+        <polyline class="cls-20" points="1781.11 1059.65 1706.22 1059.65 1698.73 1117.46 1706.22 1059.65 1732.12 1047.59 1756.33 1047.59 1781.11 1059.65 1788.61 1117.55"/>
+        <line class="cls-21" x1="1798.67" y1="1136.5" x2="1688.67" y2="1136.5"/>
+      </g>
+    </g>
+    <g id="Regular-M">
+      <g>
+        <polyline class="cls-30" points="1484.4 1059.63 1409.51 1059.63 1402.02 1117.44 1409.51 1059.63 1435.41 1047.57 1459.63 1047.57 1484.4 1059.63 1491.91 1117.53"/>
+        <line class="cls-20" x1="1501.96" y1="1136.48" x2="1391.96" y2="1136.48"/>
+      </g>
+    </g>
+    <g id="Light-M">
+      <g>
+        <polyline class="cls-31" points="1187.69 1059.63 1112.81 1059.63 1105.31 1117.44 1112.81 1059.63 1138.71 1047.57 1162.92 1047.57 1187.69 1059.63 1195.2 1117.53"/>
+        <line class="cls-30" x1="1205.25" y1="1136.48" x2="1095.25" y2="1136.48"/>
+      </g>
+    </g>
+    <g id="Thin-M">
+      <g>
+        <polyline class="cls-27" points="890.98 1059.67 816.09 1059.67 808.6 1117.47 816.09 1059.67 842 1047.6 866.21 1047.6 890.98 1059.67 898.49 1117.57"/>
+        <line class="cls-31" x1="908.54" y1="1136.51" x2="798.54" y2="1136.51"/>
+      </g>
+    </g>
+    <g id="Ultralight-M">
+      <g>
+        <polyline class="cls-26" points="594.27 1059.95 519.38 1059.95 511.88 1117.76 519.38 1059.95 545.28 1047.89 569.49 1047.89 594.27 1059.95 601.77 1117.85"/>
+        <line class="cls-27" x1="611.83" y1="1136.8" x2="501.83" y2="1136.8"/>
+      </g>
+    </g>
+    <g id="Black-S">
+      <g>
+        <polyline class="cls-32" points="2959.58 636.47 2901.45 636.47 2895.64 681.48 2901.45 636.47 2921.56 627.08 2940.35 627.08 2959.58 636.47 2965.41 681.55"/>
+        <line class="cls-33" x1="2973.02" y1="698.68" x2="2888.02" y2="698.68"/>
+      </g>
+    </g>
+    <g id="Heavy-S">
+      <g>
+        <polyline class="cls-32" points="2662.87 636.47 2604.74 636.47 2598.92 681.48 2604.74 636.47 2624.84 627.08 2643.64 627.08 2662.87 636.47 2668.69 681.55"/>
+        <line class="cls-33" x1="2676.31" y1="698.68" x2="2591.31" y2="698.68"/>
+      </g>
+    </g>
+    <g id="Bold-S">
+      <g>
+        <polyline class="cls-20" points="2366.15 636.95 2308.03 636.95 2302.21 681.96 2308.03 636.95 2328.13 627.55 2346.92 627.55 2366.15 636.95 2371.98 682.03"/>
+        <line class="cls-21" x1="2379.59" y1="699.16" x2="2294.59" y2="699.16"/>
+      </g>
+    </g>
+    <g id="Semibold-S">
+      <g>
+        <polyline class="cls-34" points="2069.45 636.95 2011.32 636.95 2005.51 681.96 2011.32 636.95 2031.42 627.55 2050.22 627.55 2069.45 636.95 2075.27 682.03"/>
+        <line class="cls-35" x1="2082.89" y1="699.16" x2="1997.89" y2="699.16"/>
+      </g>
+    </g>
+    <g id="Medium-S">
+      <g>
+        <polyline class="cls-22" points="1772.73 636.78 1714.61 636.78 1708.79 681.79 1714.61 636.78 1734.71 627.39 1753.51 627.39 1772.73 636.78 1778.56 681.86"/>
+        <line class="cls-23" x1="1786.18" y1="698.99" x2="1701.18" y2="698.99"/>
+      </g>
+    </g>
+    <g id="Regular-S">
+      <g>
+        <polyline class="cls-31" points="1476.02 636.78 1417.89 636.78 1412.08 681.79 1417.89 636.78 1438 627.39 1456.79 627.39 1476.02 636.78 1481.85 681.86"/>
+        <line class="cls-30" x1="1489.46" y1="698.99" x2="1404.46" y2="698.99"/>
+      </g>
+    </g>
+    <g id="Light-S">
+      <g>
+        <polyline class="cls-24" points="1179.31 636.78 1121.18 636.78 1115.37 681.79 1121.18 636.78 1141.29 627.39 1160.08 627.39 1179.31 636.78 1185.13 681.86"/>
+        <line class="cls-25" x1="1192.75" y1="698.99" x2="1107.75" y2="698.99"/>
+      </g>
+    </g>
+    <g id="Thin-S">
+      <g>
+        <polyline class="cls-36" points="882.6 637.56 824.48 637.56 818.66 682.57 824.48 637.56 844.58 628.16 863.37 628.16 882.6 637.56 888.43 682.64"/>
+        <line class="cls-37" x1="896.04" y1="699.77" x2="811.04" y2="699.77"/>
+      </g>
+    </g>
+    <g id="Ultralight-S">
+      <g>
+        <polyline class="cls-26" points="587.96 636.78 529.83 636.78 524.02 681.79 529.83 636.78 549.94 627.39 568.73 627.39 587.96 636.78 593.78 681.86"/>
+        <line class="cls-27" x1="601.4" y1="698.99" x2="516.4" y2="698.99"/>
+      </g>
+    </g>
+  </g>
+</svg>
