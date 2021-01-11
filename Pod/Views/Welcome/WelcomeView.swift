@@ -14,12 +14,6 @@ struct WelcomeView: View {
         VStack(alignment: .leading) {
             Spacer()
             
-//            Image("Pod")
-//                .resizable()
-//                .frame(width: 60, height: 60)
-//                .clipShape(RoundedRectangle(cornerRadius: 12.5))
-//                .padding(.bottom, 5)
-            
             Text("Hello there,\nwelcome to Pod.")
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -44,8 +38,7 @@ struct WelcomeView: View {
                 WelcomeItem(
                     icon: "heart.text.square.fill",
                     title: "Health",
-                    description: "Provides an easy way of tracking your caffeine intake.",
-                    comingSoon: true
+                    description: "Provides an easy way of tracking your caffeine intake."
                 )
                 
             }

@@ -9,7 +9,8 @@ import Combine
 import Resolver
 
 class CollectionViewModel: ObservableObject {
-    @Published var podRepository: PodRepository = Resolver.resolve()
+    private var podRepository: PodRepository = Resolver.resolve()
+    
     @Published var pods: [Pod] = []
     @Published var isLoading = false
     

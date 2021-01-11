@@ -15,11 +15,21 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>To log caffeine to the Health app, you must allow Pod access to HealthKit.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>To log caffeine to the Health app, you must give Pod permission to write Health data.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FSLucasPro-Bold.ttf</string>
+		<string>FSLucasPro-Med.ttf</string>
+		<string>FSLucasPro-SemiBd.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

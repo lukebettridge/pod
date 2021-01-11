@@ -18,8 +18,6 @@ struct Browse: View {
                 } else {
                     PodList(brand: browseVM.brands[0])
                     
-                    
-                    
 //                    ScrollView(.vertical) {
 //                        LazyVGrid(columns: [GridItem(.flexible())], spacing: 30) {
 //                            ForEach (browseVM.brands) { brand in

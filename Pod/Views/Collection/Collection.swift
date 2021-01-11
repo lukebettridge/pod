@@ -24,8 +24,8 @@ struct Collection: View {
                     if collectionItems.count > 0 {
                         CollectionList(
                             pods: $collectionVM.pods,
-                            selectPod: { pod in selectedPod = pod },
-                            collectionItems: collectionItems
+                            collectionItems: collectionItems,
+                            selectPod: { pod in selectedPod = pod }
                         )
                     } else {
                         CollectionEmpty()
@@ -36,7 +36,7 @@ struct Collection: View {
         }
         .navigationViewStyle(DefaultNavigationViewStyle())
         .sheet(item: $selectedPod) {
-            PodItem(pod: $0, exit: { selectedPod = nil })
+            PodPage(pod: $0, exit: { selectedPod = nil })
                 .environment(\.managedObjectContext, managedObjectContext)
         }
     }

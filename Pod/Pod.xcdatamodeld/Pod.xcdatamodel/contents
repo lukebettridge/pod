@@ -3,10 +3,18 @@
     <entity name="CollectionItem" representedClassName=".CollectionItem" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="favourite" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="podId" optional="YES" attributeType="String"/>
         <attribute name="quantity" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="LogItem" representedClassName=".LogItem" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="cup" optional="YES" attributeType="String"/>
+        <attribute name="loggedToHealth" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="podId" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
-        <element name="CollectionItem" positionX="-63" positionY="-18" width="128" height="14"/>
+        <element name="CollectionItem" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="LogItem" positionX="-63" positionY="-27" width="128" height="89"/>
     </elements>
 </model>

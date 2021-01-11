@@ -46,10 +46,9 @@ struct PodList: View {
                                 Section(
                                     header:
                                         VStack(alignment: .leading) {
-                                            Text(category.name ?? "")
-                                                .font(.headline)
-                                                .fontWeight(.semibold)
-                                                .padding(.bottom, 0.5)
+                                            Text((category.name ?? "").uppercased())
+                                                .font(.custom("FSLucasPro-Bold", size: 18))
+                                                .padding(.bottom, 0.1)
                                             Text(category.description ?? "")
                                                 .font(.caption)
                                                 .foregroundColor(Color.gray)
@@ -58,7 +57,8 @@ struct PodList: View {
                                 ) {
                                     PodListGrid(
                                         pods: podListVM.filteredPods.filter { $0.category?.id == category.id },
-                                        selectPod: { pod in selectedPod = pod }
+                                        selectPod: { pod in selectedPod = pod },
+                                        isLimitedEdition: category.name == "Limited Edition"
                                     )
                                 }
                             }
@@ -73,7 +73,7 @@ struct PodList: View {
                     .padding(.bottom, 30)
                 }
                 .sheet(item: $selectedPod) {
-                    PodItem(pod: $0, exit: { selectedPod = nil })
+                    PodPage(pod: $0, exit: { selectedPod = nil })
                         .environment(\.managedObjectContext, managedObjectContext)
                 }
             }
@@ -84,7 +84,7 @@ struct PodList: View {
         .onChange(of: selectedVariety, perform: { selectedVariety in
             podListVM.filterResults(query: searchBar.text, varietyIndex: selectedVariety)
         })
-//        .navigationBarTitle(brand.name ?? "", displayMode: .large)
+//        .navigationBarTitle(brand.name ?? "")
         .add(searchBar)
     }
 }

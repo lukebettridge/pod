@@ -8,29 +8,64 @@
 import SwiftUI
 import CoreData
 
+enum ContentViewActiveSheet: Identifiable {
+    case welcome, log
+    var id: Int { hashValue }
+}
+
 struct ContentView: View {
-    @State var isShowingWelcomeView: Bool = !UserDefaults.standard.bool(forKey: "Launched")
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
+    @State private var activeSheet: ContentViewActiveSheet? =
+        !UserDefaults.standard.bool(forKey: "Launched") ? .welcome : nil
     
     init() {
-       UserDefaults.standard.set(true, forKey: "Launched")
+        UserDefaults.standard.set(true, forKey: "Launched")
     }
     
     var body: some View {
-        TabView {
-            Collection()
-                .tabItem {
-                    Image(systemName: "tray.full")
-                    Text("Collection")
+        GeometryReader { gp in
+            ZStack {
+                TabView {
+                    Collection()
+                        .tabItem {
+                            Image(systemName: "rectangle.fill.badge.person.crop")
+                            Text("Collection")
+                        }
+                    Trends()
+                        .tabItem {
+                            Image(systemName: "chart.bar.fill")
+                            Text("Trends")
+                        }
+                    Spacer()
+                    Browse()
+                        .tabItem {
+                            Image(systemName: "square.grid.3x2.fill")
+                            Text("Browse")
+                        }
+                    Settings()
+                        .tabItem {
+                            Image(systemName: "gearshape.fill")
+                            Text("Settings")
+                        }
                 }
-            Browse()
-                .tabItem {
-                    Image("pod")
-                        .font(Font.system(size: 18).weight(.medium))
-                    Text("Browse")
-                }
+                
+                LogCTA(action: {
+                    activeSheet = .log
+                }, gp: gp)
+            }
         }
-        .sheet(isPresented: $isShowingWelcomeView) {
-            WelcomeView(exit: { isShowingWelcomeView = false })
+        .edgesIgnoringSafeArea(.all)
+        .sheet(item: $activeSheet) { item in
+            Group {
+                switch item {
+                    case .welcome:
+                        WelcomeView(exit: { activeSheet = nil })
+                    case .log:
+                        LogView(exit: { activeSheet = nil })
+                }
+            }
+            .environment(\.managedObjectContext, managedObjectContext)
         }
     }
 }

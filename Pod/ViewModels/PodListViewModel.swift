@@ -18,25 +18,31 @@ class PodListViewModel: ObservableObject {
     @Published var filteredPods: [Pod] = []
     @Published var filteredCategories: [Category] = []
     
-    @Published var isLoading = false
+    @Published var isLoadingPods = false
+    @Published var isLoadingCategories = false
+    var isLoading: Bool {
+        isLoadingPods || isLoadingCategories
+    }
     
     var varieties: [String] {
-        Array(Set(pods.compactMap() { pod in pod.variety }))
+        pods.compactMap() { pod in pod.variety }.unique
             .sorted { $0.lowercased() < $1.lowercased() }
     }
     
     init(brand: Brand) {
-        self.isLoading = true
+        self.isLoadingPods = true
+        self.isLoadingCategories = true
         PodRepository.getByBrand(brand: brand) { pods in
             self.pods = pods
             self.filteredPods = pods.filter {
                 self.varieties.count < 2 || self.varieties[0] == $0.variety ?? ""
             }
-            self.isLoading = false
+            self.isLoadingPods = false
         }
         CategoryRepository.getByBrand(brand: brand) { categories in
             self.categories = categories
             self.filteredCategories = categories
+            self.isLoadingCategories = false
         }
     }
     

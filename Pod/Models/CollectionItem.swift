@@ -9,9 +9,10 @@ import UIKit
 import CoreData
 
 class CollectionItem: NSManagedObject, Identifiable {
-    @NSManaged var podId: String
     @NSManaged var createdAt: Date
     @NSManaged var favourite: Bool
+    @NSManaged var notes: String
+    @NSManaged var podId: String
     @NSManaged var quantity: Int
     
     func save () -> Void {
@@ -21,12 +22,13 @@ class CollectionItem: NSManagedObject, Identifiable {
 }
 
 extension CollectionItem {
-    static func add(podId: String) -> Void {
-        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let collectionItem = NSEntityDescription.insertNewObject(forEntityName: "CollectionItem", into: managedObjectContext) as! CollectionItem
-        collectionItem.podId = podId
+    static func add(_ context: NSManagedObjectContext? = nil, podId: String) -> Void {
+        let context = context ?? (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let collectionItem = NSEntityDescription.insertNewObject(forEntityName: "CollectionItem", into: context) as! CollectionItem
         collectionItem.createdAt = Date()
-        try? managedObjectContext.save()
+        collectionItem.podId = podId
+        collectionItem.quantity = 1
+        try? context.save()
     }
     
     static func exists(podId: String) -> Bool? {
@@ -36,9 +38,9 @@ extension CollectionItem {
         return try? managedObjectContext.count(for: request) > 0
     }
     
-    static func fetchRequest() -> NSFetchRequest<CollectionItem> {
+    static func fetchRequest(sort: Dictionary<String, Bool> = ["createdAt": true]) -> NSFetchRequest<CollectionItem> {
         let request = NSFetchRequest<CollectionItem>(entityName: "CollectionItem")
-        request.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
+        request.sortDescriptors = sort.map { NSSortDescriptor(key: $0.key, ascending: $0.value) }
         return request
     }
     
@@ -50,8 +52,8 @@ extension CollectionItem {
     }
     
     static func remove(collectionItem: CollectionItem) -> Void {
-        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        managedObjectContext.delete(collectionItem)
-        try? managedObjectContext.save()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        context.delete(collectionItem)
+        try? context.save()
     }
 }

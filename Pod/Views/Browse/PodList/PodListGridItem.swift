@@ -29,7 +29,7 @@ struct PodListGridItem: View {
         }) {
             VStack(alignment: .leading) {
                 ZStack {
-                    Image(uiImage: pod.image != nil ? UIImage(data: pod.image!)! : UIImage(named: "Placeholder")!)
+                    pod.image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 125, height: 125)
@@ -47,16 +47,15 @@ struct PodListGridItem: View {
                     }
                 }
                 HStack {
-                    Text(pod.name ?? "")
-                        .font(.caption2)
-                        .fontWeight(.medium)
+                    Text((pod.name ?? "").uppercased())
+                        .font(.custom("FSLucasPro-Bold", size: 12))
                         .foregroundColor(.primary)
                         .lineLimit(1)
                     if pod.decaffeinated ?? false {
                         Decaffeinated()
                     }
                 }
-                Text(pod.origin ?? "")
+                Text(pod.category?.name == "Limited Edition" && pod.introduced != nil ? String(pod.introduced!) : pod.origin ?? "")
                     .font(.caption)
                     .foregroundColor(.gray)
                     .lineLimit(1)
@@ -68,6 +67,18 @@ struct PodListGridItem: View {
         .buttonStyle(PlainButtonStyle())
         .contentShape(RoundedRectangle(cornerRadius: 10))
         .contextMenu {
+            if let collectionItem = collectionItem {
+                Button(action: {
+                    collectionItem.favourite.toggle()
+                    collectionItem.save()
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                }) {
+                    HStack {
+                        Text(collectionItem.favourite ? "Unfavourite" : "Favourite")
+                        Image(systemName: "star.\(collectionItem.favourite ? "slash" : "fill")")
+                    }
+                }
+            }
             Button(action: {
                 if let collectionItem = collectionItem {
                     CollectionItem.remove(collectionItem: collectionItem)
@@ -78,7 +89,7 @@ struct PodListGridItem: View {
             }) {
                 HStack {
                     Text("\(collectionItem != nil ? "Remove from" : "Add to") Collection")
-                    Image(systemName: "text.badge.\(collectionItem != nil ? "checkmark" : "plus")")
+                    Image(systemName: "text.badge.\(collectionItem != nil ? "minus" : "plus")")
                 }
             }
         }

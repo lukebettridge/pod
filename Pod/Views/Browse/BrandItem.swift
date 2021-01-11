@@ -15,7 +15,7 @@ struct BrandItem: View {
     var body: some View {
         NavigationLink(destination: PodList(brand: brand)) {
             VStack(spacing: 0) {
-                Image(uiImage: brand.cover != nil ? UIImage(data: brand.cover!)! : UIImage(named: "Placeholder")!)
+                brand.cover
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .background(Color(UIColor.systemGray6))

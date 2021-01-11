@@ -12,7 +12,7 @@ struct Decaffeinated: View {
     
     var body: some View {
         Text(long ? "DECAFFEINATED" : "DECAF")
-            .font(Font.system(size: 7.5, weight: .medium, design: .monospaced))
+            .font(.custom("FSLucasPro-Bold", size: long ? 12 : 7.5))
             .foregroundColor(.white)
             .padding(.top, 2)
             .padding(.bottom, 1)
@@ -21,5 +21,6 @@ struct Decaffeinated: View {
                 RoundedRectangle(cornerRadius: 4)
                     .fill(Color.red)
             )
+            .padding(.bottom, 2.2)
     }
 }

@@ -9,15 +9,13 @@ import SwiftUI
 
 struct CollectionEmpty: View {
     var body: some View {
-        VStack {
-            Image("pod.fill")
+        VStack(spacing: 7.5) {
+            Image(systemName: "tray.fill")
                 .font(Font.system(size: 95).weight(.light))
-                .foregroundColor(Color(UIColor.systemGray5))
-                .padding(.bottom, 2)
+                .padding(.bottom, 5)
             Text("Your collection is empty")
                 .font(.title3)
-                .fontWeight(.medium)
-                .padding(.vertical, 1)
+                .fontWeight(.bold)
             Text("Find your pods in the Browse tab, press \(Image(systemName: "plus.circle.fill")) to add them to your collection.")
                 .font(.subheadline)
         }

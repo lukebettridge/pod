@@ -12,8 +12,8 @@ struct CollectionList: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     
     @Binding var pods: [Pod]
-    var selectPod: (Pod) -> Void
     var collectionItems: FetchedResults<CollectionItem>
+    var selectPod: (Pod) -> Void
     
     @State private var isShowingEditView: Bool = false
     
@@ -27,10 +27,11 @@ struct CollectionList: View {
                     collectionItems: collectionItems
                 )
                 
-                Spacer()
+                Divider()
+                    .padding(.vertical)
                 
                 ForEach (collectionItems.filter { !$0.favourite }) { collectionItem in
-                    if let pod = pods.first(where: { $0.id ?? "" == collectionItem.podId }) {
+                    if let pod = pods.first(where: { $0.id == collectionItem.podId }) {
                         CollectionRow(
                             pod: pod,
                             collectionItem: collectionItem,
@@ -40,13 +41,14 @@ struct CollectionList: View {
                 }
             }
             .padding()
+            .padding(.bottom, 30)
         }
         .background(
             Color(colorScheme == .dark ? UIColor.systemBackground : UIColor.secondarySystemBackground)
                 .edgesIgnoringSafeArea(.all)
         )
         .sheet(isPresented: $isShowingEditView) {
-            CollectionEdit(
+            FavouritesEdit(
                 pods: $pods,
                 collectionItems: collectionItems,
                 exit: { isShowingEditView.toggle() }

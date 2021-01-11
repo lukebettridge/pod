@@ -9,7 +9,8 @@ import Combine
 import Resolver
 
 class BrowseViewModel: ObservableObject {
-    @Published var brandRepository: BrandRepository = Resolver.resolve()
+    private var brandRepository: BrandRepository = Resolver.resolve()
+    
     @Published var brands: [Brand] = []
     @Published var isLoading = false
     
