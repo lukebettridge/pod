@@ -11,6 +11,7 @@ struct LogActions: View {
     @Environment(\.colorScheme) var colorScheme
     let gp: GeometryProxy
     let cancel: () -> Void
+    let label: String
     let log: () -> Void
     let disabled: Bool
     
@@ -24,7 +25,13 @@ struct LogActions: View {
                 Text("Cancel")
             }
             LogButton(action: log) {
-                Text("Log")
+                VStack(spacing: 2) {
+                    Text("Log")
+                    if !disabled {
+                        Text(label)
+                            .font(.system(size: 9))
+                    }
+                }
             }
             .disabled(disabled)
         }

@@ -41,8 +41,9 @@ struct PodPageDetail: View {
             
             PodTags(pod: pod)
             Group {
+                PodOrigin(origin: pod.origin)
                 HStack(spacing: 10) {
-                    PodOrigin(origin: pod.origin)
+                    PodCaffeine(pod: pod)
                     PodIntensity(intensity: pod.intensity)
                 }
                 HStack(spacing: 10) {

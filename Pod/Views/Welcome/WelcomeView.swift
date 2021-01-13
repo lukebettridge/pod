@@ -38,7 +38,7 @@ struct WelcomeView: View {
                 WelcomeItem(
                     icon: "heart.text.square.fill",
                     title: "Health",
-                    description: "Provides an easy way of tracking your caffeine intake."
+                    description: "Provides an easy way of tracking your water and caffeine intake."
                 )
                 
             }

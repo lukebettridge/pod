@@ -86,6 +86,8 @@
 		B8D93CDF25AA053400E0EC6E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D93CDE25AA053400E0EC6E /* Settings.swift */; };
 		B8D93CE325AAFBCE00E0EC6E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D93CE225AAFBCE00E0EC6E /* String.swift */; };
 		B8D93CE725AAFD2A00E0EC6E /* LogEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D93CE625AAFD2A00E0EC6E /* LogEmpty.swift */; };
+		B8D93CEF25AC78AE00E0EC6E /* PodListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D93CEE25AC78AE00E0EC6E /* PodListRequest.swift */; };
+		B8D93CF225ACF82600E0EC6E /* PodCaffeine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D93CF125ACF82600E0EC6E /* PodCaffeine.swift */; };
 		B8DA62ED25973D1A00074297 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DA62EC25973D1A00074297 /* CloudKit.framework */; };
 		B8DA62F125973F1100074297 /* Pod.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8DA62EF25973F1100074297 /* Pod.xcdatamodeld */; };
 		B8DA62F52597431000074297 /* CollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DA62F42597431000074297 /* CollectionItem.swift */; };
@@ -187,6 +189,8 @@
 		B8D93CDE25AA053400E0EC6E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B8D93CE225AAFBCE00E0EC6E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B8D93CE625AAFD2A00E0EC6E /* LogEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEmpty.swift; sourceTree = "<group>"; };
+		B8D93CEE25AC78AE00E0EC6E /* PodListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodListRequest.swift; sourceTree = "<group>"; };
+		B8D93CF125ACF82600E0EC6E /* PodCaffeine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodCaffeine.swift; sourceTree = "<group>"; };
 		B8DA62E925973D0C00074297 /* Pod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pod.entitlements; sourceTree = "<group>"; };
 		B8DA62EC25973D1A00074297 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B8DA62F025973F1100074297 /* Pod.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pod.xcdatamodel; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 		B888D0F325A3BAE900F1F0A7 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				B8D93CF125ACF82600E0EC6E /* PodCaffeine.swift */,
 				B8EE27B425A48B2000E3176F /* PodCollection.swift */,
 				B8141C6D25A481A200C7DDEA /* PodDescription.swift */,
 				B8EE27B025A48AC600E3176F /* PodFavourite.swift */,
@@ -447,6 +452,7 @@
 				B8F3D2C7259B77320092744D /* PodList.swift */,
 				B8B33D27259C96E300E22EC6 /* PodListGrid.swift */,
 				B81FA8A1259B854A00879F24 /* PodListGridItem.swift */,
+				B8D93CEE25AC78AE00E0EC6E /* PodListRequest.swift */,
 			);
 			path = PodList;
 			sourceTree = "<group>";
@@ -708,6 +714,7 @@
 				B8DA62F125973F1100074297 /* Pod.xcdatamodeld in Sources */,
 				B8AD7A7A25A5181100E31165 /* LogPodRow.swift in Sources */,
 				B8D93CDF25AA053400E0EC6E /* Settings.swift in Sources */,
+				B8D93CF225ACF82600E0EC6E /* PodCaffeine.swift in Sources */,
 				B8371EAE25A9EE1400015714 /* TrendsList.swift in Sources */,
 				B8CC733725A30F50007E59DC /* FavouritesEdit.swift in Sources */,
 				B8DC4B5F259DE2B4000EB3C5 /* PodPage.swift in Sources */,
@@ -716,6 +723,7 @@
 				B8EE27F725A4CEB400E3176F /* LogCTA.swift in Sources */,
 				B888D0F025A36FF400F1F0A7 /* PodScale.swift in Sources */,
 				B8141C6525A47FF600C7DDEA /* PodIntensity.swift in Sources */,
+				B8D93CEF25AC78AE00E0EC6E /* PodListRequest.swift in Sources */,
 				B87FFBDA25A5F9B100D7EB61 /* LogCupRow.swift in Sources */,
 				B8141C6825A4806000C7DDEA /* PodPrice.swift in Sources */,
 				B8AD7A6C25A505E700E31165 /* LogView.swift in Sources */,
@@ -879,7 +887,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pod/Pod.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pod/Preview Content\"";
 				DEVELOPMENT_TEAM = GPM4PVH4B9;
 				ENABLE_PREVIEWS = YES;
@@ -888,7 +896,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.lukebettridge.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -907,7 +915,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pod/Pod.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pod/Preview Content\"";
 				DEVELOPMENT_TEAM = GPM4PVH4B9;
 				ENABLE_PREVIEWS = YES;
@@ -916,7 +924,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.lukebettridge.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

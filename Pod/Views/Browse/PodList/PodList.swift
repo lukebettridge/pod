@@ -28,38 +28,45 @@ struct PodList: View {
             }
             else {
                 ScrollView(.vertical) {
-                    VStack(alignment: .leading) {
-                        if podListVM.varieties.count > 1 {
-                            Picker("Variety", selection: $selectedVariety) {
-                                ForEach(podListVM.varieties, id: \.self) { variety in
-                                    if let index = podListVM.varieties.firstIndex(of: variety) {
-                                        Text(variety).tag(index)
-                                    }
+                    
+                    if podListVM.varieties.count > 1 {
+                        Picker("Variety", selection: $selectedVariety) {
+                            ForEach(podListVM.varieties, id: \.self) { variety in
+                                if let index = podListVM.varieties.firstIndex(of: variety) {
+                                    Text(variety).tag(index)
                                 }
                             }
-                            .pickerStyle(SegmentedPickerStyle())
-                            .padding(.horizontal)
                         }
-                        
+                        .pickerStyle(SegmentedPickerStyle())
+                        .padding(.horizontal)
+                    }
+                    
+                    VStack {
                         if podListVM.filteredCategories.count > 0 {
                             ForEach(podListVM.filteredCategories) { category in
-                                Section(
-                                    header:
-                                        VStack(alignment: .leading) {
-                                            Text((category.name ?? "").uppercased())
-                                                .font(.custom("FSLucasPro-Bold", size: 18))
-                                                .padding(.bottom, 0.1)
-                                            Text(category.description ?? "")
-                                                .font(.caption)
-                                                .foregroundColor(Color.gray)
+                                if let pods = podListVM.filteredPods.filter { $0.category?.id == category.id } {
+                                    if pods.count > 0 {
+                                        Section(
+                                            header:
+                                                VStack(alignment: .leading) {
+                                                    Text((category.name ?? "").uppercased())
+                                                        .font(.custom("FSLucasPro-Bold", size: 18))
+                                                        .padding(.bottom, 0.1)
+                                                    Text(category.description ?? "")
+                                                        .font(.caption)
+                                                        .foregroundColor(Color.gray)
+                                                        .fixedSize(horizontal: false, vertical: true)
+                                                }
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                                .padding()
+                                        ) {
+                                            PodListGrid(
+                                                pods: pods,
+                                                selectPod: { pod in selectedPod = pod },
+                                                isLimitedEdition: category.name == "Limited Edition"
+                                            )
                                         }
-                                        .padding()
-                                ) {
-                                    PodListGrid(
-                                        pods: podListVM.filteredPods.filter { $0.category?.id == category.id },
-                                        selectPod: { pod in selectedPod = pod },
-                                        isLimitedEdition: category.name == "Limited Edition"
-                                    )
+                                    }
                                 }
                             }
                         } else {
@@ -69,12 +76,21 @@ struct PodList: View {
                             )
                         }
                     }
-                    .padding(.top, 7.5)
-                    .padding(.bottom, 30)
-                }
-                .sheet(item: $selectedPod) {
-                    PodPage(pod: $0, exit: { selectedPod = nil })
-                        .environment(\.managedObjectContext, managedObjectContext)
+                    .sheet(item: $selectedPod) {
+                        PodPage(pod: $0, exit: { selectedPod = nil })
+                            .environment(\.managedObjectContext, managedObjectContext)
+                    }
+                    
+                    Group {
+                        if podListVM.filteredPods.count > 0 {
+                            Divider()
+                                .padding(.top, 20)
+                        }
+                        PodListRequest()
+                            .padding(.vertical)
+                    }
+                    .padding(.horizontal)
+                    
                 }
             }
         }

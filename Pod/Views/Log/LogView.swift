@@ -19,6 +19,8 @@ struct LogView: View {
     @State var authorizationStatus: HKAuthorizationStatus? = HealthKit.authorizationStatus()
 
     let exit: () -> Void
+    
+    var cupVolume: Double { Pod.cupVolumes[selectedCup ?? ""] ?? 40 }
     let showLogCaffeine: Bool =
         ![nil, .some(.sharingAuthorized)].contains(HealthKit.authorizationStatus())
     
@@ -64,21 +66,26 @@ struct LogView: View {
                             LogActions(
                                 gp: gp,
                                 cancel: exit,
+                                label: "\(selectedPod?.caffeine(cup: selectedCup) ?? "60")mg, \(String(format: "%.0f", cupVolume))ml",
                                 log: {
-                                    if let podId = selectedPod?.id, let cup = selectedCup {
+                                    if let pod = selectedPod, let cup = selectedCup {
                                         var loggedToHealth = false
-                                        HealthKit.writeCaffeine(dietaryCaffeine: selectedPod!.caffeine, date: Date()) { success, error in
+                                        HealthKit.write(
+                                            dietaryCaffeine: pod.caffeine(cup: cup),
+                                            dietaryWater: cupVolume,
+                                            date: Date()
+                                        ) { success, error in
                                             if success {
                                                 loggedToHealth = true
                                             }
                                             
-                                            if let collectionItem = collectionItems.first(where: { $0.podId == selectedPod?.id }) {
+                                            if let collectionItem = collectionItems.first(where: { $0.podId == pod.id }) {
                                                 if collectionItem.quantity > 0 {
                                                     collectionItem.quantity -= 1
                                                     try? context.save()
                                                 }
                                             }
-                                            LogItem.add(context, podId: podId, cup: cup, loggedToHealth: loggedToHealth)
+                                            LogItem.add(context, podId: pod.id!, cup: cup, loggedToHealth: loggedToHealth)
                                             UINotificationFeedbackGenerator().notificationOccurred(.success)
                                             exit()
                                         }

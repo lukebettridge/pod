@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PodRatings: View {
-    let ratings: Dictionary<RatingType, Int>
+    let ratings: Dictionary<Pod.RatingType, Int>
     let color: Color
     
     var body: some View {

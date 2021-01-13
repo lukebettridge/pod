@@ -41,7 +41,7 @@ struct TrendsHistoryRow: View {
                     .foregroundColor(.gray)
             }
             HStack(alignment: .lastTextBaseline, spacing: 1) {
-                Text("\(Int(pod.caffeine))")
+                Text("\(pod.caffeine(cup: logItem.cup))")
                     .font(.custom("FSLucasPro-SemiBd", size: 45))
                 Text("mg")
                     .font(.custom("FSLucasPro-SemiBd", size: 14))

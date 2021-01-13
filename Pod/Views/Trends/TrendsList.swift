@@ -27,7 +27,7 @@ struct TrendsList: View {
                 )
             }
             .padding()
-            .padding(.bottom, 30)
+            
         }
         .background(
             Color(colorScheme == .dark ? UIColor.systemBackground : UIColor.secondarySystemBackground)

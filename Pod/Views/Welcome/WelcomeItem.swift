@@ -14,7 +14,7 @@ struct WelcomeItem: View {
     var comingSoon: Bool = false
     
     var body: some View {
-        HStack(alignment: .center) {
+        HStack(alignment: .top) {
             Image(systemName: icon)
                 .font(.largeTitle)
                 .foregroundColor(Color.accentColor)

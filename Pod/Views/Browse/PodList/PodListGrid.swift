@@ -19,12 +19,14 @@ struct PodListGrid: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            LazyHGrid(
-                rows: pods.count > 6 ? [gridItem, gridItem] : [gridItem],
-                spacing: -5
-            ) {
-                ForEach(sortedPods) { pod in
-                    PodListGridItem(pod: pod, selectPod: selectPod)
+            if pods.count > 0 {
+                LazyHGrid(
+                    rows: pods.count > 6 ? [gridItem, gridItem] : [gridItem],
+                    spacing: -5
+                ) {
+                    ForEach(sortedPods) { pod in
+                        PodListGridItem(pod: pod, selectPod: selectPod)
+                    }
                 }
             }
         }

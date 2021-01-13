@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct LogButton: View {
+struct LogButton<Content: View>: View {
     let action: () -> Void
     let foregroundColor: Color
     let backgroundColor: Color
-    let content: Text
+    let content: Content
     
     init(
         action: @escaping () -> Void,
         foregroundColor: Color = .white,
         backgroundColor: Color = .accentColor,
-        @ViewBuilder content: () -> Text
+        @ViewBuilder content: () -> Content
     ) {
         self.action = action
         self.foregroundColor = foregroundColor
@@ -29,9 +29,8 @@ struct LogButton: View {
         Button(action: action) {
             content
                 .foregroundColor(foregroundColor)
-                .fontWeight(.medium)
                 .padding(.vertical, 15)
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity, minHeight: 50, maxHeight: .infinity)
                 .background(
                     RoundedRectangle(cornerRadius: 10)
                         .fill(backgroundColor)

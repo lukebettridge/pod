@@ -15,42 +15,62 @@ class HealthKit {
     }
     
     static func authorize(completion: @escaping (Bool, Error?) -> Void) {
-        guard HKHealthStore.isHealthDataAvailable() else {
+        if !HKHealthStore.isHealthDataAvailable() {
             return completion(false, HealthKitSetupError.notAvailableOnDevice)
         }
-     
-        guard let dietaryCaffeine = HKObjectType.quantityType(forIdentifier: .dietaryCaffeine) else {
-            return completion(false, HealthKitSetupError.dataTypeNotAvailable)
+        
+        if let caffeineType = HKObjectType.quantityType(forIdentifier: .dietaryCaffeine),
+           let waterType = HKObjectType.quantityType(forIdentifier: .dietaryWater) {
+            HKHealthStore().requestAuthorization(
+                toShare: [caffeineType, waterType],
+                read: [],
+                completion: completion
+            )
+        } else {
+            completion(false, HealthKitSetupError.dataTypeNotAvailable)
         }
-            
-        let healthKitTypesToWrite: Set<HKSampleType> = [dietaryCaffeine]
-            
-        HKHealthStore().requestAuthorization(
-            toShare: healthKitTypesToWrite,
-            read: [],
-            completion: completion
-        )
     }
     
     static func authorizationStatus() -> HKAuthorizationStatus? {
         if HKHealthStore.isHealthDataAvailable() {
-            if let dietaryCaffeine = HKObjectType.quantityType(forIdentifier: .dietaryCaffeine) {
-                return HKHealthStore().authorizationStatus(for: dietaryCaffeine)
+            if let caffeineType = HKObjectType.quantityType(forIdentifier: .dietaryCaffeine),
+               let waterType = HKObjectType.quantityType(forIdentifier: .dietaryWater) {
+                let status = [
+                    HKHealthStore().authorizationStatus(for: caffeineType),
+                    HKHealthStore().authorizationStatus(for: waterType)
+                ]
+                
+                if status.contains(.sharingDenied) { return .sharingDenied }
+                if status.contains(.notDetermined) { return .notDetermined }
+                return .sharingAuthorized
             }
         }
         return nil
     }
     
-    static func writeCaffeine(
+    static func write(
         dietaryCaffeine: Double,
+        dietaryWater: Double,
         date: Date,
         completion: @escaping (Bool, Error?) -> Void
     ) {
-        if let type = HKObjectType.quantityType(forIdentifier: .dietaryCaffeine) {
-            let unit = HKUnit.gramUnit(with: .milli)
-            let quantity = HKQuantity(unit: unit, doubleValue: dietaryCaffeine)
-            let sample = HKQuantitySample(type: type, quantity: quantity, start: date, end: date)
-            HKHealthStore().save(sample, withCompletion: completion)
+        if let caffeineType = HKObjectType.quantityType(forIdentifier: .dietaryCaffeine),
+           let waterType = HKObjectType.quantityType(forIdentifier: .dietaryWater) {
+            
+            // Caffeine
+            let caffeineUnit = HKUnit.gramUnit(with: .milli)
+            let caffeineQuantity = HKQuantity(unit: caffeineUnit, doubleValue: dietaryCaffeine)
+            let caffeineSample = HKQuantitySample(type: caffeineType, quantity: caffeineQuantity, start: date, end: date)
+            
+            // Water
+            let waterUnit = HKUnit.literUnit(with: .milli)
+            let waterQuantity = HKQuantity(unit: waterUnit, doubleValue: dietaryWater)
+            let waterSample = HKQuantitySample(type: waterType, quantity: waterQuantity, start: date, end: date)
+            
+            HKHealthStore().save([
+                caffeineSample,
+                waterSample
+            ], withCompletion: completion)
             return
         }
         completion(false, HKError(.errorHealthDataUnavailable))

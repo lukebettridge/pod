@@ -23,7 +23,7 @@ struct LogCaffeine: View {
                         .font(.subheadline)
                         .fontWeight(.bold)
                         .foregroundColor(.primary)
-                    Text("Record an estimated amount of caffeine to the Health app.")
+                    Text("Record the amount of caffeine and water to the Health app.")
                         .font(.caption)
                         .foregroundColor(.gray)
                         .fixedSize(horizontal: false, vertical: true)
