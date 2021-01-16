@@ -15,6 +15,8 @@ class Pod: ObservableObject, Identifiable, Equatable {
     }
     
     @DocumentID var id: String?
+    var amazonLink: String?
+    var amazonLinkUS: String?
     var brand: Brand?
     var caffeinePerML: Double
     var category: Category?
@@ -29,7 +31,9 @@ class Pod: ObservableObject, Identifiable, Equatable {
     var notes: [String]?
     var origin: String?
     var price: Double?
+    var priceUS: Double?
     var productLink: String?
+    var productLinkUS: String?
     var profile: String?
     var ratings: Dictionary<RatingType, Int> = [:]
     var tip: String?
@@ -37,6 +41,8 @@ class Pod: ObservableObject, Identifiable, Equatable {
     
     init(_ data: [String: Any], documentID: String?) {
         self.id = data["id"] as? String ?? documentID
+        self.amazonLink = data["amazonLink"] as? String
+        self.amazonLinkUS = data["amazonLinkUS"] as? String
         self.cupSize = data["cupSize"] as? [String] ?? []
         self.decaffeinated = data["decaffeinated"] as? Bool
         self.description = data["description"] as? String
@@ -48,7 +54,9 @@ class Pod: ObservableObject, Identifiable, Equatable {
         self.notes = data["notes"] as? [String]
         self.origin = data["origin"] as? String
         self.price = data["price"] as? Double
+        self.priceUS = data["priceUS"] as? Double
         self.productLink = data["productLink"] as? String
+        self.productLinkUS = data["productLinkUS"] as? String
         self.profile = data["profile"] as? String
         self.tip = data["tip"] as? String
         self.variety = data["variety"] as? String

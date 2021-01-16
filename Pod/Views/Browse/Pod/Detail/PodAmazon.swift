@@ -1,13 +1,13 @@
 //
-//  PodLink.swift
+//  PodAmazon.swift
 //  Pod
 //
-//  Created by Luke Bettridge on 08/01/2021.
+//  Created by Luke Bettridge on 13/01/2021.
 //
 
 import SwiftUI
 
-struct PodLink: View {
+struct PodAmazon: View {
     @Environment(\.openURL) var openURL
     let link: String?
     let linkUS: String?
@@ -21,9 +21,9 @@ struct PodLink: View {
             }) {
                 PodField {
                     VStack(alignment: .center, spacing: 5) {
-                        Image(systemName: "arrow.up.forward.square")
+                        Image(systemName: "cart")
                             .font(.title2)
-                        Text("Product Page")
+                        Text("Purchase")
                             .font(.caption)
                     }
                     .frame(maxWidth: .infinity)
@@ -34,8 +34,8 @@ struct PodLink: View {
     }
 }
 
-struct PodLink_Previews: PreviewProvider {
+struct PodAmazon_Previews: PreviewProvider {
     static var previews: some View {
-        PodLink(link: "https://nespresso.com/gb", linkUS: "https://nespresso.com/us")
+        PodAmazon(link: "https://nespresso.com/gb", linkUS: "https://nespresso.com/us")
     }
 }

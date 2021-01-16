@@ -30,7 +30,10 @@ struct PodPageDetail: View {
                     PodCollection(collectionItem: collectionItem, podId: pod.id)
                     PodReport(name: pod.name)
                 }
-                PodFavourite(collectionItem: collectionItem)
+                HStack(spacing: 10) {
+                    PodFavourite(collectionItem: collectionItem)
+                    PodAmazon(link: pod.amazonLink, linkUS: pod.amazonLinkUS)
+                }
                 PodQuantity(collectionItem: collectionItem)
                 PodNotes(collectionItem: collectionItem)
             }
@@ -47,14 +50,14 @@ struct PodPageDetail: View {
                     PodIntensity(intensity: pod.intensity)
                 }
                 HStack(spacing: 10) {
-                    PodPrice(price: pod.price)
+                    PodPrice(price: pod.price, priceUS: pod.priceUS)
                     PodIntroduced(introduced: pod.introduced)
                 }
                 PodProfile(notes: pod.notes, profile: pod.profile)
                 PodRatings(ratings: pod.ratings, color: pod.color)
                 PodDescription(description: pod.description)
                 PodTip(tip: pod.tip)
-                PodLink(link: pod.productLink)
+                PodLink(link: pod.productLink, linkUS: pod.productLinkUS)
             }
             .foregroundColor(pod.color)
             .padding(.vertical, 2)
