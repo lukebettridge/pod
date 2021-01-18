@@ -23,8 +23,11 @@ struct PodTags: View {
                 }
             }
             Spacer()
-            if pod.decaffeinated ?? false {
-                Decaffeinated(long: true)
+            if pod.available {
+                PodTag("Available", color: pod.color, icon: "checkmark.circle.fill")
+            }
+            if pod.decaffeinated {
+                PodTag("Decaffeinated", color: .red, icon: "slash.circle.fill")
             }
         }
     }

@@ -51,7 +51,7 @@ struct PodListGridItem: View {
                         .font(.custom("FSLucasPro-Bold", size: 12))
                         .foregroundColor(.primary)
                         .lineLimit(1)
-                    if pod.decaffeinated ?? false {
+                    if pod.decaffeinated {
                         Decaffeinated()
                     }
                 }

@@ -1,5 +1,5 @@
 //
-//  LogCupList.swift
+//  LogCup.swift
 //  Pod
 //
 //  Created by Luke Bettridge on 06/01/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LogCupList: View {
+struct LogCup: View {
     var active: Bool
     @Binding var selected: String?
     @Binding var pods: [Pod]
@@ -22,7 +22,7 @@ struct LogCupList: View {
     }
     let defaultCups = ["Ristretto", "Espresso", "Lungo"]
     
-    var gridItem = GridItem(.fixed(75), spacing: 10)
+    var gridItem = GridItem(.fixed(85), spacing: 1)
     
     var body: some View {
         Section(
@@ -42,7 +42,7 @@ struct LogCupList: View {
                         repeating: gridItem,
                         count: min(Int((Double(cups.count) / 4.0).rounded(.up)), 2)
                     ),
-                    spacing: 10
+                    spacing: 1
                 ) {
                     ForEach(cups, id: \.self) { cup in
                         LogCupRow(
@@ -50,18 +50,19 @@ struct LogCupList: View {
                             selected: selected == cup,
                             disabled: !relevantCups.contains(cup)
                         )
-                            .onTapGesture {
-                                if active && selected != cup {
-                                    if relevantCups.contains(cup) {
-                                        selected = cup
-                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                                    } else {
-                                        alertCup = cup
-                                    }
+                        .onTapGesture {
+                            if active && selected != cup {
+                                if relevantCups.contains(cup) {
+                                    selected = cup
+                                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                } else {
+                                    alertCup = cup
                                 }
                             }
+                        }
                     }
                 }
+                .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.horizontal)
             }
             .alert(item: $alertCup) { cup in

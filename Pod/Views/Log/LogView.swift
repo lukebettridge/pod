@@ -44,18 +44,26 @@ struct LogView: View {
                                             .padding(.horizontal)
                                         }
                                         
-                                        LogPodList(
+                                        LogPod(
                                             selected: $selectedPod,
                                             pods: $logVM.pods,
                                             collectionItems: collectionItems
                                         )
                                         
-                                        LogCupList(
+                                        LogCup(
                                             active: selectedPod != nil,
                                             selected: $selectedCup,
                                             pods: $logVM.pods,
                                             relevantCups: selectedPod?.cupSize ?? []
                                         )
+                                        
+                                        if selectedCup != nil {
+                                            Text("Despite our best calculations, these are simply estimates and the caffeine in your beverage may vary.")
+                                                .font(.caption2)
+                                                .foregroundColor(.gray)
+                                                .padding(.top, 7.5)
+                                                .padding(.horizontal)
+                                        }
                                     }
                                     .padding(.bottom, 120)
                                 }

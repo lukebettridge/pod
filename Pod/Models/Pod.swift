@@ -17,12 +17,13 @@ class Pod: ObservableObject, Identifiable, Equatable {
     @DocumentID var id: String?
     var amazonLink: String?
     var amazonLinkUS: String?
+    var available: Bool
     var brand: Brand?
     var caffeinePerML: Double
     var category: Category?
     var color: Color
     var cupSize: [String]
-    var decaffeinated: Bool?
+    var decaffeinated: Bool
     var description: String?
     var image: Image
     var intensity: Int?
@@ -43,8 +44,9 @@ class Pod: ObservableObject, Identifiable, Equatable {
         self.id = data["id"] as? String ?? documentID
         self.amazonLink = data["amazonLink"] as? String
         self.amazonLinkUS = data["amazonLinkUS"] as? String
+        self.available = data["available"] as? Bool ?? false
         self.cupSize = data["cupSize"] as? [String] ?? []
-        self.decaffeinated = data["decaffeinated"] as? Bool
+        self.decaffeinated = data["decaffeinated"] as? Bool ?? false
         self.description = data["description"] as? String
         self.caffeinePerML = data["caffeinePerML"] as? Double
             ?? (data["decaffeinated"] as? Bool ?? false ? 0.075 : 1.5)
@@ -120,9 +122,9 @@ extension Pod {
         "Espresso": 40,
         "Lungo": 110,
         "Alto": 414,
-        "Mug": 230,
+        "Double Espresso": 80,
         "Gran Lungo": 150,
-        "Double Espresso": 80
+        "Mug": 230
     ]
     
     func caffeine(cup: String?) -> String {

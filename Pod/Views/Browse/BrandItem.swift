@@ -11,9 +11,10 @@ struct BrandItem: View {
     @Environment(\.colorScheme) var colorScheme
     
     var brand: Brand
+    @Binding var filter: PodFilter
     
     var body: some View {
-        NavigationLink(destination: PodList(brand: brand)) {
+        NavigationLink(destination: PodList(brand: brand, filter: $filter)) {
             VStack(spacing: 0) {
                 brand.cover
                     .resizable()

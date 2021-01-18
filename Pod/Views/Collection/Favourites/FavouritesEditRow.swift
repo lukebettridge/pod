@@ -20,7 +20,7 @@ struct FavouritesEditRow: View {
                 .clipShape(RoundedRectangle(cornerRadius: 6))
             Text((pod.name ?? "").uppercased())
                 .font(.custom("FSLucasPro-Med", size: 16))
-            if pod.decaffeinated ?? false {
+            if pod.decaffeinated {
                 Decaffeinated()
                     .padding(.leading, -2)
             }

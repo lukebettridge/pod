@@ -12,6 +12,7 @@ class BrowseViewModel: ObservableObject {
     private var brandRepository: BrandRepository = Resolver.resolve()
     
     @Published var brands: [Brand] = []
+    @Published var filter = PodFilter()
     @Published var isLoading = false
     
     init() {

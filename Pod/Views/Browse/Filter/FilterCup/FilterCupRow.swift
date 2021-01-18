@@ -1,17 +1,17 @@
 //
-//  LogCupRow.swift
+//  FilterCupRow.swift
 //  Pod
 //
-//  Created by Luke Bettridge on 06/01/2021.
+//  Created by Luke Bettridge on 17/01/2021.
 //
 
 import SwiftUI
 
-struct LogCupRow: View {
+struct FilterCupRow: View {
     @Environment(\.colorScheme) var colorScheme
     let cup: String
     let selected: Bool
-    let disabled: Bool
+    let disabled: Bool = false
     
     var body: some View {
         VStack(spacing: 2) {
@@ -33,4 +33,3 @@ struct LogCupRow: View {
         .background(selected ? Color.accentColor : Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
     }
 }
-

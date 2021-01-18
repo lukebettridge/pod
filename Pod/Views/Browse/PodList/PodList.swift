@@ -9,16 +9,19 @@ import SwiftUI
 
 struct PodList: View {
     @Environment(\.managedObjectContext) var managedObjectContext
+    var brand: Brand
+    @Binding var filter: PodFilter
+    
     @StateObject private var podListVM: PodListViewModel
     @StateObject private var searchBar = SearchBar()
-    var brand: Brand
     
     @State private var selectedVariety = 0
     @State private var selectedPod: Pod?
     
-    init(brand: Brand) {
+    init(brand: Brand, filter: Binding<PodFilter>) {
         self.brand = brand
-        _podListVM = StateObject(wrappedValue: PodListViewModel(brand: brand))
+        self._filter = filter
+        self._podListVM = StateObject(wrappedValue: PodListViewModel(brand: brand))
     }
     
     var body: some View {
@@ -94,11 +97,17 @@ struct PodList: View {
                 }
             }
         }
+        .onChange(of: filter.isDirty, perform: { isDirty in
+            if isDirty {
+                filter.isDirty = false
+                podListVM.filterResults(filter: filter, query: searchBar.text, varietyIndex: selectedVariety)
+            }
+        })
         .onChange(of: searchBar.text, perform: { searchText in
-            podListVM.filterResults(query: searchText, varietyIndex: selectedVariety)
+            podListVM.filterResults(filter: filter, query: searchText, varietyIndex: selectedVariety)
         })
         .onChange(of: selectedVariety, perform: { selectedVariety in
-            podListVM.filterResults(query: searchBar.text, varietyIndex: selectedVariety)
+            podListVM.filterResults(filter: filter, query: searchBar.text, varietyIndex: selectedVariety)
         })
 //        .navigationBarTitle(brand.name ?? "")
         .add(searchBar)

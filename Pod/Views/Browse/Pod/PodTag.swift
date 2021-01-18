@@ -8,30 +8,35 @@
 import SwiftUI
 
 struct PodTag: View {
+    @Environment(\.colorScheme) var colorScheme
     var text: String
     var color: Color?
+    var icon: String?
     
-    init (_ text: String, color: Color? = nil) {
+    init (_ text: String, color: Color? = nil, icon: String? = nil) {
         self.text = text
         self.color = color
+        self.icon = icon
     }
     
     var body: some View {
-        HStack {
-            if let color = color {
-                Circle()
-                    .stroke()
-                    .fill(color)
-                    .frame(width: 10, height: 10)
+        HStack(spacing: 4) {
+            if let icon = icon {
+                Image(systemName: icon)
+                    .font(.system(size: 12, weight: .bold))
+                    .padding(.bottom, 1)
             }
-            Text(text)
-                .font(.system(size: 11, weight: .medium))
+            Text(text.uppercased())
+                .font(.custom("FSLucasPro-Bold", size: 12))
         }
-        .padding(.vertical, 4.5)
-        .padding(.horizontal, 8.5)
+        .foregroundColor(color ?? .primary)
+        .padding(.top, 3)
+        .padding(.bottom, 2)
+        .padding(.leading, 4)
+        .padding(.trailing, 8)
         .background(
             RoundedRectangle(cornerRadius: 15)
-                .fill(Color(UIColor.systemBackground))
+                .fill(Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
         )
     }
 }

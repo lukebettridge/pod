@@ -1,5 +1,5 @@
 //
-//  LogPodList.swift
+//  LogPod.swift
 //  Pod
 //
 //  Created by Luke Bettridge on 05/01/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LogPodList: View {
+struct LogPod: View {
     @Binding var selected: Pod?
     @Binding var pods: [Pod]
     var collectionItems: FetchedResults<CollectionItem>
@@ -48,16 +48,16 @@ struct LogPodList: View {
                                 selected: selected?.id! == pod.id!,
                                 disabled: collectionItem.quantity == 0
                             )
-                                .onTapGesture {
-                                    if selected?.id! != pod.id! {
-                                        if collectionItem.quantity > 0 {
-                                            selected = pod
-                                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                                        } else {
-                                            alertPod = pod
-                                        }
+                            .onTapGesture {
+                                if selected?.id! != pod.id! {
+                                    if collectionItem.quantity > 0 {
+                                        selected = pod
+                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                    } else {
+                                        alertPod = pod
                                     }
                                 }
+                            }
                         }
                     }
                 }

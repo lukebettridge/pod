@@ -19,7 +19,7 @@ struct CollectionList: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(spacing: 10) {
                 CollectionFavourites(
                     pods: $pods,
                     selectPod: selectPod,
@@ -39,6 +39,11 @@ struct CollectionList: View {
                         )
                     }
                 }
+                
+                Text("You have \(collectionItems.count) capsules in your collection.")
+                    .font(.caption2)
+                    .foregroundColor(.gray)
+                    .padding(.top, 5)
             }
             .padding()
             .padding(.bottom, 30)

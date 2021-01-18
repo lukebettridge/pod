@@ -32,12 +32,23 @@
 		B8371EAE25A9EE1400015714 /* TrendsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8371EAD25A9EE1400015714 /* TrendsList.swift */; };
 		B8371EB125A9EF9100015714 /* TrendsHistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8371EB025A9EF9100015714 /* TrendsHistoryRow.swift */; };
 		B8371EB625A9F1D300015714 /* TrendsHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8371EB525A9F1D300015714 /* TrendsHistory.swift */; };
+		B838E45125B4A45B00677917 /* FilterIntensityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B838E45025B4A45B00677917 /* FilterIntensityRow.swift */; };
+		B838E45425B4ACE400677917 /* FilterActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B838E45325B4ACE400677917 /* FilterActions.swift */; };
+		B842901825B4CB8F0043C2DE /* FilterCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842901725B4CB8F0043C2DE /* FilterCup.swift */; };
+		B842901B25B4CC640043C2DE /* FilterCupRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842901A25B4CC640043C2DE /* FilterCupRow.swift */; };
+		B842901E25B4D1C30043C2DE /* FilterDecaffeinated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842901D25B4D1C30043C2DE /* FilterDecaffeinated.swift */; };
+		B842902325B4D2D00043C2DE /* FilterDecaffeinatedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842902225B4D2D00043C2DE /* FilterDecaffeinatedRow.swift */; };
+		B842902C25B4D6690043C2DE /* FilterAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842902B25B4D6690043C2DE /* FilterAvailable.swift */; };
+		B842903025B4D6730043C2DE /* FilterAvailableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842902F25B4D6730043C2DE /* FilterAvailableRow.swift */; };
+		B842903425B4DE100043C2DE /* FilterRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842903325B4DE100043C2DE /* FilterRating.swift */; };
+		B842903725B4DE170043C2DE /* FilterRatingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842903625B4DE170043C2DE /* FilterRatingRow.swift */; };
+		B842903A25B4DFA50043C2DE /* FilterRatingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842903925B4DFA50043C2DE /* FilterRatingGroup.swift */; };
 		B84ECB45259A316E00B305F7 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECB44259A316E00B305F7 /* Brand.swift */; };
 		B84ECB49259A31DE00B305F7 /* BrandRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECB48259A31DE00B305F7 /* BrandRepository.swift */; };
 		B84ECB4C259A325A00B305F7 /* BrowseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECB4B259A325A00B305F7 /* BrowseViewModel.swift */; };
 		B84ECB52259A34F200B305F7 /* BrandItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECB51259A34F200B305F7 /* BrandItem.swift */; };
 		B87AEF312598BA6700D53854 /* Decaffeinated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87AEF302598BA6600D53854 /* Decaffeinated.swift */; };
-		B87FFBD625A5F90900D7EB61 /* LogCupList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FFBD525A5F90900D7EB61 /* LogCupList.swift */; };
+		B87FFBD625A5F90900D7EB61 /* LogCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FFBD525A5F90900D7EB61 /* LogCup.swift */; };
 		B87FFBDA25A5F9B100D7EB61 /* LogCupRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FFBD925A5F9B100D7EB61 /* LogCupRow.swift */; };
 		B87FFBDD25A5FA3300D7EB61 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FFBDC25A5FA3300D7EB61 /* Array.swift */; };
 		B87FFBE125A6309100D7EB61 /* LogCaffeine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FFBE025A6309000D7EB61 /* LogCaffeine.swift */; };
@@ -54,7 +65,7 @@
 		B89EA3FB259A2E60007C9441 /* Browse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89EA3FA259A2E60007C9441 /* Browse.swift */; };
 		B8AD7A6C25A505E700E31165 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD7A6B25A505E700E31165 /* LogView.swift */; };
 		B8AD7A6F25A5069C00E31165 /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD7A6E25A5069C00E31165 /* LogViewModel.swift */; };
-		B8AD7A7425A517E200E31165 /* LogPodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD7A7325A517E200E31165 /* LogPodList.swift */; };
+		B8AD7A7425A517E200E31165 /* LogPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD7A7325A517E200E31165 /* LogPod.swift */; };
 		B8AD7A7A25A5181100E31165 /* LogPodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD7A7925A5181100E31165 /* LogPodRow.swift */; };
 		B8B21E882593A028007CD67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B21E872593A028007CD67C /* AppDelegate.swift */; };
 		B8B21E8A2593A028007CD67C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B21E892593A028007CD67C /* SceneDelegate.swift */; };
@@ -68,6 +79,9 @@
 		B8B33D28259C96E300E22EC6 /* PodListGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B33D27259C96E300E22EC6 /* PodListGrid.swift */; };
 		B8B33D2B259CD74100E22EC6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B33D2A259CD74100E22EC6 /* Category.swift */; };
 		B8B33D2E259CDA3300E22EC6 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B33D2D259CDA3300E22EC6 /* CategoryRepository.swift */; };
+		B8B9EFED25B49C0400FA5DBF /* PodFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B9EFEC25B49C0400FA5DBF /* PodFilter.swift */; };
+		B8B9EFF425B49F7D00FA5DBF /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B9EFF325B49F7D00FA5DBF /* FilterView.swift */; };
+		B8B9F00225B4A2D200FA5DBF /* FilterIntensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B9F00125B4A2D200FA5DBF /* FilterIntensity.swift */; };
 		B8C334FF25A79C97007F7394 /* LogActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C334FE25A79C97007F7394 /* LogActions.swift */; };
 		B8C3350425A79D3B007F7394 /* LogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C3350325A79D3B007F7394 /* LogButton.swift */; };
 		B8CC733725A30F50007E59DC /* FavouritesEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CC733625A30F50007E59DC /* FavouritesEdit.swift */; };
@@ -141,12 +155,23 @@
 		B8371EAD25A9EE1400015714 /* TrendsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsList.swift; sourceTree = "<group>"; };
 		B8371EB025A9EF9100015714 /* TrendsHistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsHistoryRow.swift; sourceTree = "<group>"; };
 		B8371EB525A9F1D300015714 /* TrendsHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsHistory.swift; sourceTree = "<group>"; };
+		B838E45025B4A45B00677917 /* FilterIntensityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterIntensityRow.swift; sourceTree = "<group>"; };
+		B838E45325B4ACE400677917 /* FilterActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterActions.swift; sourceTree = "<group>"; };
+		B842901725B4CB8F0043C2DE /* FilterCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCup.swift; sourceTree = "<group>"; };
+		B842901A25B4CC640043C2DE /* FilterCupRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCupRow.swift; sourceTree = "<group>"; };
+		B842901D25B4D1C30043C2DE /* FilterDecaffeinated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDecaffeinated.swift; sourceTree = "<group>"; };
+		B842902225B4D2D00043C2DE /* FilterDecaffeinatedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDecaffeinatedRow.swift; sourceTree = "<group>"; };
+		B842902B25B4D6690043C2DE /* FilterAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAvailable.swift; sourceTree = "<group>"; };
+		B842902F25B4D6730043C2DE /* FilterAvailableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAvailableRow.swift; sourceTree = "<group>"; };
+		B842903325B4DE100043C2DE /* FilterRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRating.swift; sourceTree = "<group>"; };
+		B842903625B4DE170043C2DE /* FilterRatingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRatingRow.swift; sourceTree = "<group>"; };
+		B842903925B4DFA50043C2DE /* FilterRatingGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRatingGroup.swift; sourceTree = "<group>"; };
 		B84ECB44259A316E00B305F7 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		B84ECB48259A31DE00B305F7 /* BrandRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandRepository.swift; sourceTree = "<group>"; };
 		B84ECB4B259A325A00B305F7 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
 		B84ECB51259A34F200B305F7 /* BrandItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandItem.swift; sourceTree = "<group>"; };
 		B87AEF302598BA6600D53854 /* Decaffeinated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decaffeinated.swift; sourceTree = "<group>"; };
-		B87FFBD525A5F90900D7EB61 /* LogCupList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCupList.swift; sourceTree = "<group>"; };
+		B87FFBD525A5F90900D7EB61 /* LogCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCup.swift; sourceTree = "<group>"; };
 		B87FFBD925A5F9B100D7EB61 /* LogCupRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCupRow.swift; sourceTree = "<group>"; };
 		B87FFBDC25A5FA3300D7EB61 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		B87FFBE025A6309000D7EB61 /* LogCaffeine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCaffeine.swift; sourceTree = "<group>"; };
@@ -158,7 +183,7 @@
 		B89EA3FA259A2E60007C9441 /* Browse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browse.swift; sourceTree = "<group>"; };
 		B8AD7A6B25A505E700E31165 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
 		B8AD7A6E25A5069C00E31165 /* LogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewModel.swift; sourceTree = "<group>"; };
-		B8AD7A7325A517E200E31165 /* LogPodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPodList.swift; sourceTree = "<group>"; };
+		B8AD7A7325A517E200E31165 /* LogPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPod.swift; sourceTree = "<group>"; };
 		B8AD7A7925A5181100E31165 /* LogPodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPodRow.swift; sourceTree = "<group>"; };
 		B8B21E842593A028007CD67C /* Pod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B21E872593A028007CD67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +198,9 @@
 		B8B33D27259C96E300E22EC6 /* PodListGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodListGrid.swift; sourceTree = "<group>"; };
 		B8B33D2A259CD74100E22EC6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B8B33D2D259CDA3300E22EC6 /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
+		B8B9EFEC25B49C0400FA5DBF /* PodFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodFilter.swift; sourceTree = "<group>"; };
+		B8B9EFF325B49F7D00FA5DBF /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		B8B9F00125B4A2D200FA5DBF /* FilterIntensity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterIntensity.swift; sourceTree = "<group>"; };
 		B8C334FE25A79C97007F7394 /* LogActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogActions.swift; sourceTree = "<group>"; };
 		B8C3350325A79D3B007F7394 /* LogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogButton.swift; sourceTree = "<group>"; };
 		B8CC733625A30F50007E59DC /* FavouritesEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesEdit.swift; sourceTree = "<group>"; };
@@ -274,10 +302,47 @@
 			path = History;
 			sourceTree = "<group>";
 		};
+		B842901625B4CB850043C2DE /* FilterCup */ = {
+			isa = PBXGroup;
+			children = (
+				B842901725B4CB8F0043C2DE /* FilterCup.swift */,
+				B842901A25B4CC640043C2DE /* FilterCupRow.swift */,
+			);
+			path = FilterCup;
+			sourceTree = "<group>";
+		};
+		B842902025B4D1C70043C2DE /* FilterDecaffeinated */ = {
+			isa = PBXGroup;
+			children = (
+				B842901D25B4D1C30043C2DE /* FilterDecaffeinated.swift */,
+				B842902225B4D2D00043C2DE /* FilterDecaffeinatedRow.swift */,
+			);
+			path = FilterDecaffeinated;
+			sourceTree = "<group>";
+		};
+		B842902925B4D6590043C2DE /* FilterAvailable */ = {
+			isa = PBXGroup;
+			children = (
+				B842902B25B4D6690043C2DE /* FilterAvailable.swift */,
+				B842902F25B4D6730043C2DE /* FilterAvailableRow.swift */,
+			);
+			path = FilterAvailable;
+			sourceTree = "<group>";
+		};
+		B842903225B4DDF60043C2DE /* FilterRating */ = {
+			isa = PBXGroup;
+			children = (
+				B842903325B4DE100043C2DE /* FilterRating.swift */,
+				B842903925B4DFA50043C2DE /* FilterRatingGroup.swift */,
+				B842903625B4DE170043C2DE /* FilterRatingRow.swift */,
+			);
+			path = FilterRating;
+			sourceTree = "<group>";
+		};
 		B87FFBD425A5F8F600D7EB61 /* LogCup */ = {
 			isa = PBXGroup;
 			children = (
-				B87FFBD525A5F90900D7EB61 /* LogCupList.swift */,
+				B87FFBD525A5F90900D7EB61 /* LogCup.swift */,
 				B87FFBD925A5F9B100D7EB61 /* LogCupRow.swift */,
 			);
 			path = LogCup;
@@ -329,6 +394,7 @@
 		B89EA3F9259A2E50007C9441 /* Browse */ = {
 			isa = PBXGroup;
 			children = (
+				B8B9EFF925B4A13500FA5DBF /* Filter */,
 				B8B33D3C259DCFBD00E22EC6 /* PodList */,
 				B8DC4B5C259DE264000EB3C5 /* Pod */,
 				B89EA3FA259A2E60007C9441 /* Browse.swift */,
@@ -355,7 +421,7 @@
 		B8AD7A7825A5180400E31165 /* LogPod */ = {
 			isa = PBXGroup;
 			children = (
-				B8AD7A7325A517E200E31165 /* LogPodList.swift */,
+				B8AD7A7325A517E200E31165 /* LogPod.swift */,
 				B8AD7A7925A5181100E31165 /* LogPodRow.swift */,
 			);
 			path = LogPod;
@@ -418,6 +484,7 @@
 				B8B33D2A259CD74100E22EC6 /* Category.swift */,
 				B8371E9B25A9ADA300015714 /* LogItem.swift */,
 				B8B21EA82593AC26007CD67C /* Pod.swift */,
+				B8B9EFEC25B49C0400FA5DBF /* PodFilter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -458,6 +525,29 @@
 				B8D93CEE25AC78AE00E0EC6E /* PodListRequest.swift */,
 			);
 			path = PodList;
+			sourceTree = "<group>";
+		};
+		B8B9EFF925B4A13500FA5DBF /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				B842902925B4D6590043C2DE /* FilterAvailable */,
+				B842901625B4CB850043C2DE /* FilterCup */,
+				B842902025B4D1C70043C2DE /* FilterDecaffeinated */,
+				B8B9F00025B4A2B900FA5DBF /* FilterIntensity */,
+				B842903225B4DDF60043C2DE /* FilterRating */,
+				B838E45325B4ACE400677917 /* FilterActions.swift */,
+				B8B9EFF325B49F7D00FA5DBF /* FilterView.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		B8B9F00025B4A2B900FA5DBF /* FilterIntensity */ = {
+			isa = PBXGroup;
+			children = (
+				B8B9F00125B4A2D200FA5DBF /* FilterIntensity.swift */,
+				B838E45025B4A45B00677917 /* FilterIntensityRow.swift */,
+			);
+			path = FilterIntensity;
 			sourceTree = "<group>";
 		};
 		B8D279372593E45800C65FAD /* Extensions */ = {
@@ -661,7 +751,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B87FFBD625A5F90900D7EB61 /* LogCupList.swift in Sources */,
+				B87FFBD625A5F90900D7EB61 /* LogCup.swift in Sources */,
+				B8B9EFF425B49F7D00FA5DBF /* FilterView.swift in Sources */,
 				B8371E9425A8A6D300015714 /* PodLink.swift in Sources */,
 				B8D93CE325AAFBCE00E0EC6E /* String.swift in Sources */,
 				B8DC4B62259DF555000EB3C5 /* PodField.swift in Sources */,
@@ -669,13 +760,16 @@
 				B87AEF312598BA6700D53854 /* Decaffeinated.swift in Sources */,
 				B84ECB49259A31DE00B305F7 /* BrandRepository.swift in Sources */,
 				B81FA8A5259B8DBF00879F24 /* View.swift in Sources */,
+				B842903A25B4DFA50043C2DE /* FilterRatingGroup.swift in Sources */,
+				B838E45425B4ACE400677917 /* FilterActions.swift in Sources */,
 				B8EE27B925A48BA400E3176F /* PodTags.swift in Sources */,
 				B8371EA825A9E7C300015714 /* TrendsViewModel.swift in Sources */,
 				B888D0F825A47EE000F1F0A7 /* PodOrigin.swift in Sources */,
 				B8371E9825A8ABD200015714 /* PodTip.swift in Sources */,
 				B8EE27B125A48AC600E3176F /* PodFavourite.swift in Sources */,
 				B8371EAB25A9ECB400015714 /* TrendsEmpty.swift in Sources */,
-				B8AD7A7425A517E200E31165 /* LogPodList.swift in Sources */,
+				B838E45125B4A45B00677917 /* FilterIntensityRow.swift in Sources */,
+				B8AD7A7425A517E200E31165 /* LogPod.swift in Sources */,
 				B8EE27C225A493B500E3176F /* FavouritesEmpty.swift in Sources */,
 				B81C855A2597550100979B99 /* CollectionList.swift in Sources */,
 				B81FA8A2259B854A00879F24 /* PodListGridItem.swift in Sources */,
@@ -685,6 +779,7 @@
 				B8EE27AE25A486AF00E3176F /* PodReport.swift in Sources */,
 				B84ECB52259A34F200B305F7 /* BrandItem.swift in Sources */,
 				B81FA8AD259B8E7D00879F24 /* ViewControllerResolver.swift in Sources */,
+				B842903425B4DE100043C2DE /* FilterRating.swift in Sources */,
 				B84ECB45259A316E00B305F7 /* Brand.swift in Sources */,
 				B8B33D2B259CD74100E22EC6 /* Category.swift in Sources */,
 				B8B21EB92593CD34007CD67C /* Resolver.swift in Sources */,
@@ -693,20 +788,26 @@
 				B8141C6E25A481A300C7DDEA /* PodDescription.swift in Sources */,
 				B89C7E85259A0FCB0009C797 /* CollectionEmpty.swift in Sources */,
 				B8DC4B76259F7883000EB3C5 /* PodPageDetail.swift in Sources */,
+				B8B9F00225B4A2D200FA5DBF /* FilterIntensity.swift in Sources */,
 				B81C85562597549500979B99 /* Collection.swift in Sources */,
 				B8DC4B66259E00DC000EB3C5 /* SearchBarModifier.swift in Sources */,
+				B842903025B4D6730043C2DE /* FilterAvailableRow.swift in Sources */,
 				B8D76822259FD41C00790F79 /* ToastMessage.swift in Sources */,
 				B8EE27F425A4AC8100E3176F /* PodQuantity.swift in Sources */,
+				B842901E25B4D1C30043C2DE /* FilterDecaffeinated.swift in Sources */,
 				B8C334FF25A79C97007F7394 /* LogActions.swift in Sources */,
 				B8DC4B79259F790C000EB3C5 /* PodPageTitle.swift in Sources */,
 				B87FFBE725A66DC100D7EB61 /* HealthKit.swift in Sources */,
 				B8371EB125A9EF9100015714 /* TrendsHistoryRow.swift in Sources */,
 				B8F3D2C4259B62C50092744D /* FetchImage.swift in Sources */,
 				B87FFBDD25A5FA3300D7EB61 /* Array.swift in Sources */,
+				B842901825B4CB8F0043C2DE /* FilterCup.swift in Sources */,
 				B8141C7225A4822A00C7DDEA /* PodRatings.swift in Sources */,
 				B8B33D2E259CDA3300E22EC6 /* CategoryRepository.swift in Sources */,
+				B842902325B4D2D00043C2DE /* FilterDecaffeinatedRow.swift in Sources */,
 				B8B21EA92593AC26007CD67C /* Pod.swift in Sources */,
 				B8371EA525A9E65100015714 /* Trends.swift in Sources */,
+				B842901B25B4CC640043C2DE /* FilterCupRow.swift in Sources */,
 				B8EE27B525A48B2000E3176F /* PodCollection.swift in Sources */,
 				B8B21E882593A028007CD67C /* AppDelegate.swift in Sources */,
 				B8EE27C725A4941800E3176F /* FavouritesEditRow.swift in Sources */,
@@ -714,6 +815,7 @@
 				B8CC733A25A322FF007E59DC /* CollectionFavourites.swift in Sources */,
 				B8D93CF725AF663800E0EC6E /* PodAmazon.swift in Sources */,
 				B8D93CDA25A9FB8200E0EC6E /* TrendsCharts.swift in Sources */,
+				B8B9EFED25B49C0400FA5DBF /* PodFilter.swift in Sources */,
 				B8C3350425A79D3B007F7394 /* LogButton.swift in Sources */,
 				B8DA62F125973F1100074297 /* Pod.xcdatamodeld in Sources */,
 				B8AD7A7A25A5181100E31165 /* LogPodRow.swift in Sources */,
@@ -736,6 +838,7 @@
 				B81C855D2597555000979B99 /* CollectionRow.swift in Sources */,
 				B84ECB4C259A325A00B305F7 /* BrowseViewModel.swift in Sources */,
 				B81FA8A9259B8E1000879F24 /* SearchBar.swift in Sources */,
+				B842902C25B4D6690043C2DE /* FilterAvailable.swift in Sources */,
 				B8371E9125A8A67300015714 /* PodIntroduced.swift in Sources */,
 				B8D279392593E47100C65FAD /* Color.swift in Sources */,
 				B81C856C2597634B00979B99 /* CollectionViewModel.swift in Sources */,
@@ -746,6 +849,7 @@
 				B8371E9C25A9ADA300015714 /* LogItem.swift in Sources */,
 				B8B21E8C2593A028007CD67C /* ContentView.swift in Sources */,
 				B87FFBE125A6309100D7EB61 /* LogCaffeine.swift in Sources */,
+				B842903725B4DE170043C2DE /* FilterRatingRow.swift in Sources */,
 				B8F3D2C8259B77320092744D /* PodList.swift in Sources */,
 				B8EE27BC25A4906100E3176F /* PodPageClose.swift in Sources */,
 				B8D7682525A07CAC00790F79 /* MailView.swift in Sources */,
@@ -900,7 +1004,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.lukebettridge.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -928,7 +1032,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.lukebettridge.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

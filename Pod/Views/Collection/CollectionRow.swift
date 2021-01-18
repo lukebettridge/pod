@@ -28,7 +28,7 @@ struct CollectionRow: View {
                         Text((pod.name ?? "").uppercased())
                             .font(.custom("FSLucasPro-SemiBd", size: 16))
                             .foregroundColor(.primary)
-                        if pod.decaffeinated ?? false {
+                        if pod.decaffeinated {
                             Decaffeinated()
                         }
                         if !collectionItem.notes.isEmpty {
