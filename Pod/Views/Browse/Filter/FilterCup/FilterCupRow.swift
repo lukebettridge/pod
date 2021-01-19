@@ -14,11 +14,11 @@ struct FilterCupRow: View {
     let disabled: Bool = false
     
     var body: some View {
-        VStack(spacing: 2) {
+        VStack(spacing: 5) {
             Image(cup)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 30, height: 30)
+                .frame(height: 18)
             Text(cup)
                 .font(.system(size: 8))
                 .lineLimit(cup.contains(" ") ? 2 : 1)
@@ -28,8 +28,9 @@ struct FilterCupRow: View {
         }
         .foregroundColor(selected ? .white : colorScheme == .dark ? .primary : .gray)
         .opacity(disabled && !selected ? colorScheme == .dark ? 0.2 : 0.4 : 1)
-        .padding(.horizontal, 13)
-        .frame(width: 85, height: 85)
+        .padding(.top, 7)
+        .padding(.horizontal, 10)
+        .frame(width: 65, height: 60)
         .background(selected ? Color.accentColor : Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
     }
 }

@@ -11,7 +11,7 @@ struct FilterIntensity<Content: View>: View {
     @Binding var selected: Int?
     var header: Content
     
-    var gridItem = GridItem(.fixed(50), spacing: 1)
+    var gridItem = GridItem(.fixed(45), spacing: 1)
     
     init(
         selected: Binding<Int?>,
@@ -54,7 +54,7 @@ struct FilterIntensity<Content: View>: View {
                         }
                     }
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .clipShape(RoundedRectangle(cornerRadius: 7.5))
                 .padding(.horizontal)
             }
         }

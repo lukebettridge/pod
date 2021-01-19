@@ -22,7 +22,7 @@ struct LogCup: View {
     }
     let defaultCups = ["Ristretto", "Espresso", "Lungo"]
     
-    var gridItem = GridItem(.fixed(85), spacing: 1)
+    var gridItem = GridItem(.fixed(75), spacing: 10)
     
     var body: some View {
         Section(
@@ -42,7 +42,7 @@ struct LogCup: View {
                         repeating: gridItem,
                         count: min(Int((Double(cups.count) / 4.0).rounded(.up)), 2)
                     ),
-                    spacing: 1
+                    spacing: 10
                 ) {
                     ForEach(cups, id: \.self) { cup in
                         LogCupRow(
@@ -62,7 +62,6 @@ struct LogCup: View {
                         }
                     }
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.horizontal)
             }
             .alert(item: $alertCup) { cup in

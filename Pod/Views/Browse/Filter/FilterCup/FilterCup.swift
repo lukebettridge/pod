@@ -11,7 +11,7 @@ struct FilterCup: View {
     @Binding var selected: String?
     
     var cups = Pod.cupVolumes.map { $0.key }
-    var gridItem = GridItem(.fixed(85), spacing: 1)
+    var gridItem = GridItem(.fixed(65), spacing: 1)
     
     var body: some View {
         Section(
@@ -27,7 +27,7 @@ struct FilterCup: View {
         ) {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHGrid(
-                    rows: Array(repeating: gridItem, count: 2),
+                    rows: Array(repeating: gridItem, count: 1),
                     spacing: 1
                 ) {
                     ForEach(cups, id: \.self) { cup in

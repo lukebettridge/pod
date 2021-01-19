@@ -46,15 +46,20 @@ struct PodList: View {
                     
                     VStack {
                         if podListVM.filteredCategories.count > 0 {
+                            if !filter.active && searchBar.text.isEmpty {
+                                PodListRecentlyAdded(
+                                    pods: $podListVM.filteredPods,
+                                    selectedPod: $selectedPod
+                                )
+                            }
                             ForEach(podListVM.filteredCategories) { category in
                                 if let pods = podListVM.filteredPods.filter { $0.category?.id == category.id } {
-                                    if pods.count > 0 {
+                                    if !pods.isEmpty {
                                         Section(
                                             header:
-                                                VStack(alignment: .leading) {
+                                                VStack(alignment: .leading, spacing: 5) {
                                                     Text((category.name ?? "").uppercased())
                                                         .font(.custom("FSLucasPro-Bold", size: 18))
-                                                        .padding(.bottom, 0.1)
                                                     Text(category.description ?? "")
                                                         .font(.caption)
                                                         .foregroundColor(Color.gray)
@@ -66,7 +71,7 @@ struct PodList: View {
                                             PodListGrid(
                                                 pods: pods,
                                                 selectPod: { pod in selectedPod = pod },
-                                                isLimitedEdition: category.name == "Limited Edition"
+                                                preferredSubtitle: category.name == "Limited Edition" ? .year : .origin
                                             )
                                         }
                                     }

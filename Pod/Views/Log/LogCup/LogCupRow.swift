@@ -14,11 +14,11 @@ struct LogCupRow: View {
     let disabled: Bool
     
     var body: some View {
-        VStack(spacing: 2) {
+        VStack(spacing: 5) {
             Image(cup)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 30, height: 30)
+                .frame(height: 20)
             Text(cup)
                 .font(.system(size: 8))
                 .lineLimit(cup.contains(" ") ? 2 : 1)
@@ -28,9 +28,11 @@ struct LogCupRow: View {
         }
         .foregroundColor(selected ? .white : colorScheme == .dark ? .primary : .gray)
         .opacity(disabled && !selected ? colorScheme == .dark ? 0.2 : 0.4 : 1)
-        .padding(.horizontal, 13)
-        .frame(width: 85, height: 85)
+        .padding(.top, 7)
+        .padding(.horizontal, 15)
+        .frame(width: 75, height: 75)
         .background(selected ? Color.accentColor : Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
+        .clipShape(Circle())
     }
 }
 

@@ -21,6 +21,5 @@ struct Decaffeinated: View {
                 RoundedRectangle(cornerRadius: 4)
                     .fill(Color.red)
             )
-            .padding(.bottom, 2.2)
     }
 }

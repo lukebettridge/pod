@@ -22,7 +22,6 @@ struct LogPodRow: View {
                 .frame(width: 32, height: 32)
                 .background(Color.white)
                 .clipShape(Circle())
-                
             Text((pod.name ?? "").uppercased())
                 .font(.custom("FSLucasPro-Bold", size: 13))
                 .foregroundColor(selected ? .white : .primary)
@@ -32,6 +31,7 @@ struct LogPodRow: View {
         .padding(4)
         .frame(width: 170)
         .background(selected ? Color.accentColor : Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
+        .overlay(RoundedRectangle(cornerRadius: 20).stroke().foregroundColor(pod.decaffeinated ? .red : .clear))
         .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }

@@ -40,10 +40,10 @@ struct CollectionList: View {
                     }
                 }
                 
-                Text("You have \(collectionItems.count) capsules in your collection.")
+                Text("You have \(collectionItems.reduce(0) { $0 + $1.quantity }) capsules in your collection.")
                     .font(.caption2)
                     .foregroundColor(.gray)
-                    .padding(.top, 5)
+                    .padding(.top, 4)
             }
             .padding()
             .padding(.bottom, 30)

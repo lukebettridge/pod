@@ -18,11 +18,13 @@ struct FavouritesEditRow: View {
                 .background(pod.color)
                 .frame(width: 40, height: 40)
                 .clipShape(RoundedRectangle(cornerRadius: 6))
+            HStack(spacing: 5) {
             Text((pod.name ?? "").uppercased())
-                .font(.custom("FSLucasPro-Med", size: 16))
-            if pod.decaffeinated {
-                Decaffeinated()
-                    .padding(.leading, -2)
+                .font(.custom("FSLucasPro-SemiBd", size: 16))
+                if pod.decaffeinated {
+                    Decaffeinated()
+                        .padding(.bottom, 1)
+                }
             }
             Spacer()
             Button(action: {

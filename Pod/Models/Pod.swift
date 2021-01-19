@@ -23,6 +23,7 @@ class Pod: ObservableObject, Identifiable, Equatable {
     var category: Category?
     var color: Color
     var cupSize: [String]
+    var created: Date
     var decaffeinated: Bool
     var description: String?
     var image: Image
@@ -46,6 +47,7 @@ class Pod: ObservableObject, Identifiable, Equatable {
         self.amazonLinkUS = data["amazonLinkUS"] as? String
         self.available = data["available"] as? Bool ?? false
         self.cupSize = data["cupSize"] as? [String] ?? []
+        self.created = (data["created"] as? Timestamp)?.dateValue() ?? Date(timeIntervalSince1970: 0)
         self.decaffeinated = data["decaffeinated"] as? Bool ?? false
         self.description = data["description"] as? String
         self.caffeinePerML = data["caffeinePerML"] as? Double
@@ -115,6 +117,10 @@ class Pod: ObservableObject, Identifiable, Equatable {
 extension Pod {
     enum RatingType {
         case acidity, bitterness, body, roasting
+    }
+    
+    enum SubtitleType {
+        case category, origin, year
     }
     
     static let cupVolumes: Dictionary<String, Double> = [

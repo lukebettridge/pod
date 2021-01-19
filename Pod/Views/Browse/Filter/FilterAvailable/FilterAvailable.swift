@@ -43,7 +43,7 @@ struct FilterAvailable: View {
                         }
                     }
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .clipShape(RoundedRectangle(cornerRadius: 7.5))
                 Spacer()
             }
             .padding(.horizontal)

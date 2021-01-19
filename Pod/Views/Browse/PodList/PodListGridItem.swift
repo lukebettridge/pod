@@ -10,16 +10,27 @@ import SwiftUI
 struct PodListGridItem: View {
     @ObservedObject var pod: Pod
     var selectPod: (Pod) -> Void
+    var preferredSubtitle: Pod.SubtitleType
     var fetchRequest: FetchRequest<CollectionItem>
     
     var collectionItem: CollectionItem? { fetchRequest.wrappedValue.first }
+    var subtitle: String {
+        if preferredSubtitle == .year, let introduced = pod.introduced {
+            return String(introduced)
+        } else if preferredSubtitle == .category, let category = pod.category?.name {
+            return String(category)
+        }
+        return pod.origin ?? ""
+    }
     
     init(
         pod: Pod,
-        selectPod: @escaping (Pod) -> Void
+        selectPod: @escaping (Pod) -> Void,
+        preferredSubtitle: Pod.SubtitleType
     ) {
         self.pod = pod
         self.selectPod = selectPod
+        self.preferredSubtitle = preferredSubtitle
         self.fetchRequest = FetchRequest(fetchRequest: CollectionItem.fetchRequest(podId: pod.id!))
     }
     
@@ -53,9 +64,10 @@ struct PodListGridItem: View {
                         .lineLimit(1)
                     if pod.decaffeinated {
                         Decaffeinated()
+                            .padding(.bottom, 2)
                     }
                 }
-                Text(pod.category?.name == "Limited Edition" && pod.introduced != nil ? String(pod.introduced!) : pod.origin ?? "")
+                Text(subtitle)
                     .font(.caption)
                     .foregroundColor(.gray)
                     .lineLimit(1)

@@ -30,6 +30,7 @@ struct CollectionRow: View {
                             .foregroundColor(.primary)
                         if pod.decaffeinated {
                             Decaffeinated()
+                                .padding(.bottom, 2)
                         }
                         if !collectionItem.notes.isEmpty {
                             Image(systemName: "note.text")

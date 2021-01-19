@@ -25,7 +25,7 @@ struct FilterRating: View {
         ) {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHGrid(
-                    rows: [GridItem(.fixed(50), spacing: 1)],
+                    rows: [GridItem(.fixed(45), spacing: 1)],
                     spacing: 1
                 ) {
                     ForEach(1..<6) { rating in
@@ -43,7 +43,7 @@ struct FilterRating: View {
                         }
                     }
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .clipShape(RoundedRectangle(cornerRadius: 7.5))
                 .padding(.horizontal)
             }
         }

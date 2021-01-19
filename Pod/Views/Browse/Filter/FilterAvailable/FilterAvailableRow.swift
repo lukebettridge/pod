@@ -16,7 +16,7 @@ struct FilterAvailableRow: View {
         Text(option)
             .font(.subheadline)
             .foregroundColor(selected ? .white : colorScheme == .dark ? .primary : .gray)
-            .frame(width: 100, height: 40)
+            .frame(width: 114, height: 40)
             .background(selected ? Color.accentColor : Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
     }
 }

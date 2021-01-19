@@ -34,7 +34,7 @@ struct LogView: View {
                         ZStack {
                             if collectionItems.count > 0 {
                                 ScrollView(.vertical, showsIndicators: false) {
-                                    VStack {
+                                    VStack(alignment: .leading) {
                                         if showLogCaffeine {
                                             VStack(spacing: 20) {
                                                 LogCaffeine(authorizationStatus: $authorizationStatus)
