@@ -14,6 +14,14 @@ struct CollectionRow: View {
     var collectionItem: CollectionItem
     var selectPod: (Pod) -> Void
     
+    private func log() {
+        Analytics.log(event: .addToFavourites, data: [
+            Analytics.AnalyticsParameterCapsuleId: pod.id as Any,
+            Analytics.AnalyticsParameterCapsuleName: pod.name as Any,
+            Analytics.AnalyticsParameterCapsulesRemaining: collectionItem.quantity as Any
+        ])
+    }
+    
     var body: some View {
         Button(action: { selectPod(pod) }) {
             HStack(spacing: 12.5) {
@@ -70,6 +78,7 @@ struct CollectionRow: View {
             Button(action: {
                 collectionItem.favourite.toggle()
                 collectionItem.save()
+                if collectionItem.favourite { log() }
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
             }) {
                 HStack {

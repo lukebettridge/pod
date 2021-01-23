@@ -28,6 +28,12 @@ struct Trends: View {
                 }
             }
             .navigationBarTitle("Trends")
+            .onAppear {
+                Analytics.log(event: .view, data: [
+                    Analytics.AnalyticsParameterScreenName: "Trends",
+                    Analytics.AnalyticsParameterScreenClass: "Trends"
+                ])
+            }
         }
     }
 }

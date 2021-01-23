@@ -1,5 +1,5 @@
 //
-//  FavouritesEdit.swift
+//  EditFavourites.swift
 //  Pod
 //
 //  Created by Luke Bettridge on 04/01/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FavouritesEdit: View {
+struct EditFavourites: View {
     @Binding var pods: [Pod]
     var collectionItems: FetchedResults<CollectionItem>
     var exit: () -> Void
@@ -17,7 +17,7 @@ struct FavouritesEdit: View {
             List {
                 ForEach (collectionItems) { collectionItem in
                     if let pod = pods.first(where: { $0.id ?? "" == collectionItem.podId }) {
-                        FavouritesEditRow(collectionItem: collectionItem, pod: pod)
+                        EditFavouritesRow(collectionItem: collectionItem, pod: pod)
                     }
                 }
             }
@@ -25,6 +25,12 @@ struct FavouritesEdit: View {
             .navigationBarItems(
                 trailing: Button(action: exit) { Text("Done") }
             )
+        }
+        .onAppear {
+            Analytics.log(event: .view, data: [
+                Analytics.AnalyticsParameterScreenName: "Edit Favourites",
+                Analytics.AnalyticsParameterScreenClass: "EditFavourites"
+            ])
         }
     }
 }

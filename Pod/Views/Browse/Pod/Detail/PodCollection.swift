@@ -9,17 +9,25 @@ import SwiftUI
 
 struct PodCollection: View {
     @Binding var collectionItem: CollectionItem?
-    let podId: String?
+    let pod: Pod
     
     @State var isShowingAlert: Bool = false
+    
+    private func log() {
+        Analytics.log(event: .addToCollection, data: [
+            Analytics.AnalyticsParameterCapsuleId: pod.id,
+            Analytics.AnalyticsParameterCapsuleName: pod.name
+        ])
+    }
     
     var body: some View {
         Button(action: {
             if collectionItem != nil {
                 isShowingAlert = true
             } else {
-                CollectionItem.add(podId: podId ?? "")
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
+                CollectionItem.add(podId: pod.id ?? "")
+                log()
             }
         }) {
             PodField {
@@ -44,18 +52,5 @@ struct PodCollection: View {
                 secondaryButton: .cancel()
             )
         }
-    }
-}
-
-struct PodCollection_Previews: PreviewProvider {
-    private static var collectionItem: Binding<CollectionItem?> {
-        Binding (
-            get: { Optional(CollectionItem()) },
-            set: { _ in }
-        )
-    }
-    
-    static var previews: some View {
-        PodCollection(collectionItem: collectionItem, podId: "")
     }
 }

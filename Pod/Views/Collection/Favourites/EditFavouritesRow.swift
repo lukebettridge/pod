@@ -1,5 +1,5 @@
 //
-//  FavouritesEditRow.swift
+//  EditFavouritesRow.swift
 //  Pod
 //
 //  Created by Luke Bettridge on 05/01/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FavouritesEditRow: View {
+struct EditFavouritesRow: View {
     @ObservedObject var collectionItem: CollectionItem
     let pod: Pod
     

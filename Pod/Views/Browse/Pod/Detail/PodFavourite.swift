@@ -9,12 +9,22 @@ import SwiftUI
 
 struct PodFavourite: View {
     @Binding var collectionItem: CollectionItem?
+    let pod: Pod
+    
+    private func log() {
+        Analytics.log(event: .addToFavourites, data: [
+            Analytics.AnalyticsParameterCapsuleId: pod.id as Any,
+            Analytics.AnalyticsParameterCapsuleName: pod.name as Any,
+            Analytics.AnalyticsParameterCapsulesRemaining: collectionItem?.quantity as Any
+        ])
+    }
     
     var body: some View {
         if let collectionItem = collectionItem {
             Button(action: {
                 collectionItem.favourite.toggle()
                 collectionItem.save()
+                if collectionItem.favourite { log() }
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
             }) {
                 PodField {
@@ -29,18 +39,5 @@ struct PodFavourite: View {
             }
             .buttonStyle(PlainButtonStyle())
         }
-    }
-}
-
-struct PodFavourite_Previews: PreviewProvider {
-    private static var collectionItem: Binding<CollectionItem?> {
-        Binding (
-            get: { Optional(CollectionItem()) },
-            set: { _ in }
-        )
-    }
-    
-    static var previews: some View {
-        PodFavourite(collectionItem: collectionItem)
     }
 }

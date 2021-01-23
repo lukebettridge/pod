@@ -9,14 +9,23 @@ import SwiftUI
 
 struct PodAmazon: View {
     @Environment(\.openURL) var openURL
-    let link: String?
-    let linkUS: String?
+    let pod: Pod
     
     let regionCode: String? = Locale.current.regionCode
     
+    private func log(_ purchaseLink: String) {
+        Analytics.log(event: .purchaseClick, data: [
+            Analytics.AnalyticsParameterCapsuleId: pod.id as Any,
+            Analytics.AnalyticsParameterCapsuleName: pod.name as Any,
+            Analytics.AnalyticsParameterPurchaseLink: purchaseLink,
+            Analytics.AnalyticsParameterRegionCode: regionCode as Any
+        ])
+    }
+    
     var body: some View {
-        if let link = regionCode == "US" ? linkUS : link {
+        if let link = regionCode == "US" ? pod.amazonLinkUS : pod.amazonLink {
             Button(action: {
+                log(link)
                 openURL(URL(string: link)!)
             }) {
                 PodField {
@@ -31,11 +40,5 @@ struct PodAmazon: View {
             }
             .buttonStyle(PlainButtonStyle())
         }
-    }
-}
-
-struct PodAmazon_Previews: PreviewProvider {
-    static var previews: some View {
-        PodAmazon(link: "https://nespresso.com/gb", linkUS: "https://nespresso.com/us")
     }
 }

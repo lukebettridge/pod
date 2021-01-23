@@ -34,6 +34,21 @@ struct PodListGridItem: View {
         self.fetchRequest = FetchRequest(fetchRequest: CollectionItem.fetchRequest(podId: pod.id!))
     }
     
+    private func log(event: Analytics.AnalyticsEvent) {
+        if (event == .addToCollection) {
+            Analytics.log(event: .addToCollection, data: [
+                Analytics.AnalyticsParameterCapsuleId: pod.id,
+                Analytics.AnalyticsParameterCapsuleName: pod.name
+            ])
+        } else if (event == .addToFavourites) {
+            Analytics.log(event: .addToFavourites, data: [
+                Analytics.AnalyticsParameterCapsuleId: pod.id as Any,
+                Analytics.AnalyticsParameterCapsuleName: pod.name as Any,
+                Analytics.AnalyticsParameterCapsulesRemaining: collectionItem?.quantity as Any
+            ])
+        }
+    }
+    
     var body: some View {
         Button(action: {
             selectPod(pod)
@@ -83,6 +98,7 @@ struct PodListGridItem: View {
                 Button(action: {
                     collectionItem.favourite.toggle()
                     collectionItem.save()
+                    if collectionItem.favourite { log(event: .addToFavourites) }
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 }) {
                     HStack {
@@ -96,6 +112,7 @@ struct PodListGridItem: View {
                     CollectionItem.remove(collectionItem: collectionItem)
                 } else if let id = pod.id {
                     CollectionItem.add(podId: id)
+                    log(event: .addToCollection)
                 }
                 UIImpactFeedbackGenerator().impactOccurred(intensity: 1)
             }) {

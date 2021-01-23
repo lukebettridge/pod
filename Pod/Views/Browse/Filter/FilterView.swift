@@ -21,6 +21,67 @@ struct FilterView: View {
     @State var ratingBody: Int?
     @State var roasting: Int?
     
+    private var active: Bool {
+        acidity != nil ||
+            available != nil ||
+            bitterness != nil ||
+            cup != nil ||
+            decaffeinated != nil ||
+            intensity != nil ||
+            ratingBody != nil ||
+            roasting != nil
+    }
+    
+    private var isDirty: Bool {
+        filter.acidity != acidity ||
+            filter.available != available ||
+            filter.bitterness != bitterness ||
+            filter.body != ratingBody ||
+            filter.cup != cup ||
+            filter.decaffeinated != decaffeinated ||
+            filter.intensity != intensity ||
+            filter.roasting != roasting
+    }
+    
+    private func log() {
+        if active {
+            Analytics.log(event: .filter, data: [
+                Analytics.AnalyticsParameterAcidity: acidity as Any,
+                Analytics.AnalyticsParameterBitterness: bitterness as Any,
+                Analytics.AnalyticsParameterCapsuleAvailable: available as Any,
+                Analytics.AnalyticsParameterCupSize: cup as Any,
+                Analytics.AnalyticsParameterDecaffeinated: decaffeinated as Any,
+                Analytics.AnalyticsParameterIntensity: intensity as Any,
+                Analytics.AnalyticsParameterBody: ratingBody as Any,
+                Analytics.AnalyticsParameterRoasting: roasting as Any
+            ])
+        }
+    }
+    
+    private func setFilter() {
+        filter = PodFilter([
+            "acidity": acidity as Any,
+            "available": available as Any,
+            "bitterness": bitterness as Any,
+            "body": body as Any,
+            "cup": cup as Any,
+            "decaffeinated": decaffeinated as Any,
+            "intensity": intensity as Any,
+            "roasting": roasting as Any
+        ])
+    }
+    
+    private func setState(clear: Bool = false) {
+        acidity = clear ? nil : filter.acidity
+        available = clear ? nil : filter.available
+        bitterness = clear ? nil : filter.bitterness
+        cup = clear ? nil : filter.cup
+        decaffeinated = clear ? nil : filter.decaffeinated
+        intensity = clear ? nil : filter.intensity
+        ratingBody = clear ? nil : filter.body
+        roasting = clear ? nil : filter.roasting
+    }
+    
     var body: some View {
         NavigationView {
             GeometryReader { gp in
@@ -48,6 +109,7 @@ struct FilterView: View {
                         cancel: exit,
                         apply: {
                             setFilter()
+                            log()
                             exit()
                         },
                         disabled: !isDirty
@@ -57,54 +119,12 @@ struct FilterView: View {
             }
             .navigationBarTitle("Filter")
         }
-        .onAppear(perform: {
+        .onAppear {
             self.setState()
-        })
-    }
-    
-    private var active: Bool {
-        acidity != nil ||
-            available != nil ||
-            bitterness != nil ||
-            cup != nil ||
-            decaffeinated != nil ||
-            intensity != nil ||
-            ratingBody != nil ||
-            roasting != nil
-    }
-    
-    private var isDirty: Bool {
-        filter.acidity != acidity ||
-            filter.available != available ||
-            filter.bitterness != bitterness ||
-            filter.body != ratingBody ||
-            filter.cup != cup ||
-            filter.decaffeinated != decaffeinated ||
-            filter.intensity != intensity ||
-            filter.roasting != roasting
-    }
-    
-    private func setFilter() {
-        filter = PodFilter([
-            "acidity": acidity as Any,
-            "available": available as Any,
-            "bitterness": bitterness as Any,
-            "body": body as Any,
-            "cup": cup as Any,
-            "decaffeinated": decaffeinated as Any,
-            "intensity": intensity as Any,
-            "roasting": roasting as Any
-        ])
-    }
-    
-    private func setState(clear: Bool = false) {
-        acidity = clear ? nil : filter.acidity
-        available = clear ? nil : filter.available
-        bitterness = clear ? nil : filter.bitterness
-        cup = clear ? nil : filter.cup
-        decaffeinated = clear ? nil : filter.decaffeinated
-        intensity = clear ? nil : filter.intensity
-        ratingBody = clear ? nil : filter.body
-        roasting = clear ? nil : filter.roasting
+            Analytics.log(event: .view, data: [
+                Analytics.AnalyticsParameterScreenName: "Filter",
+                Analytics.AnalyticsParameterScreenClass: "FilterView"
+            ])
+        }
     }
 }

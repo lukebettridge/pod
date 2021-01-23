@@ -53,7 +53,7 @@ struct CollectionList: View {
                 .edgesIgnoringSafeArea(.all)
         )
         .sheet(isPresented: $isShowingEditView) {
-            FavouritesEdit(
+            EditFavourites(
                 pods: $pods,
                 collectionItems: collectionItems,
                 exit: { isShowingEditView.toggle() }

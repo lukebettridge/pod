@@ -16,6 +16,7 @@ class SearchBar: NSObject, ObservableObject {
         self.searchController.obscuresBackgroundDuringPresentation = false
         self.searchController.hidesNavigationBarDuringPresentation = false
         self.searchController.searchResultsUpdater = self
+        self.searchController.searchBar.delegate = self
         self.searchController.searchBar.autocapitalizationType = .none
     }
 }
@@ -26,5 +27,11 @@ extension SearchBar: UISearchResultsUpdating {
         if let searchBarText = searchController.searchBar.text {
             self.text = searchBarText
         }
+    }
+}
+
+extension SearchBar: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        Analytics.log(event: .search, data: searchBar.text)
     }
 }

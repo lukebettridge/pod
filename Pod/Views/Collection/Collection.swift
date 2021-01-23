@@ -39,5 +39,11 @@ struct Collection: View {
             PodPage(pod: $0, exit: { selectedPod = nil })
                 .environment(\.managedObjectContext, managedObjectContext)
         }
+        .onAppear {
+            Analytics.log(event: .view, data: [
+                Analytics.AnalyticsParameterScreenName: "My Collection",
+                Analytics.AnalyticsParameterScreenClass: "Collection"
+            ])
+        }
     }
 }

@@ -59,6 +59,12 @@ struct Settings: View {
                     secondaryButton: .cancel()
                 )
             }
+            .onAppear {
+                Analytics.log(event: .view, data: [
+                    Analytics.AnalyticsParameterScreenName: "Settings",
+                    Analytics.AnalyticsParameterScreenClass: "Settings"
+                ])
+            }
         }
     }
 }

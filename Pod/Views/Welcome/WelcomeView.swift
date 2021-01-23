@@ -61,5 +61,11 @@ struct WelcomeView: View {
             .buttonStyle(PlainButtonStyle())
         }
         .padding()
+        .onAppear {
+            Analytics.log(event: .view, data: [
+                Analytics.AnalyticsParameterScreenName: "Welcome",
+                Analytics.AnalyticsParameterScreenClass: "WelcomeView"
+            ])
+        }
     }
 }

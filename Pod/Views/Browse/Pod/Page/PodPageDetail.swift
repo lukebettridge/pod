@@ -27,12 +27,12 @@ struct PodPageDetail: View {
         VStack {
             Group {
                 HStack(spacing: 10) {
-                    PodCollection(collectionItem: collectionItem, podId: pod.id)
+                    PodCollection(collectionItem: collectionItem, pod: pod)
                     PodReport(name: pod.name)
                 }
                 HStack(spacing: 10) {
-                    PodFavourite(collectionItem: collectionItem)
-                    PodAmazon(link: pod.amazonLink, linkUS: pod.amazonLinkUS)
+                    PodFavourite(collectionItem: collectionItem, pod: pod)
+                    PodAmazon(pod: pod)
                 }
                 PodQuantity(collectionItem: collectionItem)
                 PodNotes(collectionItem: collectionItem)

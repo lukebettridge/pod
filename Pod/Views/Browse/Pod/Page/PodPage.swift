@@ -38,5 +38,13 @@ struct PodPage: View {
                 try? managedObjectContext.save()
             }
         }
+        .onAppear {
+            Analytics.log(event: .view, data: [
+                Analytics.AnalyticsParameterScreenName: "Pod",
+                Analytics.AnalyticsParameterScreenClass: "PodPage",
+                Analytics.AnalyticsParameterCapsuleId: pod.id,
+                Analytics.AnalyticsParameterCapsuleName: pod.name!
+            ])
+        }
     }
 }

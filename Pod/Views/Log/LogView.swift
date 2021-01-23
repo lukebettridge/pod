@@ -24,6 +24,22 @@ struct LogView: View {
     let showLogCaffeine: Bool =
         ![nil, .some(.sharingAuthorized)].contains(HealthKit.authorizationStatus())
     
+    private func log() {
+        if let pod = selectedPod, let cup = selectedCup {
+            var capsulesRemaining: Int?
+            if let collectionItem = collectionItems.first(where: { $0.podId == pod.id }) {
+                capsulesRemaining = collectionItem.quantity
+            }
+            Analytics.log(event: .logCoffee, data: [
+                Analytics.AnalyticsParameterCaffeine: String(pod.caffeine(cup: cup)),
+                Analytics.AnalyticsParameterCapsuleId: pod.id as Any,
+                Analytics.AnalyticsParameterCapsuleName: pod.name as Any,
+                Analytics.AnalyticsParameterCapsulesRemaining: capsulesRemaining as Any,
+                Analytics.AnalyticsParameterWater: cupVolume
+            ])
+        }
+    }
+    
     var body: some View {
         NavigationView {
             Group {
@@ -95,6 +111,7 @@ struct LogView: View {
                                             }
                                             LogItem.add(context, podId: pod.id!, cup: cup, loggedToHealth: loggedToHealth)
                                             UINotificationFeedbackGenerator().notificationOccurred(.success)
+                                            log()
                                             exit()
                                         }
                                     }
@@ -110,6 +127,12 @@ struct LogView: View {
             .onChange(of: selectedPod, perform: { _ in
                 selectedCup = nil
             })
+        }
+        .onAppear {
+            Analytics.log(event: .view, data: [
+                Analytics.AnalyticsParameterScreenName: "Log Coffee",
+                Analytics.AnalyticsParameterScreenClass: "LogView"
+            ])
         }
     }
 }

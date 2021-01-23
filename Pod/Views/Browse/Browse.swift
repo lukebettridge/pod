@@ -46,5 +46,11 @@ struct Browse: View {
                 isShowingFilterView.toggle()
             })
         }
+        .onAppear {
+            Analytics.log(event: .view, data: [
+                Analytics.AnalyticsParameterScreenName: "Browse",
+                Analytics.AnalyticsParameterScreenClass: "Browse"
+            ])
+        }
     }
 }
