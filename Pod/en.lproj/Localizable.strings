@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Pod
+
+  Created by Luke Bettridge on 26/01/2021.
+  
+*/
+
+"Edit Favorites" = "Edit Favorites";
+"favorite" = "favorite";
+"Favorite" = "Favorite";
+"Favorites" = "Favorites";
+"Unfavorite" = "Unfavorite";
+"You have no favorites" = "You have no favorites";
+"Find your pods in the Browse tab, press %@ to add them to your favorites." = "Find your pods in the Browse tab, press %@ to add them to your favorites.";

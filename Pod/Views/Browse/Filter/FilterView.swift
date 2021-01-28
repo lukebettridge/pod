@@ -99,8 +99,8 @@ struct FilterView: View {
                             }
                             FilterCup(selected: $cup)
                             FilterDecaffeinated(selected: $decaffeinated)
-                            FilterRatingGroup(acidity: $acidity, bitterness: $bitterness, ratingBody: $ratingBody, roasting: $roasting)
                             FilterAvailable(selected: $available)
+                            FilterRatingGroup(acidity: $acidity, bitterness: $bitterness, ratingBody: $ratingBody, roasting: $roasting)
                         }
                         .padding(.bottom, 120)
                     }

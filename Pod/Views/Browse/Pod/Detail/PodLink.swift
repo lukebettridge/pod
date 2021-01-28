@@ -15,7 +15,7 @@ struct PodLink: View {
     let regionCode: String? = Locale.current.regionCode
     
     var body: some View {
-        if let link = regionCode == "US" ? linkUS : link {
+        if let link = regionCode == "GB" ? link : linkUS {
             Button(action: {
                 openURL(URL(string: link)!)
             }) {

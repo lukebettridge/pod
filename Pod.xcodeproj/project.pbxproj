@@ -51,6 +51,7 @@
 		B842904E25B7685E0043C2DE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B842904D25B7685E0043C2DE /* FirebaseFirestore */; };
 		B842905025B7685E0043C2DE /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B842904F25B7685E0043C2DE /* FirebaseStorageSwift-Beta */; };
 		B842905325B76C1B0043C2DE /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842905225B76C1B0043C2DE /* Analytics.swift */; };
+		B84CDC3525C090C50004A659 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B84CDC3725C090C50004A659 /* Localizable.strings */; };
 		B84ECB45259A316E00B305F7 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECB44259A316E00B305F7 /* Brand.swift */; };
 		B84ECB49259A31DE00B305F7 /* BrandRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECB48259A31DE00B305F7 /* BrandRepository.swift */; };
 		B84ECB4C259A325A00B305F7 /* BrowseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECB4B259A325A00B305F7 /* BrowseViewModel.swift */; };
@@ -171,6 +172,8 @@
 		B842903925B4DFA50043C2DE /* FilterRatingGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRatingGroup.swift; sourceTree = "<group>"; };
 		B842903E25B6F3420043C2DE /* PodListRecentlyAdded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodListRecentlyAdded.swift; sourceTree = "<group>"; };
 		B842905225B76C1B0043C2DE /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		B84CDC3625C090C50004A659 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B84CDC3C25C0918A0004A659 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B84ECB44259A316E00B305F7 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		B84ECB48259A31DE00B305F7 /* BrandRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandRepository.swift; sourceTree = "<group>"; };
 		B84ECB4B259A325A00B305F7 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
@@ -470,6 +473,7 @@
 				B8B21E952593A029007CD67C /* Info.plist */,
 				B8EE27CA25A4989C00E3176F /* Fonts */,
 				B8B21E8F2593A029007CD67C /* Preview Content */,
+				B84CDC3725C090C50004A659 /* Localizable.strings */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
@@ -721,6 +725,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-GB",
 			);
 			mainGroup = B8B21E7B2593A028007CD67C;
 			packageReferences = (
@@ -748,6 +753,7 @@
 				B8EE27E625A498BB00E3176F /* FSLucasPro-Med.ttf in Resources */,
 				B8EE27DE25A498BB00E3176F /* FSLucasPro-Bold.ttf in Resources */,
 				B8D279322593E18A00C65FAD /* GoogleService-Info.plist in Resources */,
+				B84CDC3525C090C50004A659 /* Localizable.strings in Resources */,
 				B8B21E912593A029007CD67C /* Preview Assets.xcassets in Resources */,
 				B8B21E8E2593A029007CD67C /* Assets.xcassets in Resources */,
 			);
@@ -871,6 +877,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B84CDC3725C090C50004A659 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B84CDC3625C090C50004A659 /* en */,
+				B84CDC3C25C0918A0004A659 /* en-GB */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B8B21E922593A029007CD67C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -886,6 +901,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -948,6 +964,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1008,7 +1025,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pod/Pod.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Pod/Preview Content\"";
 				DEVELOPMENT_TEAM = GPM4PVH4B9;
 				ENABLE_PREVIEWS = YES;
@@ -1017,7 +1034,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.lukebettridge.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1036,7 +1053,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pod/Pod.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Pod/Preview Content\"";
 				DEVELOPMENT_TEAM = GPM4PVH4B9;
 				ENABLE_PREVIEWS = YES;
@@ -1045,7 +1062,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.lukebettridge.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

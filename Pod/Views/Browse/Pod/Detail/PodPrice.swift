@@ -14,16 +14,16 @@ struct PodPrice: View {
     let regionCode: String? = Locale.current.regionCode
     
     var body: some View {
-        if regionCode == "US" {
-            if let price = priceUS {
-                PodField(header: "Price") {
-                    Text(String(format: "$%.02f", price))
-                }
-            }
-        } else {
+        if regionCode == "GB" {
             if let price = price {
                 PodField(header: "Price") {
                     Text(String(format: "£%.02f", price))
+                }
+            }
+        } else {
+            if let price = priceUS {
+                PodField(header: "Price") {
+                    Text(String(format: "$%.02f", price))
                 }
             }
         }

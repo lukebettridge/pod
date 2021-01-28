@@ -21,7 +21,7 @@ struct EditFavourites: View {
                     }
                 }
             }
-            .navigationBarTitle("Edit Favourites", displayMode: .inline)
+            .navigationBarTitle("Edit Favorites", displayMode: .inline)
             .navigationBarItems(
                 trailing: Button(action: exit) { Text("Done") }
             )

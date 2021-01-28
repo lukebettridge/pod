@@ -16,10 +16,10 @@ struct FavouritesEmpty: View {
                 .font(Font.system(size: 50).weight(.light))
                 .foregroundColor(Color(UIColor.systemGray5))
                 .padding(.bottom, 5)
-            Text("You have no favourites")
+            Text("You have no favorites")
                 .font(.headline)
                 .fontWeight(.medium)
-            Text("Find your pods in the Browse tab, press \(Image(systemName: "star")) to add them to your favourites.")
+            Text("Find your pods in the Browse tab, press \(Image(systemName: "star")) to add them to your favorites.")
                 .font(.caption)
                 .fixedSize(horizontal: false, vertical: true)
         }

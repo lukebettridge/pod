@@ -102,7 +102,7 @@ struct PodListGridItem: View {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 }) {
                     HStack {
-                        Text(collectionItem.favourite ? "Unfavourite" : "Favourite")
+                        Text(collectionItem.favourite ? "Unfavorite" : "Favorite")
                         Image(systemName: "star.\(collectionItem.favourite ? "slash" : "fill")")
                     }
                 }

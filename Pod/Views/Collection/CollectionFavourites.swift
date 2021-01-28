@@ -19,7 +19,7 @@ struct CollectionFavourites: View {
     
     var body: some View {
         Section(header: HStack {
-            Text("Favourites").font(.title2).fontWeight(.semibold)
+            Text("Favorites").font(.title2).fontWeight(.semibold)
             Spacer()
             Button(action: showEditView) {
                 Text("Edit").fontWeight(.regular)

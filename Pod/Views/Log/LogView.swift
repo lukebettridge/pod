@@ -77,6 +77,7 @@ struct LogView: View {
                                             Text("Despite our best calculations, these are simply estimates and the caffeine in your beverage may vary.")
                                                 .font(.caption2)
                                                 .foregroundColor(.gray)
+                                                .fixedSize(horizontal: false, vertical: true)
                                                 .padding(.top, 7.5)
                                                 .padding(.horizontal)
                                         }

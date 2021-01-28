@@ -23,7 +23,7 @@ struct PodAmazon: View {
     }
     
     var body: some View {
-        if let link = regionCode == "US" ? pod.amazonLinkUS : pod.amazonLink {
+        if let link = regionCode == "GB" ? pod.amazonLink : pod.amazonLinkUS {
             Button(action: {
                 log(link)
                 openURL(URL(string: link)!)

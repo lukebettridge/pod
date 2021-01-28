@@ -130,7 +130,8 @@ extension Pod {
         "Alto": 414,
         "Double Espresso": 80,
         "Gran Lungo": 150,
-        "Mug": 230
+        "Mug": 230,
+        "Carafe": 535
     ]
     
     func caffeine(cup: String?) -> String {

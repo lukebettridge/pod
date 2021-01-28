@@ -31,7 +31,7 @@ struct PodFavourite: View {
                     VStack(alignment: .center, spacing: 5) {
                         Image(systemName: collectionItem.favourite ? "star.slash.fill" : "star")
                             .font(.title2)
-                        Text(collectionItem.favourite ? "Unfavourite" : "Favourite")
+                        Text(collectionItem.favourite ? "Unfavorite" : "Favorite")
                             .font(.caption)
                     }
                     .frame(maxWidth: .infinity)
