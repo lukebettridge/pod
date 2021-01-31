@@ -13,7 +13,7 @@ struct Collection: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @StateObject var collectionVM = CollectionViewModel()
     
-    @State private var selectedPod: Pod?
+    @State var selectedPod: Pod?
     
     var body: some View {
         NavigationView {

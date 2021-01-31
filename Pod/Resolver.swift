@@ -9,8 +9,8 @@ import Resolver
 
 extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
-        register { PodRepository() }.scope(application)
-        register { BrandRepository() }.scope(application)
-        register { CategoryRepository() }.scope(application)
+        register { PodRepository() }.scope(.application)
+        register { BrandRepository() }.scope(.application)
+        register { CategoryRepository() }.scope(.application)
     }
 }

@@ -13,13 +13,30 @@ struct TrendsList: View {
     @Binding var pods: [Pod]
     var logItems: FetchedResults<LogItem>
     
+    var mostPopular: [MostPopularItem] {
+        (RemoteConfig.config.jsonValue(forKey: .most_popular) as? [[String: Any]] ?? [])
+            .map { MostPopularItem($0) }
+    }
+    
     var body: some View {
         ScrollView(.vertical) {
             VStack(alignment: .leading, spacing: 10) {
-                TrendsCharts()
                 
-                Divider()
-                    .padding(.vertical)
+                if RemoteConfig.config.boolValue(forKey: .show_trends_coming_soon) {
+                    TrendsCharts()
+                    Divider()
+                        .padding(.vertical)
+                }
+                
+                if mostPopular.count > 0 {
+                    NavigationLink(
+                        destination: TrendsPopular(mostPopular: mostPopular, pods: $pods)
+                    ) {
+                        TrendsPopularLink()
+                    }
+                    Divider()
+                        .padding(.vertical)
+                }
                 
                 TrendsHistory(
                     pods: $pods,

@@ -9,10 +9,10 @@ import UIKit
 import CoreData
 
 class LogItem: NSManagedObject, Identifiable {
-    @NSManaged var createdAt: Date
-    @NSManaged var cup: String
+    @NSManaged var createdAt: Date?
+    @NSManaged var cup: String?
     @NSManaged var loggedToHealth: Bool
-    @NSManaged var podId: String
+    @NSManaged var podId: String?
     
     func save () -> Void {
         let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -35,5 +35,11 @@ extension LogItem {
         let request = NSFetchRequest<LogItem>(entityName: "LogItem")
         request.sortDescriptors = sort.map { NSSortDescriptor(key: $0.key, ascending: $0.value) }
         return request
+    }
+    
+    static func remove(logItem: LogItem) -> Void {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        context.delete(logItem)
+        try? context.save()
     }
 }

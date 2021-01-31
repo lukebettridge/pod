@@ -46,11 +46,13 @@ struct PodList: View {
                     
                     VStack {
                         if podListVM.filteredCategories.count > 0 {
-                            if !filter.active && searchBar.text.isEmpty {
-                                PodListRecentlyAdded(
-                                    pods: $podListVM.filteredPods,
-                                    selectedPod: $selectedPod
-                                )
+                            if RemoteConfig.config.boolValue(forKey: .show_recently_added) {
+                                if !filter.active && searchBar.text.isEmpty {
+                                    PodListRecentlyAdded(
+                                        pods: $podListVM.filteredPods,
+                                        selectedPod: $selectedPod
+                                    )
+                                }
                             }
                             ForEach(podListVM.filteredCategories) { category in
                                 if let pods = podListVM.filteredPods.filter { $0.category?.id == category.id } {

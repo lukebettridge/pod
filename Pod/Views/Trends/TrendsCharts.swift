@@ -12,8 +12,8 @@ struct TrendsCharts: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            Image(systemName: "chart.bar.fill")
-                .font(.system(size: 40))
+            Image(systemName: "chart.bar.xaxis")
+                .font(.system(size: 35))
                 .foregroundColor(colorScheme == .dark ? .primary : .accentColor)
             VStack(alignment: .leading, spacing: 5) {
                 Text("Trends by Chart")
@@ -30,7 +30,6 @@ struct TrendsCharts: View {
             }
             Spacer()
         }
-        .padding()
         .background(Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }

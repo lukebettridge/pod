@@ -76,10 +76,14 @@ struct CollectionRow: View {
         .opacity(collectionItem.quantity > 0 ? 1 : 0.5)
         .contextMenu {
             Button(action: {
-                collectionItem.favourite.toggle()
-                collectionItem.save()
-                if collectionItem.favourite { log() }
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                    withAnimation(.linear(duration: 0.25)) {
+                        collectionItem.favourite.toggle()
+                        collectionItem.save()
+                        if collectionItem.favourite { log() }
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    }
+                }
             }) {
                 HStack {
                     Text(collectionItem.favourite ? "Unfavorite" : "Favorite")
@@ -87,8 +91,12 @@ struct CollectionRow: View {
                 }
             }
             Button(action: {
-                CollectionItem.remove(collectionItem: collectionItem)
-                UIImpactFeedbackGenerator().impactOccurred()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                    withAnimation(.linear(duration: 0.25)) {
+                        CollectionItem.remove(collectionItem: collectionItem)
+                        UIImpactFeedbackGenerator().impactOccurred()
+                    }
+                }
             }) {
                 HStack {
                     Text("Remove from Collection")

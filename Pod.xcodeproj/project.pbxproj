@@ -56,6 +56,12 @@
 		B84ECB49259A31DE00B305F7 /* BrandRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECB48259A31DE00B305F7 /* BrandRepository.swift */; };
 		B84ECB4C259A325A00B305F7 /* BrowseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECB4B259A325A00B305F7 /* BrowseViewModel.swift */; };
 		B84ECB52259A34F200B305F7 /* BrandItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ECB51259A34F200B305F7 /* BrandItem.swift */; };
+		B8727ADB25C3580C006B3BE5 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = B8727ADA25C3580C006B3BE5 /* FirebaseRemoteConfig */; };
+		B8727ADD25C358A1006B3BE5 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8727ADC25C358A1006B3BE5 /* RemoteConfig.swift */; };
+		B879477425C5BE4800BC3C22 /* MostPopularItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B879477325C5BE4800BC3C22 /* MostPopularItem.swift */; };
+		B879477825C5C0FB00BC3C22 /* TrendsPopularLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B879477725C5C0FB00BC3C22 /* TrendsPopularLink.swift */; };
+		B879477D25C5CEEF00BC3C22 /* TrendsPopular.swift in Sources */ = {isa = PBXBuildFile; fileRef = B879477C25C5CEEF00BC3C22 /* TrendsPopular.swift */; };
+		B879478025C5D0BF00BC3C22 /* TrendsPopularRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B879477F25C5D0BF00BC3C22 /* TrendsPopularRow.swift */; };
 		B87AEF312598BA6700D53854 /* Decaffeinated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87AEF302598BA6600D53854 /* Decaffeinated.swift */; };
 		B87FFBD625A5F90900D7EB61 /* LogCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FFBD525A5F90900D7EB61 /* LogCup.swift */; };
 		B87FFBDA25A5F9B100D7EB61 /* LogCupRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FFBD925A5F9B100D7EB61 /* LogCupRow.swift */; };
@@ -178,6 +184,11 @@
 		B84ECB48259A31DE00B305F7 /* BrandRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandRepository.swift; sourceTree = "<group>"; };
 		B84ECB4B259A325A00B305F7 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
 		B84ECB51259A34F200B305F7 /* BrandItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandItem.swift; sourceTree = "<group>"; };
+		B8727ADC25C358A1006B3BE5 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
+		B879477325C5BE4800BC3C22 /* MostPopularItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularItem.swift; sourceTree = "<group>"; };
+		B879477725C5C0FB00BC3C22 /* TrendsPopularLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsPopularLink.swift; sourceTree = "<group>"; };
+		B879477C25C5CEEF00BC3C22 /* TrendsPopular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsPopular.swift; sourceTree = "<group>"; };
+		B879477F25C5D0BF00BC3C22 /* TrendsPopularRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsPopularRow.swift; sourceTree = "<group>"; };
 		B87AEF302598BA6600D53854 /* Decaffeinated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decaffeinated.swift; sourceTree = "<group>"; };
 		B87FFBD525A5F90900D7EB61 /* LogCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCup.swift; sourceTree = "<group>"; };
 		B87FFBD925A5F9B100D7EB61 /* LogCupRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCupRow.swift; sourceTree = "<group>"; };
@@ -263,6 +274,7 @@
 				B8B21EB62593CCF2007CD67C /* Resolver in Frameworks */,
 				B8DA62ED25973D1A00074297 /* CloudKit.framework in Frameworks */,
 				B842904825B7685E0043C2DE /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				B8727ADB25C3580C006B3BE5 /* FirebaseRemoteConfig in Frameworks */,
 				B842904E25B7685E0043C2DE /* FirebaseFirestore in Frameworks */,
 				B842904625B7685E0043C2DE /* FirebaseAnalytics in Frameworks */,
 				B842904C25B7685E0043C2DE /* FirebaseAuth in Frameworks */,
@@ -294,10 +306,12 @@
 			isa = PBXGroup;
 			children = (
 				B8371EB425A9F1C800015714 /* History */,
+				B879477625C5C0E500BC3C22 /* Popular */,
 				B8371EA425A9E65100015714 /* Trends.swift */,
 				B8D93CD925A9FB8200E0EC6E /* TrendsCharts.swift */,
 				B8371EAA25A9ECB400015714 /* TrendsEmpty.swift */,
 				B8371EAD25A9EE1400015714 /* TrendsList.swift */,
+				B879477725C5C0FB00BC3C22 /* TrendsPopularLink.swift */,
 			);
 			path = Trends;
 			sourceTree = "<group>";
@@ -346,6 +360,15 @@
 				B842903625B4DE170043C2DE /* FilterRatingRow.swift */,
 			);
 			path = FilterRating;
+			sourceTree = "<group>";
+		};
+		B879477625C5C0E500BC3C22 /* Popular */ = {
+			isa = PBXGroup;
+			children = (
+				B879477C25C5CEEF00BC3C22 /* TrendsPopular.swift */,
+				B879477F25C5D0BF00BC3C22 /* TrendsPopularRow.swift */,
+			);
+			path = Popular;
 			sourceTree = "<group>";
 		};
 		B87FFBD425A5F8F600D7EB61 /* LogCup */ = {
@@ -495,6 +518,7 @@
 				B8371E9B25A9ADA300015714 /* LogItem.swift */,
 				B8B21EA82593AC26007CD67C /* Pod.swift */,
 				B8B9EFEC25B49C0400FA5DBF /* PodFilter.swift */,
+				B879477325C5BE4800BC3C22 /* MostPopularItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -669,6 +693,7 @@
 				B842905225B76C1B0043C2DE /* Analytics.swift */,
 				B8F3D2C3259B62C50092744D /* FetchImage.swift */,
 				B87FFBE625A66DC100D7EB61 /* HealthKit.swift */,
+				B8727ADC25C358A1006B3BE5 /* RemoteConfig.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -699,6 +724,7 @@
 				B842904B25B7685E0043C2DE /* FirebaseAuth */,
 				B842904D25B7685E0043C2DE /* FirebaseFirestore */,
 				B842904F25B7685E0043C2DE /* FirebaseStorageSwift-Beta */,
+				B8727ADA25C3580C006B3BE5 /* FirebaseRemoteConfig */,
 			);
 			productName = Pod;
 			productReference = B8B21E842593A028007CD67C /* Pod.app */;
@@ -766,6 +792,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B879477425C5BE4800BC3C22 /* MostPopularItem.swift in Sources */,
 				B87FFBD625A5F90900D7EB61 /* LogCup.swift in Sources */,
 				B8B9EFF425B49F7D00FA5DBF /* FilterView.swift in Sources */,
 				B8371E9425A8A6D300015714 /* PodLink.swift in Sources */,
@@ -801,6 +828,7 @@
 				B8B33D2B259CD74100E22EC6 /* Category.swift in Sources */,
 				B8B21EB92593CD34007CD67C /* Resolver.swift in Sources */,
 				B8D7683125A0DEB500790F79 /* PodTag.swift in Sources */,
+				B8727ADD25C358A1006B3BE5 /* RemoteConfig.swift in Sources */,
 				B8DA62F52597431000074297 /* CollectionItem.swift in Sources */,
 				B8141C6E25A481A300C7DDEA /* PodDescription.swift in Sources */,
 				B89C7E85259A0FCB0009C797 /* CollectionEmpty.swift in Sources */,
@@ -826,6 +854,7 @@
 				B8371EA525A9E65100015714 /* Trends.swift in Sources */,
 				B842901B25B4CC640043C2DE /* FilterCupRow.swift in Sources */,
 				B8EE27B525A48B2000E3176F /* PodCollection.swift in Sources */,
+				B879477D25C5CEEF00BC3C22 /* TrendsPopular.swift in Sources */,
 				B8B21E882593A028007CD67C /* AppDelegate.swift in Sources */,
 				B8EE27C725A4941800E3176F /* EditFavouritesRow.swift in Sources */,
 				B8D279622594B5DC00C65FAD /* PodRepository.swift in Sources */,
@@ -841,6 +870,7 @@
 				B8371EAE25A9EE1400015714 /* TrendsList.swift in Sources */,
 				B8CC733725A30F50007E59DC /* EditFavourites.swift in Sources */,
 				B8DC4B5F259DE2B4000EB3C5 /* PodPage.swift in Sources */,
+				B879477825C5C0FB00BC3C22 /* TrendsPopularLink.swift in Sources */,
 				B8141C6B25A480B500C7DDEA /* PodProfile.swift in Sources */,
 				B8D7683825A1001600790F79 /* WelcomeItem.swift in Sources */,
 				B8EE27F725A4CEB400E3176F /* LogCTA.swift in Sources */,
@@ -860,6 +890,7 @@
 				B8D279392593E47100C65FAD /* Color.swift in Sources */,
 				B81C856C2597634B00979B99 /* CollectionViewModel.swift in Sources */,
 				B8B21E8A2593A028007CD67C /* SceneDelegate.swift in Sources */,
+				B879478025C5D0BF00BC3C22 /* TrendsPopularRow.swift in Sources */,
 				B8D7683425A0EDB600790F79 /* WelcomeView.swift in Sources */,
 				B81FA89F259B82D600879F24 /* PodListViewModel.swift in Sources */,
 				B8EE27FA25A4DD9D00E3176F /* UIDevice.swift in Sources */,
@@ -1025,7 +1056,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pod/Pod.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pod/Preview Content\"";
 				DEVELOPMENT_TEAM = GPM4PVH4B9;
 				ENABLE_PREVIEWS = YES;
@@ -1034,7 +1065,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.lukebettridge.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1053,7 +1084,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pod/Pod.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pod/Preview Content\"";
 				DEVELOPMENT_TEAM = GPM4PVH4B9;
 				ENABLE_PREVIEWS = YES;
@@ -1062,7 +1093,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.lukebettridge.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1161,6 +1192,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B842904425B7685E0043C2DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageSwift-Beta";
+		};
+		B8727ADA25C3580C006B3BE5 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B842904425B7685E0043C2DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
 		};
 		B8B21EB52593CCF2007CD67C /* Resolver */ = {
 			isa = XCSwiftPackageProductDependency;
