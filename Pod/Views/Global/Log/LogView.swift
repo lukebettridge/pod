@@ -11,13 +11,13 @@ import HealthKit
 struct LogView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.managedObjectContext) var context
+    @Environment(\.pods) var pods
     @FetchRequest(fetchRequest: CollectionItem.fetchRequest(sort: ["favourite": false, "createdAt": true])) var collectionItems: FetchedResults<CollectionItem>
     
     @State var selectedPod: Pod?
     @State var selectedCup: String?
     @State var authorizationStatus: HKAuthorizationStatus? = HealthKit.authorizationStatus()
 
-    let pods: [Pod]
     let isLoading: Bool
     let exit: () -> Void
     

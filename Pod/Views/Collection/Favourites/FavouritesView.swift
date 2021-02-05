@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct FavouritesView: View {
+    @Environment(\.pods) var pods
     @FetchRequest(fetchRequest: CollectionItem.fetchRequest()) var collectionItems: FetchedResults<CollectionItem>
     
-    var pods: [Pod]
     var exit: () -> Void
     
     var body: some View {

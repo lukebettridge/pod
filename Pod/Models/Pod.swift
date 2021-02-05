@@ -18,6 +18,7 @@ class Pod: ObservableObject, Identifiable, Equatable {
     var amazonLink: String?
     var amazonLinkUS: String?
     var available: Bool
+    var barcodes: [String]
     var brand: Brand?
     var caffeinePerML: Double
     var category: Category?
@@ -46,6 +47,7 @@ class Pod: ObservableObject, Identifiable, Equatable {
         self.amazonLink = data["amazonLink"] as? String
         self.amazonLinkUS = data["amazonLinkUS"] as? String
         self.available = data["available"] as? Bool ?? false
+        self.barcodes = data["barcodes"] as? [String] ?? []
         self.cupSize = data["cupSize"] as? [String] ?? []
         self.created = (data["created"] as? Timestamp)?.dateValue() ?? Date(timeIntervalSince1970: 0)
         self.decaffeinated = data["decaffeinated"] as? Bool ?? false

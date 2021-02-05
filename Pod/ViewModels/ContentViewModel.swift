@@ -10,7 +10,7 @@ import Combine
 import Resolver
 
 enum ContentViewActiveSheet: Identifiable {
-    case favourites, filter, log, pod, welcome
+    case favourites, filter, log, pod, scanner, welcome
     var id: Int { hashValue }
 }
 
@@ -55,15 +55,18 @@ class ContentViewModel: ObservableObject {
     }
     
     func openSheet(_ sheet: ContentViewActiveSheet) {
+        closeSheet()
         activeSheet = sheet
     }
     
     func openSheet(_ sheet: ContentViewActiveSheet, pod: Pod) {
+        closeSheet()
         self.selectedPod = pod
         activeSheet = sheet
     }
     
     func openSheet(_ sheet: ContentViewActiveSheet, filter: Binding<BrowseFilter>) {
+        closeSheet()
         self.selectedFilter = filter
         activeSheet = sheet
     }

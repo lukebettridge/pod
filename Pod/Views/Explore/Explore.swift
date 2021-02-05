@@ -9,12 +9,12 @@ import SwiftUI
 
 struct Explore: View {
     @Environment(\.colorScheme) var colorScheme
-    @EnvironmentObject var contentVM: ContentViewModel
+    @EnvironmentObject var vm: ContentViewModel
     
     var body: some View {
         NavigationView {
             Group {
-                if contentVM.isLoading {
+                if vm.isLoading {
                     ProgressView()
                 } else {
                     ScrollView(.vertical) {
@@ -32,6 +32,15 @@ struct Explore: View {
                 }
             }
             .navigationBarTitle("Explore")
+            .navigationBarItems(
+                trailing:
+                    Button(action: {
+                        vm.openSheet(.scanner)
+                    }) {
+                        Image(systemName: "barcode.viewfinder")
+                            .font(.title2)
+                    }
+            )
         }
         .onAppear {
             Analytics.log(event: .view, data: [

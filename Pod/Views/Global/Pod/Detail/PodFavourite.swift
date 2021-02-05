@@ -11,7 +11,7 @@ struct PodFavourite: View {
     @Binding var collectionItem: CollectionItem?
     let pod: Pod
     
-    private func log() {
+    func log() {
         Analytics.log(event: .addToFavourites, data: [
             Analytics.AnalyticsParameterCapsuleId: pod.id!,
             Analytics.AnalyticsParameterCapsuleName: pod.name!,

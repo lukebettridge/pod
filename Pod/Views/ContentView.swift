@@ -54,14 +54,11 @@ struct ContentView: View {
                 vm.openSheet(.welcome)
             }
         }
-        .sheet(item: $vm.activeSheet) { item in
+        .sheet(item: $vm.activeSheet) { sheet in
             Group {
-                switch item {
+                switch sheet {
                     case .favourites:
-                        FavouritesView(
-                            pods: vm.pods,
-                            exit: vm.closeSheet
-                        )
+                        FavouritesView(exit: vm.closeSheet)
                     case .filter:
                             FilterView(
                                 vm.selectedFilter,
@@ -72,22 +69,24 @@ struct ContentView: View {
                             )
                     case .log:
                         LogView(
-                            pods: vm.pods,
                             isLoading: vm.isLoading,
                             exit: vm.closeSheet
                         )
                     case .pod:
                         PodView(
-                            vm.selectedPod,
+                            $vm.selectedPod,
                             exit: {
                                 vm.closeSheet()
                                 vm.selectedPod = nil
                             }
                         )
+                    case .scanner:
+                        ScannerView(exit: vm.closeSheet)
                     case .welcome:
                         WelcomeView(exit: vm.closeSheet)
                 }
             }
+            .environment(\.pods, vm.pods)
             .environment(\.managedObjectContext, managedObjectContext)
         }
     }

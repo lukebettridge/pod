@@ -12,11 +12,11 @@ struct PodView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.managedObjectContext) var managedObjectContext
     
-    var pod: Pod?
+    @Binding var pod: Pod?
     var exit: () -> Void
     
-    init(_ pod: Pod?, exit: @escaping () -> Void) {
-        self.pod = pod
+    init(_ pod: Binding<Pod?>, exit: @escaping () -> Void) {
+        self._pod = pod
         self.exit = exit
     }
     

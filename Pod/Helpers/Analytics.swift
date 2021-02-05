@@ -24,6 +24,8 @@ class Analytics {
         case .purchaseClick:
             logPurchaseClick(data: data as? [String: Any])
             break
+        case .scanBarcode:
+            logScanBarcode(data: data as? [String: Any])
         case .search:
             logSearch(term: data as? String)
             break
@@ -39,9 +41,11 @@ class Analytics {
     static let AnalyticsEventFilter: String = "filter"
     static let AnalyticsEventLogCoffee: String = "log_coffee"
     static let AnalyticsEventPurchaseClick: String = "purchase_click"
+    static let AnalyticsEventScanBarcode: String = "scan_barcode"
     
     // Custom Dimensions
     static let AnalyticsParameterAcidity: String = "acidity"
+    static let AnalyticsParameterBarcode: String = "barcode"
     static let AnalyticsParameterBitterness: String = "bitterness"
     static let AnalyticsParameterBody: String = "body"
     static let AnalyticsParameterCapsuleAvailable: String = "capsule_available"
@@ -66,7 +70,7 @@ class Analytics {
 
 extension Analytics {
     enum AnalyticsEvent {
-        case addToCollection, addToFavourites, filter, logCoffee, purchaseClick, search, view
+        case addToCollection, addToFavourites, filter, logCoffee, purchaseClick, scanBarcode, search, view
     }
     
     private static func logAddToCollection(data: [String: Any]?) {
@@ -96,6 +100,12 @@ extension Analytics {
     private static func logPurchaseClick(data: [String: Any]?) {
         if let data = data {
             FirebaseAnalytics.Analytics.logEvent(AnalyticsEventPurchaseClick, parameters: data)
+        }
+    }
+    
+    private static func logScanBarcode(data: [String: Any]?) {
+        if let data = data {
+            FirebaseAnalytics.Analytics.logEvent(AnalyticsEventScanBarcode, parameters: data)
         }
     }
     

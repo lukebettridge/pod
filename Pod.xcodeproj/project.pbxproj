@@ -80,6 +80,9 @@
 		B888D0F025A36FF400F1F0A7 /* PodScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888D0EF25A36FF400F1F0A7 /* PodScale.swift */; };
 		B888D0F825A47EE000F1F0A7 /* PodOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888D0F725A47EE000F1F0A7 /* PodOrigin.swift */; };
 		B89C7E85259A0FCB0009C797 /* CollectionEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C7E84259A0FCB0009C797 /* CollectionEmpty.swift */; };
+		B8A3265025CD6E730052D05B /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = B8A3264F25CD6E730052D05B /* CodeScanner */; };
+		B8A3265325CD6F270052D05B /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3265225CD6F270052D05B /* ScannerView.swift */; };
+		B8A3265525CDBD9C0052D05B /* ScannerClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A3265425CDBD9C0052D05B /* ScannerClose.swift */; };
 		B8AD7A6C25A505E700E31165 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD7A6B25A505E700E31165 /* LogView.swift */; };
 		B8AD7A7425A517E200E31165 /* LogPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD7A7325A517E200E31165 /* LogPod.swift */; };
 		B8AD7A7A25A5181100E31165 /* LogPodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD7A7925A5181100E31165 /* LogPodRow.swift */; };
@@ -209,6 +212,8 @@
 		B888D0EF25A36FF400F1F0A7 /* PodScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodScale.swift; sourceTree = "<group>"; };
 		B888D0F725A47EE000F1F0A7 /* PodOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodOrigin.swift; sourceTree = "<group>"; };
 		B89C7E84259A0FCB0009C797 /* CollectionEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionEmpty.swift; sourceTree = "<group>"; };
+		B8A3265225CD6F270052D05B /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		B8A3265425CDBD9C0052D05B /* ScannerClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerClose.swift; sourceTree = "<group>"; };
 		B8AD7A6B25A505E700E31165 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
 		B8AD7A7325A517E200E31165 /* LogPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPod.swift; sourceTree = "<group>"; };
 		B8AD7A7925A5181100E31165 /* LogPodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPodRow.swift; sourceTree = "<group>"; };
@@ -284,6 +289,7 @@
 				B842904625B7685E0043C2DE /* FirebaseAnalytics in Frameworks */,
 				B842904C25B7685E0043C2DE /* FirebaseAuth in Frameworks */,
 				B8DC4B6E259E17D0000EB3C5 /* Introspect in Frameworks */,
+				B8A3265025CD6E730052D05B /* CodeScanner in Frameworks */,
 				B842904A25B7685E0043C2DE /* FirebaseStorage in Frameworks */,
 				B842905025B7685E0043C2DE /* FirebaseStorageSwift-Beta in Frameworks */,
 				B87FFBE525A66BDD00D7EB61 /* HealthKit.framework in Frameworks */,
@@ -397,6 +403,7 @@
 				B87947A425C6E74C00BC3C22 /* Browse */,
 				B84F7C0F25C9EEF300BF81ED /* Featured */,
 				B879477625C5C0E500BC3C22 /* MostPopular */,
+				B8A3265125CD6F190052D05B /* Scanner */,
 				B83DECFD25CCC5CE00C7DC48 /* TopFavourites */,
 				B879478425C6AB9700BC3C22 /* Explore.swift */,
 				B8C3905A25CB171000C8C058 /* ExploreLink.swift */,
@@ -459,6 +466,15 @@
 				B8EE27F325A4AC8100E3176F /* PodQuantity.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		B8A3265125CD6F190052D05B /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				B8A3265425CDBD9C0052D05B /* ScannerClose.swift */,
+				B8A3265225CD6F270052D05B /* ScannerView.swift */,
+			);
+			path = Scanner;
 			sourceTree = "<group>";
 		};
 		B8AD7A6A25A504D700E31165 /* Log */ = {
@@ -739,6 +755,7 @@
 				B842904D25B7685E0043C2DE /* FirebaseFirestore */,
 				B842904F25B7685E0043C2DE /* FirebaseStorageSwift-Beta */,
 				B8727ADA25C3580C006B3BE5 /* FirebaseRemoteConfig */,
+				B8A3264F25CD6E730052D05B /* CodeScanner */,
 			);
 			productName = Pod;
 			productReference = B8B21E842593A028007CD67C /* Pod.app */;
@@ -772,6 +789,7 @@
 				B8B21EB42593CCF2007CD67C /* XCRemoteSwiftPackageReference "Resolver" */,
 				B8DC4B6C259E17D0000EB3C5 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				B842904425B7685E0043C2DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B8A3264E25CD6E730052D05B /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = B8B21E852593A028007CD67C /* Products */;
 			projectDirPath = "";
@@ -842,8 +860,10 @@
 				B842903425B4DE100043C2DE /* FilterRating.swift in Sources */,
 				B84ECB45259A316E00B305F7 /* Brand.swift in Sources */,
 				B8B33D2B259CD74100E22EC6 /* Category.swift in Sources */,
+				B8A3265525CDBD9C0052D05B /* ScannerClose.swift in Sources */,
 				B8B21EB92593CD34007CD67C /* Resolver.swift in Sources */,
 				B8D7683125A0DEB500790F79 /* PodTag.swift in Sources */,
+				B8A3265325CD6F270052D05B /* ScannerView.swift in Sources */,
 				B8727ADD25C358A1006B3BE5 /* RemoteConfig.swift in Sources */,
 				B8DA62F52597431000074297 /* CollectionItem.swift in Sources */,
 				B8141C6E25A481A300C7DDEA /* PodDescription.swift in Sources */,
@@ -1072,7 +1092,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pod/Pod.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pod/Preview Content\"";
 				DEVELOPMENT_TEAM = GPM4PVH4B9;
 				ENABLE_PREVIEWS = YES;
@@ -1081,7 +1101,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.lukebettridge.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1100,7 +1120,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pod/Pod.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pod/Preview Content\"";
 				DEVELOPMENT_TEAM = GPM4PVH4B9;
 				ENABLE_PREVIEWS = YES;
@@ -1109,7 +1129,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.lukebettridge.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1150,6 +1170,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 7.4.0;
+			};
+		};
+		B8A3264E25CD6E730052D05B /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
 			};
 		};
 		B8B21EB42593CCF2007CD67C /* XCRemoteSwiftPackageReference "Resolver" */ = {
@@ -1205,6 +1233,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B842904425B7685E0043C2DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
+		};
+		B8A3264F25CD6E730052D05B /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8A3264E25CD6E730052D05B /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 		B8B21EB52593CCF2007CD67C /* Resolver */ = {
 			isa = XCSwiftPackageProductDependency;
