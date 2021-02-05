@@ -10,34 +10,65 @@ import CoreData
 
 struct Collection: View {
     @FetchRequest(fetchRequest: CollectionItem.fetchRequest()) var collectionItems: FetchedResults<CollectionItem>
-    @Environment(\.managedObjectContext) var managedObjectContext
-    @StateObject var collectionVM = CollectionViewModel()
+    @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var vm: ContentViewModel
     
-    @State var selectedPod: Pod?
+    var favourites: [CollectionItem] {
+        collectionItems.filter { $0.favourite }
+    }
     
     var body: some View {
         NavigationView {
-            Group {
-                if collectionVM.isLoading {
+            VStack {
+                if vm.isLoading {
                     ProgressView()
-                } else {
-                    if collectionItems.count > 0 {
-                        CollectionList(
-                            pods: $collectionVM.pods,
-                            collectionItems: collectionItems,
-                            selectPod: { pod in selectedPod = pod }
-                        )
-                    } else {
-                        CollectionEmpty()
+                } else if collectionItems.count > 0 {
+                    ScrollView(.vertical) {
+                        VStack(spacing: 10) {
+                            Section(header: HStack {
+                                Text("Favorites").font(.title2).fontWeight(.semibold)
+                                Spacer()
+                                Button(action: { vm.openSheet(.favourites) }) {
+                                    Text("Edit").fontWeight(.regular)
+                                }
+                            }) {
+                                if favourites.count > 0 {
+                                    ForEach (favourites) { collectionItem in
+                                        if let pod = vm.pods.first(where: { $0.id == collectionItem.podId }) {
+                                            CollectionRow(collectionItem, pod: pod)
+                                        }
+                                    }
+                                } else {
+                                    FavouritesEmpty()
+                                }
+                            }
+                            
+                            Divider()
+                                .padding(.vertical)
+                            
+                            ForEach (collectionItems.filter { !$0.favourite }) { collectionItem in
+                                if let pod = vm.pods.first(where: { $0.id == collectionItem.podId }) {
+                                    CollectionRow(collectionItem, pod: pod)
+                                }
+                            }
+                            
+                            Text("You have \(collectionItems.reduce(0) { $0 + $1.quantity }) capsules in your collection.")
+                                .font(.caption2)
+                                .foregroundColor(.gray)
+                                .padding(.top, 4)
+                        }
+                        .padding()
+                        .padding(.bottom, 30)
                     }
+                    .background(
+                        Color(colorScheme == .dark ? UIColor.systemBackground : UIColor.secondarySystemBackground)
+                            .edgesIgnoringSafeArea(.all)
+                    )
+                } else {
+                    CollectionEmpty()
                 }
             }
             .navigationBarTitle("My Collection")
-        }
-        .navigationViewStyle(DefaultNavigationViewStyle())
-        .sheet(item: $selectedPod) {
-            PodPage(pod: $0, exit: { selectedPod = nil })
-                .environment(\.managedObjectContext, managedObjectContext)
         }
         .onAppear {
             Analytics.log(event: .view, data: [

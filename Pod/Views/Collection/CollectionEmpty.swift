@@ -24,9 +24,3 @@ struct CollectionEmpty: View {
         .padding(.horizontal)
     }
 }
-
-struct CollectionEmpty_Previews: PreviewProvider {
-    static var previews: some View {
-        CollectionEmpty()
-    }
-}

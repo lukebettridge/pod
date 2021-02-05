@@ -8,16 +8,9 @@
 import SwiftUI
 import CoreData
 
-enum ContentViewActiveSheet: Identifiable {
-    case welcome, log
-    var id: Int { hashValue }
-}
-
 struct ContentView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
-    
-    @State private var activeSheet: ContentViewActiveSheet? =
-        !UserDefaults.standard.bool(forKey: "Launched") ? .welcome : nil
+    @StateObject var vm = ContentViewModel()
     
     init() {
         UserDefaults.standard.set(true, forKey: "Launched")
@@ -29,19 +22,19 @@ struct ContentView: View {
                 TabView {
                     Collection()
                         .tabItem {
-                            Image(systemName: "rectangle.fill.badge.person.crop")
+                            Image(systemName: "person.crop.square.fill")
                             Text("Collection")
                         }
+                    Explore()
+                        .tabItem {
+                            Image(systemName: "square.grid.2x2.fill")
+                            Text("Explore")
+                        }
+                    Spacer()
                     Trends()
                         .tabItem {
                             Image(systemName: "chart.bar.fill")
                             Text("Trends")
-                        }
-                    Spacer()
-                    Browse()
-                        .tabItem {
-                            Image(systemName: "square.grid.3x2.fill")
-                            Text("Browse")
                         }
                     Settings()
                         .tabItem {
@@ -49,20 +42,50 @@ struct ContentView: View {
                             Text("Settings")
                         }
                 }
+                .environment(\.pods, vm.pods)
+                .environmentObject(vm)
                 
-                LogCTA(action: {
-                    activeSheet = .log
-                }, gp: gp)
+                LogCTA(action: { vm.openSheet(.log) }, gp: gp)
             }
         }
         .edgesIgnoringSafeArea(.all)
-        .sheet(item: $activeSheet) { item in
+        .onAppear {
+            if !UserDefaults.standard.bool(forKey: "Launched") {
+                vm.openSheet(.welcome)
+            }
+        }
+        .sheet(item: $vm.activeSheet) { item in
             Group {
                 switch item {
-                    case .welcome:
-                        WelcomeView(exit: { activeSheet = nil })
+                    case .favourites:
+                        FavouritesView(
+                            pods: vm.pods,
+                            exit: vm.closeSheet
+                        )
+                    case .filter:
+                            FilterView(
+                                vm.selectedFilter,
+                                exit: {
+                                    vm.closeSheet()
+                                    vm.selectedFilter = nil
+                                }
+                            )
                     case .log:
-                        LogView(exit: { activeSheet = nil })
+                        LogView(
+                            pods: vm.pods,
+                            isLoading: vm.isLoading,
+                            exit: vm.closeSheet
+                        )
+                    case .pod:
+                        PodView(
+                            vm.selectedPod,
+                            exit: {
+                                vm.closeSheet()
+                                vm.selectedPod = nil
+                            }
+                        )
+                    case .welcome:
+                        WelcomeView(exit: vm.closeSheet)
                 }
             }
             .environment(\.managedObjectContext, managedObjectContext)

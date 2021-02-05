@@ -46,6 +46,7 @@ struct TrendsHistoryRow: View {
                         Text((pod.name ?? "").uppercased())
                             .font(.custom("FSLucasPro-SemiBd", size: 16))
                             .foregroundColor(.primary)
+                            .lineLimit(1)
                         if pod.decaffeinated {
                             Decaffeinated()
                         }

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TrendsHistory: View {
-    @Binding var pods: [Pod]
-    var logItems: FetchedResults<LogItem>
+    let logItems: FetchedResults<LogItem>
+    let pods: [Pod]
     
     @State var isEditing: Bool = false
     

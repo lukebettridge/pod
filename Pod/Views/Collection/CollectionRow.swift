@@ -9,21 +9,26 @@ import SwiftUI
 
 struct CollectionRow: View {
     @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var vm: ContentViewModel
     
+    @ObservedObject var collectionItem: CollectionItem
     @ObservedObject var pod: Pod
-    var collectionItem: CollectionItem
-    var selectPod: (Pod) -> Void
+    
+    init(_ collectionItem: CollectionItem, pod: Pod) {
+        self.collectionItem = collectionItem
+        self.pod = pod
+    }
     
     private func log() {
         Analytics.log(event: .addToFavourites, data: [
-            Analytics.AnalyticsParameterCapsuleId: pod.id as Any,
-            Analytics.AnalyticsParameterCapsuleName: pod.name as Any,
+            Analytics.AnalyticsParameterCapsuleId: pod.id!,
+            Analytics.AnalyticsParameterCapsuleName: pod.name!,
             Analytics.AnalyticsParameterCapsulesRemaining: collectionItem.quantity as Any
         ])
     }
     
     var body: some View {
-        Button(action: { selectPod(pod) }) {
+        Button(action: { vm.openSheet(.pod, pod: pod) }) {
             HStack(spacing: 12.5) {
                 pod.image
                     .resizable()
@@ -36,6 +41,7 @@ struct CollectionRow: View {
                         Text((pod.name ?? "").uppercased())
                             .font(.custom("FSLucasPro-SemiBd", size: 16))
                             .foregroundColor(.primary)
+                            .lineLimit(1)
                         if pod.decaffeinated {
                             Decaffeinated()
                                 .padding(.bottom, 2)

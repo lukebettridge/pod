@@ -37,9 +37,3 @@ struct FavouritesEmpty: View {
         )
     }
 }
-
-struct FavouritesEmpty_Previews: PreviewProvider {
-    static var previews: some View {
-        FavouritesEmpty()
-    }
-}

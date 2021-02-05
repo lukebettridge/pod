@@ -10,7 +10,24 @@ import FirebaseFirestore
 class CategoryRepository {
     private let store = Firestore.firestore()
     
-    func getByBrand(brand: Brand, completion: @escaping ([Category]) -> Void) {
+    func get(completion: @escaping ([Category]) -> Void) {
+        store
+            .collection("categories")
+            .order(by: "name")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting brands: \(err)")
+                } else {
+                    completion(
+                        querySnapshot?.documents.compactMap() { document in
+                            Category(document.data(), documentID: document.documentID)
+                        } ?? []
+                    )
+                }
+            }
+    }
+    
+    func getByBrand(_ brand: Brand, completion: @escaping ([Category]) -> Void) {
         if let id = brand.id {
             let brandReference = store
                 .collection("brands")

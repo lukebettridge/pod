@@ -14,13 +14,15 @@ class RemoteConfig {
         let config = Firebase.RemoteConfig.remoteConfig()
         
         let defaults: [String: Any?] = [
+            ValueKey.featured.rawValue: nil,
             ValueKey.most_popular.rawValue: [],
             ValueKey.show_recently_added.rawValue: true,
-            ValueKey.show_trends_coming_soon.rawValue: false
+            ValueKey.show_trends_coming_soon.rawValue: false,
+            ValueKey.top_favourites.rawValue: []
         ]
         config.setDefaults(defaults as? [String: NSObject])
     
-        config.fetch { status, err in
+        config.fetch(withExpirationDuration: 0) { status, err in
             if let err = err {
                 print("Error fetching config: \(err)")
             } else {
@@ -38,6 +40,6 @@ class RemoteConfig {
     }
     
     enum ValueKey: String {
-        case most_popular, show_recently_added, show_trends_coming_soon
+        case featured, most_popular, show_recently_added, show_trends_coming_soon, top_favourites
     }
 }
