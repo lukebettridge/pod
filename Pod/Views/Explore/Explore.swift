@@ -34,9 +34,7 @@ struct Explore: View {
             .navigationBarTitle("Explore")
             .navigationBarItems(
                 trailing:
-                    Button(action: {
-                        vm.openSheet(.scanner)
-                    }) {
+                    Button(action: { vm.openSheet(.scanner) }) {
                         Image(systemName: "barcode.viewfinder")
                             .font(.title2)
                     }

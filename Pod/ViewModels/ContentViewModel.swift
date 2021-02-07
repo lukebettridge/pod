@@ -10,7 +10,7 @@ import Combine
 import Resolver
 
 enum ContentViewActiveSheet: Identifiable {
-    case favourites, filter, log, pod, scanner, welcome
+    case favourites, filter, log, plus, pod, scanner, welcome
     var id: Int { hashValue }
 }
 

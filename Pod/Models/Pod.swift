@@ -20,7 +20,7 @@ class Pod: ObservableObject, Identifiable, Equatable {
     var available: Bool
     var barcodes: [String]
     var brand: Brand?
-    var caffeinePerML: Double
+    var caffeinePerML: Double?
     var category: Category?
     var color: Color
     var cupSize: [String]
@@ -53,7 +53,6 @@ class Pod: ObservableObject, Identifiable, Equatable {
         self.decaffeinated = data["decaffeinated"] as? Bool ?? false
         self.description = data["description"] as? String
         self.caffeinePerML = data["caffeinePerML"] as? Double
-            ?? (data["decaffeinated"] as? Bool ?? false ? 0.075 : 1.5)
         self.intensity = data["intensity"] as? Int
         self.introduced = data["introduced"] as? Int
         self.name = data["name"] as? String
@@ -137,11 +136,13 @@ extension Pod {
     ]
     
     func caffeine(cup: String?) -> String {
-        let caffeine = self.caffeinePerML * (Pod.cupVolumes[cup ?? ""] ?? 40)
+        let caffeinePerML = self.caffeinePerML ?? (decaffeinated ? 0.075 : 1.5)
+        let caffeine = caffeinePerML * (Pod.cupVolumes[cup ?? ""] ?? 40)
         return String(format: caffeine == floor(caffeine) ? "%.0f" : "%.1f", caffeine)
     }
     
     func caffeine(cup: String?) -> Double {
-        self.caffeinePerML * (Pod.cupVolumes[cup ?? ""] ?? 40)
+        let caffeinePerML = self.caffeinePerML ?? (decaffeinated ? 0.075 : 1.5)
+        return caffeinePerML * (Pod.cupVolumes[cup ?? ""] ?? 40)
     }
 }

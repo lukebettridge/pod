@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import StoreKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,10 +21,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Get the managed object context from the shared persistent container.
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        // Store manager
+        // let storeManager = StoreManager()
+        // SKPaymentQueue.default().add(storeManager)
 
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
             .environment(\.managedObjectContext, context)
+            //.environmentObject(storeManager)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

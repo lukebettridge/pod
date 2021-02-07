@@ -16,7 +16,7 @@ struct CollectionEmpty: View {
             Text("Your collection is empty")
                 .font(.title3)
                 .fontWeight(.bold)
-            Text("Find your pods in the Browse tab, press \(Image(systemName: "plus.circle.fill")) to add them to your collection.")
+            Text("Find your pods in the Explore tab, press \(Image(systemName: "plus.circle.fill")) to add them to your collection.")
                 .font(.subheadline)
         }
         .foregroundColor(Color(UIColor.systemGray3))

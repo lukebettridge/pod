@@ -10,9 +10,21 @@ import SwiftUI
 struct Settings: View {
     @State var isShowingAlert = false
     
+    @State var variety = UserDefaults.standard.integer(forKey: "Variety")
+    
     var body: some View {
         NavigationView {
             Form {
+                Section(
+                    footer:
+                        Text("Set which capsule type you'd prefer to see first when browsing all capsules.")
+                ) {
+                    Picker("Default Capsule Type", selection: $variety) {
+                        Text("Original").tag(0)
+                        Text("Vertuo").tag(1)
+                    }
+                }
+                
                 Section(header: Text("About")) {
                     if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
                         HStack {
@@ -65,6 +77,9 @@ struct Settings: View {
                     Analytics.AnalyticsParameterScreenClass: "Settings"
                 ])
             }
+        }
+        .onChange(of: variety) { variety in
+            UserDefaults.standard.set(variety, forKey: "Variety")
         }
     }
 }

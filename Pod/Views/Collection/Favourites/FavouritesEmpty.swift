@@ -19,7 +19,7 @@ struct FavouritesEmpty: View {
             Text("You have no favorites")
                 .font(.headline)
                 .fontWeight(.medium)
-            Text("Find your pods in the Browse tab, press \(Image(systemName: "star")) to add them to your favorites.")
+            Text("Find your pods in the Explore tab, press \(Image(systemName: "star")) to add them to your favorites.")
                 .font(.caption)
                 .fixedSize(horizontal: false, vertical: true)
         }

@@ -67,6 +67,10 @@ struct Browse: View {
                                 }
                             }
                         }
+                        if pods.count == 0 {
+                            BrowseRequest()
+                                .padding()
+                        }
                     }
                     .padding(.vertical, 5)
                 }
@@ -86,6 +90,7 @@ struct Browse: View {
             UINavigationController.navigationItem.searchController = self.searchBar.searchController
         }
         .onAppear {
+            self.variety = UserDefaults.standard.integer(forKey: "Variety")
             Analytics.log(event: .view, data: [
                 Analytics.AnalyticsParameterScreenName: title,
                 Analytics.AnalyticsParameterScreenClass: "Browse"

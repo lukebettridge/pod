@@ -72,6 +72,8 @@ struct ContentView: View {
                             isLoading: vm.isLoading,
                             exit: vm.closeSheet
                         )
+                    case .plus:
+                        PlusView()
                     case .pod:
                         PodView(
                             $vm.selectedPod,
