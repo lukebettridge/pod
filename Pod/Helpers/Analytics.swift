@@ -18,6 +18,7 @@ class Analytics {
             break
         case .filter:
             logFilter(data: data as? [String: Any])
+            break
         case .logCoffee:
             logCoffee(data: data as? [String: Any])
             break
@@ -26,6 +27,7 @@ class Analytics {
             break
         case .scanBarcode:
             logScanBarcode(data: data as? [String: Any])
+            break
         case .search:
             logSearch(term: data as? String)
             break
