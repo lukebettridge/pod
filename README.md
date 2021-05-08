@@ -2,7 +2,7 @@
 
 # Pod: Coffee Capsules
 
-Pod offers detailed information on the entire range of available and discontinued Nespresso coffee capsules. Organise your own collection of capsules stored safely within iCloud. Automatically record your water and caffeine consumption within the Health app.
+Pod offers detailed information about the entire range of Nespresso coffee capsules. Organise your own collection of capsules within the app, stored safely in iCloud. Automatically record your water and caffeine consumption in the Health app.
 
 [<img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" height="45" />](https://apps.apple.com/us/app/pod-coffee-capsules/id1547170152)
 
@@ -16,9 +16,9 @@ The user interface is built almost entirely using SwiftUI with the UIKit App Del
 
 The app relies on a Firebase Cloud Firestore Database which stores the capsule information. Firestore offers offline support, caching the majority of the dataset on-device.
 
-Google Cloud Storage is used to store assets such as capsule images and Firestore backups. Firestore capsule entries reference the relevant object keys for related assets which are also stored on-device initially, allowing them to be fetched locally for future requests.
+Google Cloud Storage is used to store assets such as capsule images and Firestore backups. Firestore capsule entries reference the relevant object keys for related assets. These assets are also stored on-device.
 
-Firebase Cloud Functions are also used to collate analytical data captured by Google Analytics. This allows Pod to display the most popular and most favourited capsules back to the user. These functions are run daily, making SQL queries to BigQuery, and storing the collated data as Firebase Remote Config parameters. The repository for these Cloud Functions can be found here: [lukebettridge/pod-functions](https://github.com/lukebettridge/pod-functions).
+Firebase Cloud Functions are used to collate analytical data captured by Google Analytics. This allows Pod to display the most popular and most favourited capsules back to the user. These functions are run daily, making SQL queries to BigQuery, and storing the collated data as Firebase Remote Config parameters. The repository for these Cloud Functions can be found here: [lukebettridge/pod-functions](https://github.com/lukebettridge/pod-functions).
 
 ### Data
 
