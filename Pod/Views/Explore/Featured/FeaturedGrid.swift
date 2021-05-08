@@ -11,14 +11,15 @@ struct FeaturedGrid: View {
     @Environment(\.pods) var pods
     let color: Color
     
-    let gridItem = GridItem(.flexible(), spacing: 15)
+    let gridItem = GridItem(.flexible(minimum: 0, maximum: 100), spacing: 15)
     
     var body: some View {
         LazyVGrid(
             columns: Array(
                 repeating: gridItem,
-                count: 3
+                count: min(pods.count, 3)
             ),
+            alignment: .center,
             spacing: 15
         ) {
             ForEach(pods) { pod in
