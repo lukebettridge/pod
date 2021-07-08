@@ -14,7 +14,7 @@ struct FavouritesEmpty: View {
         VStack(spacing: 5) {
             Image(systemName: "star.fill")
                 .font(Font.system(size: 50).weight(.light))
-                .foregroundColor(Color(UIColor.systemGray5))
+                .foregroundColor(Color(UIColor.systemGray4))
                 .padding(.bottom, 5)
             Text("You have no favorites")
                 .font(.headline)
@@ -30,10 +30,8 @@ struct FavouritesEmpty: View {
         .padding(.top, 18.5)
         .padding(.bottom, 21)
         .background(
-            RoundedRectangle(cornerRadius: 10)
-                .fill(
-                    colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-                )
+            RoundedRectangle(cornerRadius: 15)
+                .fill(Color("SecondaryBackground"))
         )
     }
 }

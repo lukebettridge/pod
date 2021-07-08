@@ -36,7 +36,7 @@ struct PodTag: View {
         .padding(.trailing, 8)
         .background(
             RoundedRectangle(cornerRadius: 15)
-                .fill(Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
+                .fill(Color("SecondaryBackground"))
         )
     }
 }

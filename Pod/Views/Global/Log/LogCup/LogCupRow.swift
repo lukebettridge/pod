@@ -31,7 +31,7 @@ struct LogCupRow: View {
         .padding(.top, 7)
         .padding(.horizontal, 15)
         .frame(width: 75, height: 75)
-        .background(selected ? Color.accentColor : Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
+        .background(selected ? Color.accentColor : Color("SecondaryBackground"))
         .clipShape(Circle())
     }
 }

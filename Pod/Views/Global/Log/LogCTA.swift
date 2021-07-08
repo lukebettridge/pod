@@ -27,14 +27,12 @@ struct LogCTA: View {
                 Image("Espresso")
                     .resizable()
                     .scaledToFit()
-                    .foregroundColor(Color.white.opacity(colorScheme == .dark ? 0.5 : 1))
+                    .foregroundColor(Color.white.opacity(colorScheme == .dark ? 0.8 : 1))
                     .frame(width: relativeWidth / 2.25, height: relativeWidth / 2.25)
                     .frame(width: relativeWidth, height: relativeWidth)
                     .background(
                         Circle()
-                            .fill(
-                                colorScheme == .dark ? Color(UIColor.tertiarySystemBackground) : Color.accentColor
-                            )
+                            .fill(Color.accentColor)
                     )
                     .shadow(color: Color.black.opacity(colorScheme == .dark ? 0.3 : 0.1), radius: 6, x: 0, y: 0)
             }

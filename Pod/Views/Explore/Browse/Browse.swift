@@ -49,6 +49,7 @@ struct Browse: View {
         VStack {
             if vm.isLoading || browseVM.isLoading {
                 ProgressView()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 ScrollView(.vertical) {
                     VStack {
@@ -76,6 +77,7 @@ struct Browse: View {
                 }
             }
         }
+        .background(Color("PrimaryBackground").edgesIgnoringSafeArea(.all))
         .navigationBarTitle(title)
         .navigationBarItems(
             trailing:
@@ -83,7 +85,7 @@ struct Browse: View {
                     vm.openSheet(.filter, filter: $filter)
                 }) {
                     Image(systemName: "line.horizontal.3.decrease.circle\(filter.active ? ".fill" : "")")
-                        .font(.title2)
+                        .font(.headline)
                 }
         )
         .introspectNavigationController { UINavigationController in

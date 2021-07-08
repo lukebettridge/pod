@@ -35,7 +35,7 @@ struct PodView: View {
             }
             .background(
                 colorScheme == .dark
-                    ? Color(UIColor.systemBackground)
+                    ? Color("PrimaryBackground")
                     : pod.color
             )
             .edgesIgnoringSafeArea(.vertical)

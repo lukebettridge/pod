@@ -17,6 +17,7 @@ struct Trends: View {
             VStack {
                 if vm.isLoading {
                     ProgressView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else if logItems.count > 0 {
                     ScrollView(.vertical) {
                         VStack(alignment: .leading, spacing: 10) {
@@ -32,15 +33,16 @@ struct Trends: View {
                         }
                         .padding()
                     }
-                    .background(
-                        Color(colorScheme == .dark ? UIColor.systemBackground : UIColor.secondarySystemBackground)
-                            .edgesIgnoringSafeArea(.all)
-                    )
                 } else {
                     TrendsEmpty()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
-            .navigationBarTitle("Trends")
+            .background(
+                Color("PrimaryBackground")
+                    .edgesIgnoringSafeArea(.all)
+            )
+            .navigationBarTitle("History")
         }
         .onAppear {
             Analytics.log(event: .view, data: [

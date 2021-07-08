@@ -41,7 +41,7 @@ struct TrendsHistoryRow: View {
                         .resizable()
                         .background(pod.color)
                         .frame(width: 25, height: 25)
-                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                        .clipShape(RoundedRectangle(cornerRadius: 7.5))
                     HStack(alignment: .center, spacing: 5) {
                         Text((pod.name ?? "").uppercased())
                             .font(.custom("FSLucasPro-SemiBd", size: 16))
@@ -77,11 +77,11 @@ struct TrendsHistoryRow: View {
             }
         }
         .padding(.vertical, 12)
-        .padding(.horizontal, 15)
+        .padding(.horizontal, 13.5)
         .background(
-            colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
+            Color("SecondaryBackground")
         )
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .clipShape(RoundedRectangle(cornerRadius: 15))
         .alert(isPresented: $isShowingAlert) {
             Alert(
                 title: Text("Remove from History"),

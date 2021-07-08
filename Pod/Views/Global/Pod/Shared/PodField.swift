@@ -27,10 +27,10 @@ struct PodField<Content: View>: View {
             }
             content
         }
-        .padding(.horizontal, 15)
-        .padding(.vertical, 12.5)
+        .padding(.horizontal, 13.5)
+        .padding(.vertical, 12)
         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-        .background(Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .background(Color("SecondaryBackground"))
+        .clipShape(RoundedRectangle(cornerRadius: 14.5))
     }
 }

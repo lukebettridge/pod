@@ -22,19 +22,19 @@ struct ContentView: View {
                 TabView {
                     Collection()
                         .tabItem {
-                            Image(systemName: "person.crop.square.fill")
+                            Image(systemName: "books.vertical.fill")
                             Text("Collection")
                         }
                     Explore()
                         .tabItem {
-                            Image(systemName: "square.grid.2x2.fill")
+                            Image(systemName: "mail.stack.fill")
                             Text("Explore")
                         }
                     Spacer()
                     Trends()
                         .tabItem {
-                            Image(systemName: "chart.bar.fill")
-                            Text("Trends")
+                            Image(systemName: "clock.arrow.circlepath")
+                            Text("History")
                         }
                     Settings()
                         .tabItem {

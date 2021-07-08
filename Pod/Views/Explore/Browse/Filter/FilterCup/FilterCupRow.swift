@@ -31,6 +31,6 @@ struct FilterCupRow: View {
         .padding(.top, 7)
         .padding(.horizontal, 10)
         .frame(width: 65, height: 60)
-        .background(selected ? Color.accentColor : Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
+        .background(selected ? Color.accentColor : Color("SecondaryBackground"))
     }
 }

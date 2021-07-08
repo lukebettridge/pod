@@ -28,7 +28,7 @@ struct ExploreLink: View {
         HStack {
             Image(systemName: icon)
                 .font(.system(size: 35))
-                .foregroundColor(colorScheme == .dark ? .primary : .accentColor)
+                .foregroundColor(.accentColor)
             
             VStack(alignment: .leading, spacing: 2.5) {
                 Text(title)
@@ -45,11 +45,11 @@ struct ExploreLink: View {
             Spacer()
             
             Image(systemName: "chevron.forward")
-                .font(Font.headline.weight(.light))
-                .foregroundColor(.gray)
+                .font(Font.subheadline.weight(.light))
+                .foregroundColor(.accentColor)
         }
         .padding()
-        .background(Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .background(Color("SecondaryBackground"))
+        .clipShape(RoundedRectangle(cornerRadius: 15))
     }
 }

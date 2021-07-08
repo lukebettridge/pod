@@ -22,6 +22,7 @@ struct FavouritesView: View {
                     }
                 }
             }
+            .background(Color("PrimaryBackground").edgesIgnoringSafeArea(.all))
             .navigationBarTitle("Edit Favorites", displayMode: .inline)
             .navigationBarItems(
                 trailing: Button(action: exit) { Text("Done") }

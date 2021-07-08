@@ -15,7 +15,7 @@ struct TrendsHistory: View {
     
     var body: some View {
         Section(header: HStack {
-            Text("History").font(.title2).fontWeight(.semibold)
+//            Text("History").font(.title2).fontWeight(.semibold)
             Spacer()
             Button(action: {
                 withAnimation(.linear(duration: 0.25)) {

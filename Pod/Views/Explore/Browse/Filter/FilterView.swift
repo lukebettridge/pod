@@ -123,7 +123,7 @@ struct FilterView: View {
                         disabled: !isDirty
                     )
                 }
-                .background(Color(colorScheme == .dark ? UIColor.systemBackground : UIColor.secondarySystemBackground).edgesIgnoringSafeArea(.all))
+                .background(Color("PrimaryBackground").edgesIgnoringSafeArea(.all))
             }
             .navigationBarTitle("Filter")
         }

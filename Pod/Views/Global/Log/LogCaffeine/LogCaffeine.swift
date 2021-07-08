@@ -62,14 +62,14 @@ struct LogCaffeine: View {
                 .frame(maxWidth: .infinity)
                 .background(
                     RoundedRectangle(cornerRadius: 7.5)
-                        .fill(colorScheme == .dark ? Color(UIColor.tertiarySystemBackground) : .accentColor)
+                        .fill(Color.accentColor)
                 )
             }
             .buttonStyle(PlainButtonStyle())
             .disabled(authorizationStatus != .some(.notDetermined))
         }
         .padding()
-        .background(Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .background(Color("SecondaryBackground"))
+        .clipShape(RoundedRectangle(cornerRadius: 15))
     }
 }

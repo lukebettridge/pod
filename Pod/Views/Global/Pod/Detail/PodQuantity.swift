@@ -16,7 +16,7 @@ struct PodQuantity: View {
             HStack(spacing: 0) {
                 Image(systemName: "minus")
                     .frame(width: 50, height: 50, alignment: .center)
-                    .background(Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
+                    .background(Color("SecondaryBackground"))
                     .opacity(collectionItem.quantity > 0 ? 1 : 0.5)
                     .onTapGesture {
                         if collectionItem.quantity > 0 {
@@ -41,7 +41,7 @@ struct PodQuantity: View {
                 
                 Image(systemName: "plus")
                     .frame(width: 50, height: 50, alignment: .center)
-                    .background(Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
+                    .background(Color("SecondaryBackground"))
                     .onTapGesture {
                         collectionItem.quantity += 1
                         collectionItem.save()
@@ -53,8 +53,8 @@ struct PodQuantity: View {
                         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                     }
             }
-            .background(Color(colorScheme == .dark ? UIColor.tertiarySystemBackground : UIColor.secondarySystemBackground))
-            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .background(Color("SecondaryBackground").opacity(0.6))
+            .clipShape(RoundedRectangle(cornerRadius: 12.5))
         }
     }
 }

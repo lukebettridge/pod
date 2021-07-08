@@ -24,7 +24,7 @@ struct WelcomeView: View {
             VStack(alignment: .leading, spacing: 15) {
                 
                 WelcomeItem(
-                    icon: "tray.and.arrow.down.fill",
+                    icon: "books.vertical.fill",
                     title: "Collection",
                     description: "Organise and keep track of your collection."
                 )
@@ -61,6 +61,7 @@ struct WelcomeView: View {
             .buttonStyle(PlainButtonStyle())
         }
         .padding()
+        .background(Color("PrimaryBackground").edgesIgnoringSafeArea(.all))
         .onAppear {
             Analytics.log(event: .view, data: [
                 Analytics.AnalyticsParameterScreenName: "Welcome",

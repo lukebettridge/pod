@@ -21,7 +21,7 @@ struct TopFavouritesRow: View {
 
                 Spacer()
             }
-            .foregroundColor(Color(UIColor.systemGray6))
+            .foregroundColor(Color("SecondaryBackground"))
             HStack(spacing: 12.5) {
                 pod.image
                     .resizable()

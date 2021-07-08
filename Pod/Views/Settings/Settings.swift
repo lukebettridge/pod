@@ -9,41 +9,54 @@ import SwiftUI
 
 struct Settings: View {
     @State var isShowingAlert = false
-    
     @State var variety = UserDefaults.standard.integer(forKey: "Variety")
+    
+    init() {
+        UITableView.appearance().backgroundColor = UIColor(Color("PrimaryBackground"))
+    }
     
     var body: some View {
         NavigationView {
             Form {
-                Section(
-                    footer:
-                        Text("Set which capsule type you'd prefer to see first when browsing all capsules.")
-                ) {
-                    Picker("Default Capsule Type", selection: $variety) {
-                        Text("Original").tag(0)
-                        Text("Vertuo").tag(1)
-                    }
-                }
-                
-                Section(header: Text("About")) {
-                    if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-                        HStack {
-                            Text("Version")
-                            Spacer()
-                            Text("\(appVersion)")
-                                .foregroundColor(.gray)
+                Group {
+                    
+                    Section(
+                        footer:
+                            Text("Set which capsule type you'd prefer to see first when browsing all capsules.")
+                    ) {
+                        Picker("Default Capsule Type", selection: $variety) {
+                            Text("Original").tag(0)
+                            Text("Vertuo").tag(1)
                         }
                     }
+                    
+                    Section(header: Text("About")) {
+                        if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+                            HStack {
+                                Text("Version")
+                                Spacer()
+                                Text("\(appVersion)")
+                                    .foregroundColor(.gray)
+                            }
+                            HStack {
+                                Text("Developer")
+                                Spacer()
+                                Link("@bttrdg", destination: URL(string: "https://twitter.com/bttrdg")!)
+                            }
+                        }
+                    }
+                    
+                    Section(
+                        header: Text("Legal"),
+                        footer:
+                            Text("All images and content relating to Nespresso coffee capsules are the property of Nestlé Nespresso S.A.")
+                    ) {
+                        Link("Privacy Policy", destination: URL(string: "https://pod-app.io/privacy-policy")!)
+                        Link("Copyright", destination: URL(string: "https://www.nespresso.com/uk/en/legal")!)
+                    }
+                    
                 }
-                
-                Section(
-                    header: Text("Legal"),
-                    footer:
-                        Text("All images and content relating to Nespresso coffee capsules are the property of Nestlé Nespresso S.A.")
-                ) {
-                    Link("Privacy Policy", destination: URL(string: "https://pod-app.io/privacy-policy")!)
-                    Link("Copyright", destination: URL(string: "https://www.nespresso.com/uk/en/legal")!)
-                }
+                .listRowBackground(Color("SecondaryBackground"))
             }
             .navigationBarTitle("Settings")
             .navigationBarItems(
@@ -56,7 +69,7 @@ struct Settings: View {
                         }
                     } label: {
                         Image(systemName: "ellipsis.circle")
-                            .font(.title2)
+                            .font(.headline)
                     }
             )
             .alert(isPresented: $isShowingAlert) {

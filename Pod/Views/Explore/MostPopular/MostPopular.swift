@@ -35,6 +35,7 @@ struct MostPopular: View {
             .padding(.bottom)
             .padding(.horizontal)
         }
+        .background(Color("PrimaryBackground").edgesIgnoringSafeArea(.all))
         .navigationBarTitle("Most Popular")
         .onAppear {
             Analytics.log(event: .view, data: [

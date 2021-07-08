@@ -22,9 +22,16 @@ struct Collection: View {
             VStack {
                 if vm.isLoading {
                     ProgressView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else if collectionItems.count > 0 {
                     ScrollView(.vertical) {
-                        VStack(spacing: 10) {
+                        VStack(spacing: 15) {
+                            Text("You have \(collectionItems.reduce(0) { $0 + $1.quantity }) capsules in your collection.")
+                                .font(.caption2)
+                                .foregroundColor(.gray)
+                                .padding(.top, -16)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            
                             Section(header: HStack {
                                 Text("Favorites").font(.title2).fontWeight(.semibold)
                                 Spacer()
@@ -51,23 +58,19 @@ struct Collection: View {
                                     CollectionRow(collectionItem, pod: pod)
                                 }
                             }
-                            
-                            Text("You have \(collectionItems.reduce(0) { $0 + $1.quantity }) capsules in your collection.")
-                                .font(.caption2)
-                                .foregroundColor(.gray)
-                                .padding(.top, 4)
                         }
                         .padding()
                         .padding(.bottom, 30)
                     }
-                    .background(
-                        Color(colorScheme == .dark ? UIColor.systemBackground : UIColor.secondarySystemBackground)
-                            .edgesIgnoringSafeArea(.all)
-                    )
                 } else {
                     CollectionEmpty()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
+            .background(
+                Color("PrimaryBackground")
+                    .edgesIgnoringSafeArea(.all)
+            )
             .navigationBarTitle("My Collection")
         }
         .onAppear {

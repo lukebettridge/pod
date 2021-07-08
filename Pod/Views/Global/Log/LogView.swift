@@ -46,6 +46,7 @@ struct LogView: View {
             Group {
                 if isLoading {
                     ProgressView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     GeometryReader { gp in
                         ZStack {
@@ -118,10 +119,10 @@ struct LogView: View {
                                 disabled: selectedCup == nil
                             )
                         }
-                        .background(Color(colorScheme == .dark ? UIColor.systemBackground : UIColor.secondarySystemBackground).edgesIgnoringSafeArea(.all))
                     }
                 }
             }
+            .background(Color("PrimaryBackground").edgesIgnoringSafeArea(.all))
             .navigationBarTitle("Log Coffee")
             .onChange(of: selectedPod, perform: { _ in
                 selectedCup = nil

@@ -34,6 +34,7 @@ struct TopFavourites: View {
             .padding(.bottom)
             .padding(.horizontal)
         }
+        .background(Color("PrimaryBackground").edgesIgnoringSafeArea(.all))
         .navigationBarTitle("Top Favorites")
         .onAppear {
             Analytics.log(event: .view, data: [

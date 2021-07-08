@@ -16,6 +16,7 @@ struct Explore: View {
             Group {
                 if vm.isLoading {
                     ProgressView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     ScrollView(.vertical) {
                         VStack(alignment: .leading, spacing: 10) {
@@ -25,18 +26,18 @@ struct Explore: View {
                         .padding()
                         .padding(.bottom, 20)
                     }
-                    .background(
-                        Color(colorScheme == .dark ? UIColor.systemBackground : UIColor.secondarySystemBackground)
-                            .edgesIgnoringSafeArea(.all)
-                    )
                 }
             }
+            .background(
+                Color("PrimaryBackground")
+                    .edgesIgnoringSafeArea(.all)
+            )
             .navigationBarTitle("Explore")
             .navigationBarItems(
                 trailing:
                     Button(action: { vm.openSheet(.scanner) }) {
                         Image(systemName: "barcode.viewfinder")
-                            .font(.title2)
+                            .font(.headline)
                     }
             )
         }

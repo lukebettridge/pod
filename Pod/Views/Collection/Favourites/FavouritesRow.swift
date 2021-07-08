@@ -17,7 +17,7 @@ struct FavouritesRow: View {
                 .resizable()
                 .background(pod.color)
                 .frame(width: 40, height: 40)
-                .clipShape(RoundedRectangle(cornerRadius: 6))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
             HStack(spacing: 5) {
             Text((pod.name ?? "").uppercased())
                 .font(.custom("FSLucasPro-SemiBd", size: 16))
@@ -38,5 +38,6 @@ struct FavouritesRow: View {
             }
         }
         .padding(.vertical, 2.5)
+        .listRowBackground(Color("SecondaryBackground"))
     }
 }

@@ -28,9 +28,9 @@ struct LogPodRow: View {
                 .opacity(disabled && !selected ? 0.2 : 1)
             Spacer()
         }
-        .padding(4)
+        .padding(5)
         .frame(width: 170)
-        .background(selected ? Color.accentColor : Color(colorScheme == .dark ? UIColor.secondarySystemBackground : UIColor.systemBackground))
+        .background(selected ? Color.accentColor : Color("SecondaryBackground"))
         .overlay(RoundedRectangle(cornerRadius: 20).stroke().foregroundColor(pod.decaffeinated ? .red : .clear))
         .clipShape(RoundedRectangle(cornerRadius: 20))
     }

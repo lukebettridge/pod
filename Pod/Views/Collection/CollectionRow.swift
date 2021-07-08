@@ -34,7 +34,7 @@ struct CollectionRow: View {
                     .resizable()
                     .background(pod.color)
                     .frame(width: 55, height: 55)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .clipShape(RoundedRectangle(cornerRadius: 12.5))
                 
                 VStack(alignment: .leading) {
                     HStack(alignment: .center, spacing: 5) {
@@ -67,17 +67,15 @@ struct CollectionRow: View {
                 Spacer()
                 
                 Image(systemName: "chevron.forward")
-                    .font(Font.headline.weight(.light))
-                    .foregroundColor(.gray)
+                    .font(Font.subheadline.weight(.light))
+                    .foregroundColor(.accentColor)
             }
         }
+        .padding(.horizontal, 13.5)
         .padding(.vertical, 12)
-        .padding(.horizontal, 15)
         .background(
-            RoundedRectangle(cornerRadius: 10)
-                .fill(
-                    colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-                )
+            RoundedRectangle(cornerRadius: 15)
+                .fill(Color("SecondaryBackground"))
         )
         .opacity(collectionItem.quantity > 0 ? 1 : 0.5)
         .contextMenu {
